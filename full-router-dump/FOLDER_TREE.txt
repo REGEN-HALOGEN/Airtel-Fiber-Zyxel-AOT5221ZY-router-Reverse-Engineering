@@ -1,0 +1,2553 @@
+Folder PATH listing for volume SYS
+Volume serial number is 364C-6F9D
+C:.
+|   FILE_INVENTORY.csv
+|   FOLDER_TREE.txt
+|   README.md
+|   
++---analysis
+|   |   reorganization-log.csv
+|   |   
+|   +---reports
+|   |       archive-firmware-SHA256SUMS.txt
+|   |       binwalk-signatures.txt
+|   |       device-tree-hardware-index.txt
+|   |       file-identification.txt
+|   |       flash-file-inventory.txt
+|   |       kernel-image-list.txt
+|   |       network-component-files.txt
+|   |       network-component-references.txt
+|   |       rootfs-directories.txt
+|   |       slot-comparison.txt
+|   |       ubi-volume-sha256.txt
+|   |       
+|   +---signatures
+|   \---source-archives
+|           aot5221-os-analysis.tar.gz
+|           
++---configuration
++---filesystem
+|   +---archives
+|   |       apps-filesystem.tar
+|   |       
+|   \---rootfs
+|       |   app
+|       |   
+|       +---bin
+|       |       arch
+|       |       ash
+|       |       AX_UDPserver
+|       |       base32
+|       |       bash
+|       |       board_detect
+|       |       brctl
+|       |       busybox
+|       |       cat
+|       |       chat
+|       |       chgrp
+|       |       chmod
+|       |       chown
+|       |       cmdsh
+|       |       config_generate
+|       |       cp
+|       |       curl
+|       |       date
+|       |       df
+|       |       diag
+|       |       dmesg
+|       |       echo
+|       |       egrep
+|       |       eponoamd
+|       |       fgrep
+|       |       flash
+|       |       getopt
+|       |       grep
+|       |       gunzip
+|       |       gzip
+|       |       hle_entity
+|       |       igmpproxy
+|       |       ipcalc.sh
+|       |       kill
+|       |       link
+|       |       ln
+|       |       login
+|       |       ls
+|       |       maceui
+|       |       map_agent
+|       |       map_checker
+|       |       map_controller
+|       |       map_reinit
+|       |       map_reset
+|       |       map_vlan_config
+|       |       mkdir
+|       |       mknod
+|       |       mkntfs
+|       |       mosapp
+|       |       moscli
+|       |       mount
+|       |       mpstat
+|       |       mv
+|       |       netstat
+|       |       nice
+|       |       ntfs-3g
+|       |       ntfslabel
+|       |       ntpclient
+|       |       nv
+|       |       oamcli
+|       |       obuspa
+|       |       omcicli
+|       |       omci_app
+|       |       opkg
+|       |       pidof
+|       |       ping
+|       |       ping6
+|       |       pondetect
+|       |       pppd
+|       |       ps
+|       |       pwd
+|       |       resume
+|       |       rm
+|       |       sed
+|       |       setpriv
+|       |       sh
+|       |       sleep
+|       |       smuxctl
+|       |       stat
+|       |       stty
+|       |       sync
+|       |       sys
+|       |       tar
+|       |       touch
+|       |       ubus
+|       |       uclient-fetch
+|       |       umount
+|       |       uname
+|       |       uncompress
+|       |       uploadTest
+|       |       usleep
+|       |       vi
+|       |       voice
+|       |       VoIP_maserati
+|       |       wait_dsp
+|       |       wlan_manager
+|       |       wlan_wps
+|       |       zcat
+|       |       zywifid
+|       |       zywifid_run.sh
+|       |       zywlctl
+|       |       
+|       +---config
+|       |       default_scfg.txt
+|       |       scfg.txt
+|       |       
+|       +---dev
+|       +---etc
+|       |   |   banner
+|       |   |   banner.failsafe
+|       |   |   config.csv
+|       |   |   default_scfg.txt
+|       |   |   device_info
+|       |   |   diag.sh
+|       |   |   ethers
+|       |   |   ethertypes
+|       |   |   filesystems
+|       |   |   fstab
+|       |   |   group
+|       |   |   hostapd_general_event.sh
+|       |   |   hostapd_wps_led.sh
+|       |   |   hostapd_wps_timer.sh
+|       |   |   hosts
+|       |   |   hotplug-preinit.json
+|       |   |   hotplug.json
+|       |   |   inittab
+|       |   |   insdrv.sh
+|       |   |   localtime
+|       |   |   miniupnpd.conf
+|       |   |   MLD_Config.sh
+|       |   |   mosuserconfig
+|       |   |   mtab
+|       |   |   multiap.conf
+|       |   |   multi_ap_script
+|       |   |   ndppd.conf
+|       |   |   omci_custom_opt.conf
+|       |   |   omci_ignore_mib_tbl.conf
+|       |   |   omci_mib.cfg
+|       |   |   openwrt_release
+|       |   |   openwrt_version
+|       |   |   opkg.conf
+|       |   |   os-release
+|       |   |   passwd
+|       |   |   preinit
+|       |   |   profile
+|       |   |   protocols
+|       |   |   rc.common
+|       |   |   rc.local
+|       |   |   rc_boot_dsp
+|       |   |   reg.txt
+|       |   |   resolv.conf
+|       |   |   runoam.sh
+|       |   |   runomci.sh
+|       |   |   runsdk.sh
+|       |   |   run_customized_sdk.sh
+|       |   |   scfg.txt
+|       |   |   services
+|       |   |   shadow
+|       |   |   shells
+|       |   |   shinit
+|       |   |   smt.cfg
+|       |   |   sysctl.conf
+|       |   |   sysupgrade.conf
+|       |   |   transceiver_module.sh
+|       |   |   TZ
+|       |   |   udhcpc.user
+|       |   |   wpa_supplicant_wps_led.sh
+|       |   |   wpa_supplicant_wps_timer.sh
+|       |   |   
+|       |   +---board.d
+|       |   |       01_leds
+|       |   |       02_network
+|       |   |       10_usb
+|       |   |       99-default_network
+|       |   |       
+|       |   +---capabilities
+|       |   |       wpad.json
+|       |   |       
+|       |   +---conf
+|       |   |   +---rtl8192xbe
+|       |   |   |   +---RFE50
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---AP_2G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---AP_5G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---PON_2G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---PON_5G
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   +---RFE51
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---KCT8248HE1
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---SKY85340
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           PHY_REG_GAIN.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   +---RFE53
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---KCT8239SD
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---KCT8239SD_2L
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---SKY85337_MSTC
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       PHY_REG_GAIN.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---VC5337
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           PHY_REG_GAIN.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   \---RFE54
+|       |   |   |       |   PHY_REG.txt
+|       |   |   |       |   PHY_REG_GAIN.txt
+|       |   |   |       |   RadioA.txt
+|       |   |   |       |   RadioB.txt
+|       |   |   |       |   TXPWR_ByRate.txt
+|       |   |   |       |   TXPWR_LMT.txt
+|       |   |   |       |   TXPWR_LMT_RU.txt
+|       |   |   |       |   TXPWR_TrackTSSI.txt
+|       |   |   |       |   
+|       |   |   |       +---RTC7646
+|       |   |   |       |       PHY_REG.txt
+|       |   |   |       |       PHY_REG_GAIN.txt
+|       |   |   |       |       RadioA.txt
+|       |   |   |       |       RadioB.txt
+|       |   |   |       |       TXPWR_ByRate.txt
+|       |   |   |       |       TXPWR_LMT.txt
+|       |   |   |       |       TXPWR_LMT_RU.txt
+|       |   |   |       |       TXPWR_TrackTSSI.txt
+|       |   |   |       |       
+|       |   |   |       \---RTK66287
+|       |   |   |               PHY_REG.txt
+|       |   |   |               PHY_REG_GAIN.txt
+|       |   |   |               RadioA.txt
+|       |   |   |               RadioB.txt
+|       |   |   |               TXPWR_ByRate.txt
+|       |   |   |               TXPWR_LMT.txt
+|       |   |   |               TXPWR_LMT_RU.txt
+|       |   |   |               TXPWR_TrackTSSI.txt
+|       |   |   |               
+|       |   |   +---rtl8832bre
+|       |   |   |   \---RFE50
+|       |   |   |       |   PHY_REG.txt
+|       |   |   |       |   PHY_REG_GAIN.txt
+|       |   |   |       |   RadioA.txt
+|       |   |   |       |   RadioB.txt
+|       |   |   |       |   TXPWR_ByRate.txt
+|       |   |   |       |   TXPWR_LMT.txt
+|       |   |   |       |   TXPWR_LMT_RU.txt
+|       |   |   |       |   TXPWR_TrackTSSI.txt
+|       |   |   |       |   
+|       |   |   |       +---AP_2G
+|       |   |   |       |       PHY_REG.txt
+|       |   |   |       |       RadioA.txt
+|       |   |   |       |       RadioB.txt
+|       |   |   |       |       TXPWR_ByRate.txt
+|       |   |   |       |       TXPWR_LMT.txt
+|       |   |   |       |       TXPWR_LMT_RU.txt
+|       |   |   |       |       TXPWR_TrackTSSI.txt
+|       |   |   |       |       
+|       |   |   |       +---AP_5G
+|       |   |   |       |       PHY_REG.txt
+|       |   |   |       |       PHY_REG_GAIN.txt
+|       |   |   |       |       RadioA.txt
+|       |   |   |       |       RadioB.txt
+|       |   |   |       |       TXPWR_ByRate.txt
+|       |   |   |       |       TXPWR_LMT.txt
+|       |   |   |       |       TXPWR_LMT_RU.txt
+|       |   |   |       |       TXPWR_TrackTSSI.txt
+|       |   |   |       |       
+|       |   |   |       +---PON_2G
+|       |   |   |       |       PHY_REG.txt
+|       |   |   |       |       RadioA.txt
+|       |   |   |       |       RadioB.txt
+|       |   |   |       |       TXPWR_ByRate.txt
+|       |   |   |       |       TXPWR_LMT.txt
+|       |   |   |       |       TXPWR_LMT_RU.txt
+|       |   |   |       |       TXPWR_TrackTSSI.txt
+|       |   |   |       |       
+|       |   |   |       \---PON_5G
+|       |   |   |               PHY_REG.txt
+|       |   |   |               PHY_REG_GAIN.txt
+|       |   |   |               RadioA.txt
+|       |   |   |               RadioB.txt
+|       |   |   |               TXPWR_ByRate.txt
+|       |   |   |               TXPWR_LMT.txt
+|       |   |   |               TXPWR_LMT_RU.txt
+|       |   |   |               TXPWR_TrackTSSI.txt
+|       |   |   |               
+|       |   |   +---rtl8852ae
+|       |   |   |   +---RFE50
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT[FCC SAR][IC SAR].txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type2.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type3.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type37.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type38.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type4.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type50.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type51.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type52.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type53.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type54.txt
+|       |   |   |   |   |   TxXtalTrack.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---AP_2G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---AP_5G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---PON_2G
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---PON_5G
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   +---RFE51
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT[FCC SAR][IC SAR].txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_51.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type2.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type3.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type37.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type38.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type4.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type50.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type51.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type52.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type53.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type54.txt
+|       |   |   |   |   |   TxXtalTrack.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---KCT8248HE
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---SKY85333
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   +---SKY85747
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---VC5333
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   +---RFE52
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT[FCC SAR][IC SAR].txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type2.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type3.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type37.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type38.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type4.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type50.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type51.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type52.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type53.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type54.txt
+|       |   |   |   |   |   TxXtalTrack.txt
+|       |   |   |   |   |   
+|       |   |   |   |   +---RTC66204
+|       |   |   |   |   |       PHY_REG.txt
+|       |   |   |   |   |       RadioA.txt
+|       |   |   |   |   |       RadioB.txt
+|       |   |   |   |   |       TXPWR_ByRate.txt
+|       |   |   |   |   |       TXPWR_LMT.txt
+|       |   |   |   |   |       TXPWR_LMT_RU.txt
+|       |   |   |   |   |       TXPWR_TrackTSSI.txt
+|       |   |   |   |   |       
+|       |   |   |   |   \---RTC66504
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   +---RFE53
+|       |   |   |   |   |   PHY_REG.txt
+|       |   |   |   |   |   PHY_REG_GAIN.txt
+|       |   |   |   |   |   RadioA.txt
+|       |   |   |   |   |   RadioB.txt
+|       |   |   |   |   |   TXPWR_ByRate.txt
+|       |   |   |   |   |   TXPWR_LMT.txt
+|       |   |   |   |   |   TXPWR_LMT[FCC SAR][IC SAR].txt
+|       |   |   |   |   |   TXPWR_LMT_RU.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type2.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type3.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type37.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type38.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type4.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type50.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type51.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type52.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type53.txt
+|       |   |   |   |   |   TXPWR_TrackTSSI_type54.txt
+|       |   |   |   |   |   TxXtalTrack.txt
+|       |   |   |   |   |   
+|       |   |   |   |   \---KCT8575HE
+|       |   |   |   |           PHY_REG.txt
+|       |   |   |   |           RadioA.txt
+|       |   |   |   |           RadioB.txt
+|       |   |   |   |           TXPWR_ByRate.txt
+|       |   |   |   |           TXPWR_LMT.txt
+|       |   |   |   |           TXPWR_LMT_RU.txt
+|       |   |   |   |           TXPWR_TrackTSSI.txt
+|       |   |   |   |           
+|       |   |   |   \---RFE54
+|       |   |   |       |   PHY_REG.txt
+|       |   |   |       |   PHY_REG_GAIN.txt
+|       |   |   |       |   RadioA.txt
+|       |   |   |       |   RadioB.txt
+|       |   |   |       |   TXPWR_ByRate.txt
+|       |   |   |       |   TXPWR_LMT.txt
+|       |   |   |       |   TXPWR_LMT[FCC SAR][IC SAR].txt
+|       |   |   |       |   TXPWR_LMT_RU.txt
+|       |   |   |       |   TXPWR_TrackTSSI.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type2.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type3.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type37.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type38.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type4.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type50.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type51.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type52.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type53.txt
+|       |   |   |       |   TXPWR_TrackTSSI_type54.txt
+|       |   |   |       |   TxXtalTrack.txt
+|       |   |   |       |   
+|       |   |   |       \---RTC7676E
+|       |   |   |               PHY_REG.txt
+|       |   |   |               RadioA.txt
+|       |   |   |               RadioB.txt
+|       |   |   |               TXPWR_ByRate.txt
+|       |   |   |               TXPWR_LMT.txt
+|       |   |   |               TXPWR_LMT_RU.txt
+|       |   |   |               TXPWR_TrackTSSI.txt
+|       |   |   |               
+|       |   |   \---rtl8852ce
+|       |   |       +---RFE50
+|       |   |       |   |   PHY_REG.txt
+|       |   |       |   |   PHY_REG_GAIN.txt
+|       |   |       |   |   RadioA.txt
+|       |   |       |   |   RadioB.txt
+|       |   |       |   |   TXPWR_ByRate.txt
+|       |   |       |   |   TXPWR_LMT.txt
+|       |   |       |   |   TXPWR_LMT_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_6G_VLP.txt
+|       |   |       |   |   TXPWR_LMT_RU.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_VLP.txt
+|       |   |       |   |   TXPWR_TrackTSSI.txt
+|       |   |       |   |   
+|       |   |       |   +---AP_2G
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---AP_5G
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---PON_2G
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   \---PON_5G
+|       |   |       |           PHY_REG.txt
+|       |   |       |           PHY_REG_GAIN.txt
+|       |   |       |           RadioA.txt
+|       |   |       |           RadioB.txt
+|       |   |       |           TXPWR_ByRate.txt
+|       |   |       |           TXPWR_LMT.txt
+|       |   |       |           TXPWR_LMT_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_6G_STD.txt
+|       |   |       |           TXPWR_LMT_RU.txt
+|       |   |       |           TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |           TXPWR_TrackTSSI.txt
+|       |   |       |           
+|       |   |       +---RFE51
+|       |   |       |   |   PHY_REG.txt
+|       |   |       |   |   PHY_REG_GAIN.txt
+|       |   |       |   |   RadioA.txt
+|       |   |       |   |   RadioB.txt
+|       |   |       |   |   TXPWR_ByRate.txt
+|       |   |       |   |   TXPWR_LMT.txt
+|       |   |       |   |   TXPWR_LMT_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_6G_VLP.txt
+|       |   |       |   |   TXPWR_LMT_RU.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_VLP.txt
+|       |   |       |   |   TXPWR_TrackTSSI.txt
+|       |   |       |   |   
+|       |   |       |   +---KTC8570N
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---SKY85791
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   \---SKY85791_AIS
+|       |   |       |           PHY_REG.txt
+|       |   |       |           PHY_REG_GAIN.txt
+|       |   |       |           RadioA.txt
+|       |   |       |           RadioB.txt
+|       |   |       |           TXPWR_ByRate.txt
+|       |   |       |           TXPWR_LMT.txt
+|       |   |       |           TXPWR_LMT_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_6G_STD.txt
+|       |   |       |           TXPWR_LMT_RU.txt
+|       |   |       |           TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |           TXPWR_TrackTSSI.txt
+|       |   |       |           
+|       |   |       +---RFE52
+|       |   |       |   |   PHY_REG.txt
+|       |   |       |   |   PHY_REG_GAIN.txt
+|       |   |       |   |   RadioA.txt
+|       |   |       |   |   RadioB.txt
+|       |   |       |   |   TXPWR_ByRate.txt
+|       |   |       |   |   TXPWR_LMT.txt
+|       |   |       |   |   TXPWR_LMT_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_6G_VLP.txt
+|       |   |       |   |   TXPWR_LMT_RU.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_VLP.txt
+|       |   |       |   |   TXPWR_TrackTSSI.txt
+|       |   |       |   |   
+|       |   |       |   +---RTC66504HT
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---RTC66506
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   \---RTC66506K
+|       |   |       |           PHY_REG.txt
+|       |   |       |           PHY_REG_GAIN.txt
+|       |   |       |           RadioA.txt
+|       |   |       |           RadioB.txt
+|       |   |       |           TXPWR_ByRate.txt
+|       |   |       |           TXPWR_LMT.txt
+|       |   |       |           TXPWR_LMT_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_6G_STD.txt
+|       |   |       |           TXPWR_LMT_RU.txt
+|       |   |       |           TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |           TXPWR_TrackTSSI.txt
+|       |   |       |           
+|       |   |       +---RFE53
+|       |   |       |   |   PHY_REG.txt
+|       |   |       |   |   PHY_REG_GAIN.txt
+|       |   |       |   |   RadioA.txt
+|       |   |       |   |   RadioB.txt
+|       |   |       |   |   TXPWR_ByRate.txt
+|       |   |       |   |   TXPWR_LMT.txt
+|       |   |       |   |   TXPWR_LMT_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_6G_VLP.txt
+|       |   |       |   |   TXPWR_LMT_RU.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_LPI.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |   TXPWR_LMT_RU_6G_VLP.txt
+|       |   |       |   |   TXPWR_TrackTSSI.txt
+|       |   |       |   |   
+|       |   |       |   +---KCT8539HE
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---KCT8575HP
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   +---SKY85755_MSTC
+|       |   |       |   |       PHY_REG.txt
+|       |   |       |   |       PHY_REG_GAIN.txt
+|       |   |       |   |       RadioA.txt
+|       |   |       |   |       RadioB.txt
+|       |   |       |   |       TXPWR_ByRate.txt
+|       |   |       |   |       TXPWR_LMT.txt
+|       |   |       |   |       TXPWR_LMT_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_6G_STD.txt
+|       |   |       |   |       TXPWR_LMT_RU.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |   |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |   |       TXPWR_TrackTSSI.txt
+|       |   |       |   |       
+|       |   |       |   \---VC5755
+|       |   |       |           PHY_REG.txt
+|       |   |       |           PHY_REG_GAIN.txt
+|       |   |       |           RadioA.txt
+|       |   |       |           RadioB.txt
+|       |   |       |           TXPWR_ByRate.txt
+|       |   |       |           TXPWR_LMT.txt
+|       |   |       |           TXPWR_LMT_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_6G_STD.txt
+|       |   |       |           TXPWR_LMT_RU.txt
+|       |   |       |           TXPWR_LMT_RU_6G_LOW.txt
+|       |   |       |           TXPWR_LMT_RU_6G_STD.txt
+|       |   |       |           TXPWR_TrackTSSI.txt
+|       |   |       |           
+|       |   |       \---RFE54
+|       |   |           |   PHY_REG.txt
+|       |   |           |   PHY_REG_GAIN.txt
+|       |   |           |   RadioA.txt
+|       |   |           |   RadioB.txt
+|       |   |           |   TXPWR_ByRate.txt
+|       |   |           |   TXPWR_LMT.txt
+|       |   |           |   TXPWR_LMT_6G_LPI.txt
+|       |   |           |   TXPWR_LMT_6G_STD.txt
+|       |   |           |   TXPWR_LMT_6G_VLP.txt
+|       |   |           |   TXPWR_LMT_RU.txt
+|       |   |           |   TXPWR_LMT_RU_6G_LPI.txt
+|       |   |           |   TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |   TXPWR_LMT_RU_6G_VLP.txt
+|       |   |           |   TXPWR_TrackTSSI.txt
+|       |   |           |   
+|       |   |           +---RTC7676D
+|       |   |           |       PHY_REG.txt
+|       |   |           |       PHY_REG_GAIN.txt
+|       |   |           |       RadioA.txt
+|       |   |           |       RadioB.txt
+|       |   |           |       TXPWR_ByRate.txt
+|       |   |           |       TXPWR_LMT.txt
+|       |   |           |       TXPWR_LMT_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_6G_STD.txt
+|       |   |           |       TXPWR_LMT_RU.txt
+|       |   |           |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |       TXPWR_TrackTSSI.txt
+|       |   |           |       
+|       |   |           +---RTC7676D1
+|       |   |           |       PHY_REG.txt
+|       |   |           |       PHY_REG_GAIN.txt
+|       |   |           |       RadioA.txt
+|       |   |           |       RadioB.txt
+|       |   |           |       TXPWR_ByRate.txt
+|       |   |           |       TXPWR_LMT.txt
+|       |   |           |       TXPWR_LMT_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_6G_STD.txt
+|       |   |           |       TXPWR_LMT_RU.txt
+|       |   |           |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |       TXPWR_TrackTSSI.txt
+|       |   |           |       
+|       |   |           +---RTC7676D1_2L
+|       |   |           |       PHY_REG.txt
+|       |   |           |       PHY_REG_GAIN.txt
+|       |   |           |       RadioA.txt
+|       |   |           |       RadioB.txt
+|       |   |           |       TXPWR_ByRate.txt
+|       |   |           |       TXPWR_LMT.txt
+|       |   |           |       TXPWR_LMT_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_6G_STD.txt
+|       |   |           |       TXPWR_LMT_RU.txt
+|       |   |           |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |       TXPWR_TrackTSSI.txt
+|       |   |           |       
+|       |   |           +---RTC7676D_08U
+|       |   |           |       PHY_REG.txt
+|       |   |           |       PHY_REG_GAIN.txt
+|       |   |           |       RadioA.txt
+|       |   |           |       RadioB.txt
+|       |   |           |       TXPWR_ByRate.txt
+|       |   |           |       TXPWR_LMT.txt
+|       |   |           |       TXPWR_LMT_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_6G_STD.txt
+|       |   |           |       TXPWR_LMT_RU.txt
+|       |   |           |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |       TXPWR_TrackTSSI.txt
+|       |   |           |       
+|       |   |           +---RTK66587_BPF
+|       |   |           |       PHY_REG.txt
+|       |   |           |       PHY_REG_GAIN.txt
+|       |   |           |       RadioA.txt
+|       |   |           |       RadioB.txt
+|       |   |           |       TXPWR_ByRate.txt
+|       |   |           |       TXPWR_LMT.txt
+|       |   |           |       TXPWR_LMT_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_6G_STD.txt
+|       |   |           |       TXPWR_LMT_RU.txt
+|       |   |           |       TXPWR_LMT_RU_6G_LOW.txt
+|       |   |           |       TXPWR_LMT_RU_6G_STD.txt
+|       |   |           |       TXPWR_TrackTSSI.txt
+|       |   |           |       
+|       |   |           \---RTK66587_DPX
+|       |   |                   PHY_REG.txt
+|       |   |                   PHY_REG_GAIN.txt
+|       |   |                   RadioA.txt
+|       |   |                   RadioB.txt
+|       |   |                   TXPWR_ByRate.txt
+|       |   |                   TXPWR_LMT.txt
+|       |   |                   TXPWR_LMT_6G_LOW.txt
+|       |   |                   TXPWR_LMT_6G_STD.txt
+|       |   |                   TXPWR_LMT_RU.txt
+|       |   |                   TXPWR_LMT_RU_6G_LOW.txt
+|       |   |                   TXPWR_LMT_RU_6G_STD.txt
+|       |   |                   TXPWR_TrackTSSI.txt
+|       |   |                   
+|       |   +---config
+|       |   |       omcproxy
+|       |   |       openssl
+|       |   |       rpcd
+|       |   |       rtkmap
+|       |   |       rtkvoip
+|       |   |       
+|       |   +---crontabs
+|       |   +---cups
+|       |   |   |   cups-files.conf
+|       |   |   |   cupsd.conf
+|       |   |   |   
+|       |   |   +---conf
+|       |   |   |       cupsd.conf
+|       |   |   |       mime.convs
+|       |   |   |       mime.types
+|       |   |   |       
+|       |   |   \---model
+|       |   +---hotplug.d
+|       |   |   +---block
+|       |   |   |       00-media-change
+|       |   |   |       10-mount
+|       |   |   |       
+|       |   |   +---ieee80211
+|       |   |   |       10-wifi-detect
+|       |   |   |       
+|       |   |   +---iface
+|       |   |   |       00-netstate
+|       |   |   |       
+|       |   |   \---net
+|       |   |           00-sysctl
+|       |   |           20-smp-packet-steering
+|       |   |           
+|       |   +---init.d
+|       |   |       boot
+|       |   |       btm.sh
+|       |   |       CA_init.sh
+|       |   |       ccc_init.sh
+|       |   |       cups
+|       |   |       deviceinfo.sh
+|       |   |       devicesock.sh
+|       |   |       diagshell
+|       |   |       done
+|       |   |       fstab
+|       |   |       gpio_switch
+|       |   |       hachi.sh
+|       |   |       igmpproxy
+|       |   |       init_mosapp.sh
+|       |   |       led
+|       |   |       load_rtk_wifi6
+|       |   |       load_rtk_xframe_ext_recovery
+|       |   |       lock_console
+|       |   |       mountfs.sh
+|       |   |       mount_piubi.sh
+|       |   |       ndppd
+|       |   |       network
+|       |   |       omcproxy
+|       |   |       openssl
+|       |   |       rpcd
+|       |   |       rtk_multiap
+|       |   |       rtk_voip_dsp
+|       |   |       rtk_voip_preload
+|       |   |       smbd.sh
+|       |   |       sysctl
+|       |   |       sysfixtime
+|       |   |       system
+|       |   |       transceiver.sh
+|       |   |       umount
+|       |   |       urandom_seed
+|       |   |       urngd
+|       |   |       wpad
+|       |   |       zywifid.sh
+|       |   |       zz_rc4mstcinit
+|       |   |       
+|       |   +---iproute2
+|       |   |       ematch_map
+|       |   |       rt_protos
+|       |   |       rt_tables
+|       |   |       
+|       |   +---modules-boot.d
+|       |   |       02-crypto-hash
+|       |   |       04-crypto-crc32c
+|       |   |       09-crypto-aead
+|       |   |       09-crypto-manager
+|       |   |       10-ca_packages
+|       |   |       11-ca_rtk
+|       |   |       12-rtk_fc
+|       |   |       13-rtk_igmp_hook
+|       |   |       20-lib-crc16
+|       |   |       20-usb-core
+|       |   |       30-gpio-button-hotplug
+|       |   |       54-usb-xhci-hcd
+|       |   |       
+|       |   +---modules.d
+|       |   |       02-crypto-hash
+|       |   |       04-crypto-crc32c
+|       |   |       09-crypto-aead
+|       |   |       09-crypto-ccm
+|       |   |       09-crypto-cmac
+|       |   |       09-crypto-ctr
+|       |   |       09-crypto-gcm
+|       |   |       09-crypto-gf128
+|       |   |       09-crypto-ghash
+|       |   |       09-crypto-hmac
+|       |   |       09-crypto-manager
+|       |   |       09-crypto-null
+|       |   |       09-crypto-rng
+|       |   |       09-crypto-seqiv
+|       |   |       09-crypto-sha256
+|       |   |       10-ca_packages
+|       |   |       11-ca_rtk
+|       |   |       12-rtk_fc
+|       |   |       13-rtk_igmp_hook
+|       |   |       20-lib-crc16
+|       |   |       20-usb-core
+|       |   |       25-nls-cp437
+|       |   |       25-nls-iso8859-1
+|       |   |       25-nls-utf8
+|       |   |       30-gpio-button-hotplug
+|       |   |       42-ip6tables
+|       |   |       50-usb-ledtrig-usbport
+|       |   |       54-usb-xhci-hcd
+|       |   |       80-fuse
+|       |   |       91-smuxdev
+|       |   |       br-netfilter
+|       |   |       cfg80211_rtk
+|       |   |       ebtables
+|       |   |       ipt-conntrack
+|       |   |       ipt-core
+|       |   |       ipt-extra
+|       |   |       ipt-filter
+|       |   |       ipt-ipopt
+|       |   |       ipt-nat-extra
+|       |   |       ipt-raw
+|       |   |       ipt-rpfilter
+|       |   |       ipt-u32
+|       |   |       ipt_mark2
+|       |   |       lib-crc-ccitt
+|       |   |       lib-crc32c
+|       |   |       lib-textsearch
+|       |   |       mac80211_rtk
+|       |   |       nf-flow
+|       |   |       nf-ipt6
+|       |   |       nf-log
+|       |   |       nf-log6
+|       |   |       nf-reject
+|       |   |       nf-reject6
+|       |   |       nft-core
+|       |   |       nft-fib
+|       |   |       nft-nat
+|       |   |       nft-offload
+|       |   |       ppp
+|       |   |       pppoe
+|       |   |       
+|       |   +---mycert
+|       |   |       web.pem
+|       |   |       
+|       |   +---opkg
+|       |   |   |   customfeeds.conf
+|       |   |   |   distfeeds.conf
+|       |   |   |   
+|       |   |   \---keys
+|       |   |           4d017e6f1ed5d616
+|       |   |           5a5b400c3de153a3
+|       |   |           
+|       |   +---ppp
+|       |   |       chap-secrets
+|       |   |       chap_auth_fail
+|       |   |       default_options
+|       |   |       ip-down
+|       |   |       ip-up
+|       |   |       ipcp_down
+|       |   |       ipv6-down
+|       |   |       ipv6-up
+|       |   |       pap-secrets
+|       |   |       pap_auth_fail
+|       |   |       session_disconnect
+|       |   |       start_negotiate
+|       |   |       wwan_options
+|       |   |       _options_static
+|       |   |       
+|       |   +---rc.button
+|       |   |       failsafe
+|       |   |       power
+|       |   |       reboot
+|       |   |       reset
+|       |   |       rfkill
+|       |   |       wps
+|       |   |       
+|       |   +---rc.d
+|       |   |       K10gpio_switch
+|       |   |       K21wpad
+|       |   |       K90boot
+|       |   |       K90network
+|       |   |       K90sysfixtime
+|       |   |       K90umount
+|       |   |       S00sysfixtime
+|       |   |       S00urngd
+|       |   |       S08rtk_voip_dsp
+|       |   |       S10boot
+|       |   |       S10lock_console
+|       |   |       S10system
+|       |   |       S11fstab
+|       |   |       S11sysctl
+|       |   |       S12rpcd
+|       |   |       S13load_rtk_wifi6
+|       |   |       S13openssl
+|       |   |       S15diagshell
+|       |   |       S16rtk_voip_preload
+|       |   |       S19wpad
+|       |   |       S20network
+|       |   |       S50transceiver.sh
+|       |   |       S90ndppd
+|       |   |       S94gpio_switch
+|       |   |       S95done
+|       |   |       S99igmpproxy
+|       |   |       S99load_rtk_xframe_ext_recovery
+|       |   |       S99omcproxy
+|       |   |       S99urandom_seed
+|       |   |       S99zz_rc4mstcinit
+|       |   |       
+|       |   +---rc4_mstc.d
+|       |   |       S01deviceinfo
+|       |   |       S02zywifid
+|       |   |       S03CA_init
+|       |   |       S04mountfs
+|       |   |       S05mount_piubi
+|       |   |       S06ccc_init
+|       |   |       S10devicesock
+|       |   |       S99hachi
+|       |   |       
+|       |   +---scripts
+|       |   |       btm.sh
+|       |   |       cmd
+|       |   |       cmd1
+|       |   |       crc
+|       |   |       crc1
+|       |   |       create_scfg_txt.sh
+|       |   |       dw
+|       |   |       ew
+|       |   |       fwdbg
+|       |   |       getmib
+|       |   |       getmib1
+|       |   |       get_fc_smux.sh
+|       |   |       ib
+|       |   |       ib1
+|       |   |       id1
+|       |   |       idd
+|       |   |       idd1
+|       |   |       irf
+|       |   |       irf1
+|       |   |       iw
+|       |   |       iw1
+|       |   |       led_leave_bootup_state.sh
+|       |   |       led_mixRGB_blink.sh
+|       |   |       mmd_cmdr
+|       |   |       mmd_cmdw
+|       |   |       modutils.sh
+|       |   |       mp_start.sh
+|       |   |       mp_stop.sh
+|       |   |       mu
+|       |   |       ob
+|       |   |       ob1
+|       |   |       od
+|       |   |       od1
+|       |   |       orf
+|       |   |       orf1
+|       |   |       ow
+|       |   |       ow1
+|       |   |       phl
+|       |   |       phl1
+|       |   |       phyr
+|       |   |       phyw
+|       |   |       rc_dev_voip
+|       |   |       reboot.sh
+|       |   |       rssi
+|       |   |       rssi1
+|       |   |       rtk_xframe_ext_recovery_detect.sh
+|       |   |       setmib
+|       |   |       setmib1
+|       |   |       wifi_modutils.sh
+|       |   |       
+|       |   +---serdes
+|       |   |       p6_serdes_fiber_100m.txt
+|       |   |       p6_serdes_fiber_1g.txt
+|       |   |       p6_serdes_sgmii_1g.txt
+|       |   |       p6_serdes_sgmii_2g5.txt
+|       |   |       p6_serdes_usxgmii_10g.txt
+|       |   |       p6_serdes_xfi_10g.txt
+|       |   |       pon_serdes_activee_100m.txt
+|       |   |       pon_serdes_activee_10d3125g.txt
+|       |   |       pon_serdes_activee_1d25g.txt
+|       |   |       pon_serdes_activee_3d125g.txt
+|       |   |       pon_serdes_epon.txt
+|       |   |       pon_serdes_epon_A.txt
+|       |   |       pon_serdes_epon_bi10g.txt
+|       |   |       pon_serdes_epon_d10g.txt
+|       |   |       pon_serdes_gpon.txt
+|       |   |       pon_serdes_gpon_A.txt
+|       |   |       pon_serdes_xgpon.txt
+|       |   |       pon_serdes_xgspon.txt
+|       |   |       
+|       |   +---ssl
+|       |   |   |   cert.pem
+|       |   |   |   openssl.cnf
+|       |   |   |   
+|       |   |   +---certs
+|       |   |   |       ca-certificates.crt
+|       |   |   |       
+|       |   |   +---engines.cnf.d
+|       |   |   \---private
+|       |   +---sysctl.d
+|       |   |       10-default.conf
+|       |   |       11-br-netfilter.conf
+|       |   |       11-nf-conntrack.conf
+|       |   |       
+|       |   +---uci-defaults
+|       |   |       10-fstab
+|       |   |       10_migrate-shadow
+|       |   |       12_network-generate-ula
+|       |   |       13_fix-group-user
+|       |   |       14_migrate-dhcp-release
+|       |   |       20_migrate-feeds
+|       |   |       50-migrate-rpcd-ubus-sock.sh
+|       |   |       
+|       |   +---udhcpc
+|       |   |       default.bound
+|       |   |       default.deconfig
+|       |   |       default.leasefail
+|       |   |       default.nak
+|       |   |       default.renew
+|       |   |       default.script
+|       |   |       
+|       |   +---udhcpc.user.d
+|       |   \---wide-dhcpv6
+|       |           MSTC_dhcp6c_script
+|       |           
+|       +---image
+|       |       dsp.img
+|       |       
+|       +---lib
+|       |   |   functions.sh
+|       |   |   ld-linux-aarch64.so.1
+|       |   |   libanl.so
+|       |   |   libanl.so.1
+|       |   |   libblkid-tiny.so
+|       |   |   libblobmsg_json.so.20220515
+|       |   |   libc.so
+|       |   |   libc.so.6
+|       |   |   libcrypt.so
+|       |   |   libcrypt.so.1
+|       |   |   libdl.so.2
+|       |   |   libfstools.so
+|       |   |   libgcc_s.so.1
+|       |   |   libjson_script.so.20220515
+|       |   |   libm.so
+|       |   |   libm.so.6
+|       |   |   libmapvendor.so
+|       |   |   libmapVendorData.so
+|       |   |   libmultiap.so
+|       |   |   libnsl.so.1
+|       |   |   libnss_dns.so.2
+|       |   |   libnss_files.so.2
+|       |   |   libomci_api.so
+|       |   |   libomci_fal.so
+|       |   |   libomci_gos.so
+|       |   |   libomci_mib.so
+|       |   |   libomci_voice.so
+|       |   |   libpr.so
+|       |   |   libpreload-seccomp.so
+|       |   |   libpreload-trace.so
+|       |   |   libpthread.so.0
+|       |   |   libresolv.so
+|       |   |   libresolv.so.2
+|       |   |   librt.so.1
+|       |   |   librtk.so
+|       |   |   libsetlbf.so
+|       |   |   libstdc++.so.6
+|       |   |   libstdc++.so.6.0.29
+|       |   |   libstdc++.so.6.0.29-gdb.py
+|       |   |   libubox.so.20220515
+|       |   |   libubus.so.20220601
+|       |   |   libuci.so
+|       |   |   libustream-ssl.so
+|       |   |   libut.so
+|       |   |   libutil.so.1
+|       |   |   libvalidate.so
+|       |   |   libvoip_manager.so
+|       |   |   
+|       |   +---config
+|       |   |       uci.sh
+|       |   |       
+|       |   +---features
+|       |   |   \---internal
+|       |   |           bdp_00000001.so
+|       |   |           bdp_00000004.so
+|       |   |           bdp_00000008.so
+|       |   |           bdp_00000020.so
+|       |   |           bdp_00000040.so
+|       |   |           bdp_00000080.so
+|       |   |           bdp_00000100.so
+|       |   |           bdp_00000200.so
+|       |   |           bdp_00000400.so
+|       |   |           mc_00000001.so
+|       |   |           mc_00000002.so
+|       |   |           mc_00000004.so
+|       |   |           mc_00000008.so
+|       |   |           mc_00000010.so
+|       |   |           me_00000002.so
+|       |   |           me_00000004.so
+|       |   |           me_00000008.so
+|       |   |           me_00000010.so
+|       |   |           me_00000020.so
+|       |   |           me_00000040.so
+|       |   |           me_00000080.so
+|       |   |           me_00000100.so
+|       |   |           me_00000400.so
+|       |   |           me_00000800.so
+|       |   |           me_00001000.so
+|       |   |           me_00002000.so
+|       |   |           me_00004000.so
+|       |   |           me_00008000.so
+|       |   |           me_00010000.so
+|       |   |           me_00020000.so
+|       |   |           me_00040000.so
+|       |   |           me_00080000.so
+|       |   |           me_00400000.so
+|       |   |           rdp_00000001.so
+|       |   |           rdp_00000004.so
+|       |   |           rdp_00000008.so
+|       |   |           rdp_00000010.so
+|       |   |           rdp_00000020.so
+|       |   |           rdp_00000040.so
+|       |   |           
+|       |   +---firmware
+|       |   |       regulatory.db
+|       |   |       
+|       |   +---functions
+|       |   |       caldata.sh
+|       |   |       leds.sh
+|       |   |       migrations.sh
+|       |   |       network.sh
+|       |   |       preinit.sh
+|       |   |       procd.sh
+|       |   |       service.sh
+|       |   |       system.sh
+|       |   |       uci-defaults.sh
+|       |   |       
+|       |   +---modules
+|       |   |   |   dpbcaster.ko
+|       |   |   |   omcidrv.ko
+|       |   |   |   pf_rt_fc.ko
+|       |   |   |   
+|       |   |   +---5.10.138
+|       |   |   |       ca-ne.ko
+|       |   |   |       ca-phy-mdio-access.ko
+|       |   |   |       ca-plat-kernel.ko
+|       |   |   |       ca-rtk-epon-drv.ko
+|       |   |   |       ca-rtk.ko
+|       |   |   |       cfg80211.ko
+|       |   |   |       cli-drv.ko
+|       |   |   |       crc-ccitt.ko
+|       |   |   |       ebt_among.ko
+|       |   |   |       ehci-fsl.ko
+|       |   |   |       ehci-hcd.ko
+|       |   |   |       ehci-pci.ko
+|       |   |   |       ehci-platform.ko
+|       |   |   |       fc_8277c.ko
+|       |   |   |       fc_mgr.ko
+|       |   |   |       fsl-mph-dr-of.ko
+|       |   |   |       gpio-button-hotplug.ko
+|       |   |   |       hostSpeedUp.ko
+|       |   |   |       ip6table_filter.ko
+|       |   |   |       ip6table_mangle.ko
+|       |   |   |       ip6t_REJECT.ko
+|       |   |   |       ip6t_rpfilter.ko
+|       |   |   |       ip6_tables.ko
+|       |   |   |       iptable_filter.ko
+|       |   |   |       iptable_mangle.ko
+|       |   |   |       iptable_raw.ko
+|       |   |   |       ipt_ECN.ko
+|       |   |   |       ipt_REJECT.ko
+|       |   |   |       ipt_rpfilter.ko
+|       |   |   |       ledtrig-usbport.ko
+|       |   |   |       libcrc32c.ko
+|       |   |   |       libscfg.ko
+|       |   |   |       mac80211.ko
+|       |   |   |       nft_chain_nat.ko
+|       |   |   |       nft_counter.ko
+|       |   |   |       nft_ct.ko
+|       |   |   |       nft_fib.ko
+|       |   |   |       nft_fib_inet.ko
+|       |   |   |       nft_fib_ipv4.ko
+|       |   |   |       nft_fib_ipv6.ko
+|       |   |   |       nft_flow_offload.ko
+|       |   |   |       nft_hash.ko
+|       |   |   |       nft_limit.ko
+|       |   |   |       nft_log.ko
+|       |   |   |       nft_masq.ko
+|       |   |   |       nft_nat.ko
+|       |   |   |       nft_numgen.ko
+|       |   |   |       nft_objref.ko
+|       |   |   |       nft_quota.ko
+|       |   |   |       nft_redir.ko
+|       |   |   |       nft_reject.ko
+|       |   |   |       nft_reject_inet.ko
+|       |   |   |       nft_reject_ipv4.ko
+|       |   |   |       nft_reject_ipv6.ko
+|       |   |   |       nf_flow_table.ko
+|       |   |   |       nf_flow_table_inet.ko
+|       |   |   |       nf_flow_table_ipv4.ko
+|       |   |   |       nf_flow_table_ipv6.ko
+|       |   |   |       nf_log_common.ko
+|       |   |   |       nf_log_ipv4.ko
+|       |   |   |       nf_log_ipv6.ko
+|       |   |   |       nf_reject_ipv4.ko
+|       |   |   |       nf_reject_ipv6.ko
+|       |   |   |       nf_tables.ko
+|       |   |   |       nls_cp437.ko
+|       |   |   |       nls_iso8859-1.ko
+|       |   |   |       nls_utf8.ko
+|       |   |   |       ohci-hcd.ko
+|       |   |   |       ohci-pci.ko
+|       |   |   |       ohci-platform.ko
+|       |   |   |       pon_transceiver.ko
+|       |   |   |       pppoe.ko
+|       |   |   |       pppox.ko
+|       |   |   |       ppp_async.ko
+|       |   |   |       ppp_generic.ko
+|       |   |   |       rtk_igmp_hook.ko
+|       |   |   |       rtk_wifi6.ko
+|       |   |   |       slhc.ko
+|       |   |   |       smuxdev.ko
+|       |   |   |       xhci-hcd.ko
+|       |   |   |       xhci-pci.ko
+|       |   |   |       xhci-plat-hcd.ko
+|       |   |   |       xt_bpf.ko
+|       |   |   |       xt_cgroup.ko
+|       |   |   |       xt_CT.ko
+|       |   |   |       xt_DSCP.ko
+|       |   |   |       xt_HL.ko
+|       |   |   |       xt_LOG.ko
+|       |   |   |       xt_mark2.ko
+|       |   |   |       xt_u32.ko
+|       |   |   |       
+|       |   |   \---features
+|       |   |           bdp_00000001.ko
+|       |   |           bdp_00000002.ko
+|       |   |           bdp_00000010.ko
+|       |   |           bdp_00000100.ko
+|       |   |           bdp_00000800.ko
+|       |   |           bdp_00001000.ko
+|       |   |           me_00000001.ko
+|       |   |           me_00000200.ko
+|       |   |           me_00020000.ko
+|       |   |           me_00100000.ko
+|       |   |           rdp_00000002.ko
+|       |   |           rdp_00000020.ko
+|       |   |           
+|       |   +---MSTC
+|       |   |   |   libbase64.so
+|       |   |   |   libbe.so
+|       |   |   |   libbeEvents.so
+|       |   |   |   libbemodules.so
+|       |   |   |   libbestatus.so
+|       |   |   |   libbeutils.so
+|       |   |   |   libblkid.so
+|       |   |   |   libblkid.so.1
+|       |   |   |   libblkid.so.1.1.0
+|       |   |   |   libblkid.so.1.1.0T
+|       |   |   |   libboard_access.so
+|       |   |   |   libcccbe.so
+|       |   |   |   libccclog.so
+|       |   |   |   libcccrdm.so
+|       |   |   |   libcdbg.so
+|       |   |   |   libclinkc.so
+|       |   |   |   libCmd.so
+|       |   |   |   libcmsg.so
+|       |   |   |   libconfuse.a
+|       |   |   |   libconfuse.la
+|       |   |   |   libconfuse.so
+|       |   |   |   libconfuse.so.2
+|       |   |   |   libconfuse.so.2.1.0
+|       |   |   |   libcrypto.so
+|       |   |   |   libcrypto.so.1.1
+|       |   |   |   libcurl.so
+|       |   |   |   libcurl.so.4
+|       |   |   |   libcurl.so.4.6.0
+|       |   |   |   libdas.so
+|       |   |   |   libdasmodules.so
+|       |   |   |   libdb-4.7.so
+|       |   |   |   libexpat.a
+|       |   |   |   libexpat.so
+|       |   |   |   libexpat.so.0
+|       |   |   |   libexpat.so.0.5.0
+|       |   |   |   libfw_utils.so
+|       |   |   |   libjson-c.so
+|       |   |   |   libjson-c.so.2
+|       |   |   |   libjson-c.so.2.0.1
+|       |   |   |   libledctl.so
+|       |   |   |   liblog.so
+|       |   |   |   libmicrosipaccessor.so
+|       |   |   |   libmicrosipclone.so
+|       |   |   |   libmicrosipcore.so
+|       |   |   |   libmos.so
+|       |   |   |   libmosquitto.so
+|       |   |   |   libmosquitto.so.1
+|       |   |   |   libmrd.so
+|       |   |   |   libmxml.so
+|       |   |   |   libmxml.so.1
+|       |   |   |   libmxml.so.1.4
+|       |   |   |   libntfs-3g.so.88
+|       |   |   |   libntfs-3g.so.88.0.0
+|       |   |   |   libpam.so
+|       |   |   |   libpam.so.0
+|       |   |   |   libpam.so.0.85.1
+|       |   |   |   libpppoe.so
+|       |   |   |   librdm.so
+|       |   |   |   librdmcommon.so
+|       |   |   |   libreboot.so
+|       |   |   |   librtk.so
+|       |   |   |   libsmartcols.so
+|       |   |   |   libsmartcols.so.1
+|       |   |   |   libsmartcols.so.1.1.0
+|       |   |   |   libsqlite3.so
+|       |   |   |   libsqlite3.so.0
+|       |   |   |   libsqlite3.so.0.8.6
+|       |   |   |   libssl.so
+|       |   |   |   libssl.so.1.1
+|       |   |   |   libtransceiverctl.so
+|       |   |   |   libTree.so
+|       |   |   |   libTree_disable_VoIP.so
+|       |   |   |   libua.so
+|       |   |   |   libusb-1.0.a
+|       |   |   |   libusb-1.0.la
+|       |   |   |   libusb-1.0.so
+|       |   |   |   libusb-1.0.so.0
+|       |   |   |   libusb-1.0.so.0.1.0
+|       |   |   |   libuuid.so
+|       |   |   |   libuuid.so.1
+|       |   |   |   libuuid.so.1.3.0
+|       |   |   |   libwebsockets.so
+|       |   |   |   libwebsockets.so.19
+|       |   |   |   libwrapper.so
+|       |   |   |   libwrappercommon.so
+|       |   |   |   libx2rexpat.a
+|       |   |   |   libx2rrdm.so
+|       |   |   |   libxmlparse.a
+|       |   |   |   libz.so
+|       |   |   |   libz.so.1
+|       |   |   |   libz.so.1.2.8
+|       |   |   |   libzebra.so
+|       |   |   |   libzebra.so.1
+|       |   |   |   libzebra.so.1.0.0
+|       |   |   |   pam_userdb.so
+|       |   |   |   
+|       |   |   +---be_modules
+|       |   |   +---features
+|       |   |   |   \---internal
+|       |   |   +---modules
+|       |   |   |   +---4.4.140
+|       |   |   |   |   +---extra
+|       |   |   |   |   \---kernel
+|       |   |   |   |       \---drivers
+|       |   |   |   |           \---net
+|       |   |   |   |               \---ethernet
+|       |   |   |   |                   \---realtek
+|       |   |   |   |                       \---rtl86900
+|       |   |   |   |                           +---igmpHookModule
+|       |   |   |   |                           \---sdk
+|       |   |   |   |                               \---src
+|       |   |   |   |                                   \---module
+|       |   |   |   |                                       +---ds_pkt_bcaster
+|       |   |   |   |                                       +---epon_drv
+|       |   |   |   |                                       +---epon_mpcp
+|       |   |   |   |                                       \---epon_polling
+|       |   |   |   \---features
+|       |   |   +---omci
+|       |   |   +---pkgconfig
+|       |   |   |       libconfuse.pc
+|       |   |   |       libusb-1.0.pc
+|       |   |   |       
+|       |   |   \---voip
+|       |   +---netifd
+|       |   |   |   dhcp-get-server.sh
+|       |   |   |   dhcp.script
+|       |   |   |   hostapd.sh
+|       |   |   |   netifd-proto.sh
+|       |   |   |   netifd-wireless.sh
+|       |   |   |   utils.sh
+|       |   |   |   
+|       |   |   +---proto
+|       |   |   |       dhcp.sh
+|       |   |   |       
+|       |   |   \---wireless
+|       |   |           mac80211.sh
+|       |   |           
+|       |   +---network
+|       |   |       config.sh
+|       |   |       
+|       |   +---omci
+|       |   |       mib_Anig.so
+|       |   |       mib_Authen_Sec_Method.so
+|       |   |       mib_CallControlPerformanceMonitoringHistoryData.so
+|       |   |       mib_Cardholder.so
+|       |   |       mib_CircuitPack.so
+|       |   |       mib_Cuc_OnuCapability.so
+|       |   |       mib_Cuc_OnuOpticalTransceiversInfo.so
+|       |   |       mib_Dot1RateLimiter.so
+|       |   |       mib_EnergyConsumptionPmHistoryData.so
+|       |   |       mib_EnhancedSecCtl.so
+|       |   |       mib_EthExtPmData.so
+|       |   |       mib_EthExtPmData64Bit.so
+|       |   |       mib_EthPmData2.so
+|       |   |       mib_EthPmData3.so
+|       |   |       mib_EthPmDataDs.so
+|       |   |       mib_EthPmDataUs.so
+|       |   |       mib_EthPmHistoryData.so
+|       |   |       mib_EthUni.so
+|       |   |       mib_ExtendedIpHostCfgData.so
+|       |   |       mib_ExtendedIpHostCfgData_65417.so
+|       |   |       mib_ExtendedMcastOperProf.so
+|       |   |       mib_ExtendedOnuG.so
+|       |   |       mib_ExtendedOnuGZTE.so
+|       |   |       mib_ExtVlanTagOperCfgData.so
+|       |   |       mib_FecPMHD.so
+|       |   |       mib_GalEthProf.so
+|       |   |       mib_GemIwTp.so
+|       |   |       mib_GemPortCtp.so
+|       |   |       mib_GemPortNetworkCtpPMHD.so
+|       |   |       mib_GemPortPMHD.so
+|       |   |       mib_GemTrafficDescriptor.so
+|       |   |       mib_GeneralPurposeBuffer.so
+|       |   |       mib_GenericPortal.so
+|       |   |       mib_GenexisEthPMHD4.so
+|       |   |       mib_IpHostConfigData.so
+|       |   |       mib_LargeString.so
+|       |   |       mib_LctUni.so
+|       |   |       mib_LoidAuth.so
+|       |   |       mib_LoopDetect.so
+|       |   |       mib_MacBridgePortFilterPreassign.so
+|       |   |       mib_MacBridgePortFilterTable.so
+|       |   |       mib_MacBridgePortPmMonitorHistoryData.so
+|       |   |       mib_MacBriPortBriTblData.so
+|       |   |       mib_MacBriPortCfgData.so
+|       |   |       mib_MacBriServProf.so
+|       |   |       mib_Map8021pServProf.so
+|       |   |       mib_McastOperProf.so
+|       |   |       mib_McastSubConfInfo.so
+|       |   |       mib_McastSubMonitor.so
+|       |   |       mib_Me242.so
+|       |   |       mib_Me243.so
+|       |   |       mib_Me350.so
+|       |   |       mib_Me370.so
+|       |   |       mib_Me373.so
+|       |   |       mib_Me65305.so
+|       |   |       mib_Me65427.so
+|       |   |       mib_MeZteSntp.so
+|       |   |       mib_MgcCfgData.so
+|       |   |       mib_MGCConfigPortal.so
+|       |   |       mib_MultiGemIwTp.so
+|       |   |       mib_NetworkDialPlanTable.so
+|       |   |       mib_Network_addr.so
+|       |   |       mib_OctetString.so
+|       |   |       mib_OltG.so
+|       |   |       mib_OltLocationCfgData.so
+|       |   |       mib_Omci.so
+|       |   |       mib_Ont2g.so
+|       |   |       mib_OntData.so
+|       |   |       mib_Ontg.so
+|       |   |       mib_OntSelfLoopDetect.so
+|       |   |       mib_OntSystemMgmt.so
+|       |   |       mib_OnuCapability.so
+|       |   |       mib_OnuDynaPwrMgmtCtrl.so
+|       |   |       mib_OnuLoopDetection.so
+|       |   |       mib_OnuPwrShedding.so
+|       |   |       mib_OnuRemoteDbg.so
+|       |   |       mib_PhysicalPathTerminationPointISDNUNI.so
+|       |   |       mib_PotsUni.so
+|       |   |       mib_Pptp80211Uni.so
+|       |   |       mib_PptpVideoAni.so
+|       |   |       mib_PptpVideoUni.so
+|       |   |       mib_PriQ.so
+|       |   |       mib_PrivateTellionOntStatistics.so
+|       |   |       mib_PrivateTqCfg.so
+|       |   |       mib_PrivateVlanCfg.so
+|       |   |       mib_PseudowireMaintenanceProfile.so
+|       |   |       mib_RTPPerformanceMonitoringHistoryData.so
+|       |   |       mib_RTPProfileData.so
+|       |   |       mib_RTPPseudowireParameters.so
+|       |   |       mib_Scheduler.so
+|       |   |       mib_SIPAgentConfigData.so
+|       |   |       mib_SIPAgentPerformanceMonitoringHistoryData.so
+|       |   |       mib_SIPCallInitiationPerformanceMonitoringHistoryData.so
+|       |   |       mib_SIPConfigPortal.so
+|       |   |       mib_SIPUserData.so
+|       |   |       mib_SWImage.so
+|       |   |       mib_Tcont.so
+|       |   |       mib_TcpUdpCfgData.so
+|       |   |       mib_ThresholdData1.so
+|       |   |       mib_ThresholdData2.so
+|       |   |       mib_TR069ManageServer.so
+|       |   |       mib_Unig.so
+|       |   |       mib_VEIP.so
+|       |   |       mib_VlanTagFilterData.so
+|       |   |       mib_VlanTagOpCfgData.so
+|       |   |       mib_VoiceServiceProfile.so
+|       |   |       mib_VoIPApplicationServiceProfile.so
+|       |   |       mib_VoIPConfigData.so
+|       |   |       mib_VoIPFeatureAccessCodes.so
+|       |   |       mib_VoipImage.so
+|       |   |       mib_VoIPLineStatus.so
+|       |   |       mib_VoIPMediaProfile.so
+|       |   |       mib_VoIPVoiceCTP.so
+|       |   |       mib_XgponDsMangPMHD.so
+|       |   |       mib_XgponTcPMHD.so
+|       |   |       mib_XgponUsMangPMHD.so
+|       |   |       
+|       |   +---preinit
+|       |   |       00_preinit.conf
+|       |   |       02_default_set_state
+|       |   |       02_sysinfo
+|       |   |       10_indicate_failsafe
+|       |   |       10_indicate_preinit
+|       |   |       30_failsafe_wait
+|       |   |       40_run_failsafe_hook
+|       |   |       50_indicate_regular_preinit
+|       |   |       70_initramfs_test
+|       |   |       80_mount_root
+|       |   |       81_urandom_seed
+|       |   |       98_check_passwd_uid_of_root
+|       |   |       99_10_failsafe_login
+|       |   |       99_10_run_init
+|       |   |       
+|       |   +---upgrade
+|       |   |   |   common.sh
+|       |   |   |   do_stage2
+|       |   |   |   fwtool.sh
+|       |   |   |   nand.sh
+|       |   |   |   platform.sh
+|       |   |   |   stage2
+|       |   |   |   
+|       |   |   \---keep.d
+|       |   |           base-files
+|       |   |           base-files-essential
+|       |   |           block-mount
+|       |   |           libopenssl-conf
+|       |   |           netifd
+|       |   |           opkg
+|       |   |           
+|       |   +---voip
+|       |   \---wifi
+|       |           mac80211.sh
+|       |           rtk_wifi.sh
+|       |           
+|       +---lib64
+|       +---mnt
+|       +---overlay
+|       +---proc
+|       +---rom
+|       |       note
+|       |       
+|       +---root
+|       +---sbin
+|       |       askfirst
+|       |       blkid
+|       |       block
+|       |       check_chksum_0.0.1
+|       |       chk_usr_config.sh
+|       |       compute_checksum_0.0.1
+|       |       cups_usburi
+|       |       db_load
+|       |       devmem
+|       |       devstatus
+|       |       diag
+|       |       extract_feature_bit_0.0.1
+|       |       extract_image_0.0.1
+|       |       firstboot
+|       |       fwup
+|       |       fwupgrade.sh
+|       |       fw_bl_utils.sh
+|       |       fw_boot_utils.sh
+|       |       fw_schedule.sh
+|       |       fw_utils.sh
+|       |       getty
+|       |       get_feature_bit.sh
+|       |       halt
+|       |       hotplug-call
+|       |       ifconfig
+|       |       ifdown
+|       |       ifstatus
+|       |       ifup
+|       |       init
+|       |       insmod
+|       |       ip
+|       |       jffs2mark
+|       |       jffs2reset
+|       |       kill_all_process.sh
+|       |       klogd
+|       |       kmodloader
+|       |       led.sh
+|       |       lsmod
+|       |       makeras.sh
+|       |       mcputil
+|       |       mcputil3.0.0
+|       |       mdev
+|       |       modinfo
+|       |       modprobe
+|       |       mount.ntfs-3g
+|       |       mount_root
+|       |       mrd.sh
+|       |       mrd_access
+|       |       mtd
+|       |       netifd
+|       |       pingcheckd
+|       |       prlimit
+|       |       procd
+|       |       reboot
+|       |       reload_config
+|       |       rmmod
+|       |       route
+|       |       rpcd
+|       |       run-init
+|       |       seccomp-trace
+|       |       service
+|       |       snmpd
+|       |       sysctl
+|       |       syslogd
+|       |       sysupgrade
+|       |       tc
+|       |       tlv.sh
+|       |       TLV_access
+|       |       ubusd
+|       |       uci
+|       |       udevtrigger
+|       |       udhcpc
+|       |       ujail
+|       |       upgraded
+|       |       urandom_seed
+|       |       urngd
+|       |       usb-getbridgename.sh
+|       |       usb-hotplug.sh
+|       |       utrace
+|       |       validate_data
+|       |       vconfig
+|       |       vsftpd
+|       |       wifi
+|       |       zhotplugd
+|       |       zyclip
+|       |       
+|       +---sys
+|       +---tmp
+|       \---usr
+|           +---bin
+|           |   |   aipc_util
+|           |   |   app-cli
+|           |   |   ar
+|           |   |   ascii
+|           |   |   awk
+|           |   |   basename
+|           |   |   bc
+|           |   |   board_access
+|           |   |   bras_lock_reboot.sh
+|           |   |   btm
+|           |   |   bzip2
+|           |   |   calibrate
+|           |   |   caller_id
+|           |   |   ca_cert.sh
+|           |   |   ccctest
+|           |   |   ccc_be
+|           |   |   ccc_das
+|           |   |   ccc_erase_disk.sh
+|           |   |   ccc_erase_disk_full.sh
+|           |   |   ccc_mr
+|           |   |   ccc_postsave.sh
+|           |   |   ccc_preload.sh
+|           |   |   cdbg
+|           |   |   chvt
+|           |   |   clogd
+|           |   |   cmp
+|           |   |   conference
+|           |   |   country_tone_update
+|           |   |   crc32
+|           |   |   create_connection
+|           |   |   create_connection_ipv6
+|           |   |   custom_tone
+|           |   |   cut
+|           |   |   daa
+|           |   |   dbclient
+|           |   |   detbuf2_dump
+|           |   |   diff
+|           |   |   dis_tone
+|           |   |   dns_config_notify
+|           |   |   dropbearkey
+|           |   |   dtmfdet_dump
+|           |   |   dtmf_det_cfg
+|           |   |   encrypt_config.sh
+|           |   |   expr
+|           |   |   factor
+|           |   |   fallocate
+|           |   |   fax_ex
+|           |   |   fgconsole
+|           |   |   find
+|           |   |   flock
+|           |   |   free
+|           |   |   fskgen
+|           |   |   fsk_date
+|           |   |   ftpget
+|           |   |   ftpput
+|           |   |   fuser
+|           |   |   fwtool
+|           |   |   fw_utils
+|           |   |   fxo
+|           |   |   fxo_callerid_det
+|           |   |   fxo_dual
+|           |   |   fxo_int
+|           |   |   fxs
+|           |   |   fxs_int
+|           |   |   gain_test
+|           |   |   genMeter
+|           |   |   getrandom
+|           |   |   get_lte_module_name.sh
+|           |   |   hachi
+|           |   |   head
+|           |   |   helpdesk.sh
+|           |   |   hexedit
+|           |   |   howler_ulaw.bin
+|           |   |   icf.cfg
+|           |   |   icf.exe
+|           |   |   id
+|           |   |   init_voipclock_arm
+|           |   |   ivrsys.bin
+|           |   |   iwinfo
+|           |   |   jshn
+|           |   |   jsonfilter
+|           |   |   killall
+|           |   |   ledctl_agent
+|           |   |   ledsCtrl.sh
+|           |   |   led_ctrl
+|           |   |   loadDiagnostics
+|           |   |   logger
+|           |   |   lpr
+|           |   |   lpstat
+|           |   |   lsscsi
+|           |   |   lzma
+|           |   |   mailsend
+|           |   |   md5sum
+|           |   |   mini_httpd
+|           |   |   mm.exe
+|           |   |   mpring
+|           |   |   mptone
+|           |   |   my_cert.sh
+|           |   |   nc
+|           |   |   nl
+|           |   |   nlListener
+|           |   |   nproc
+|           |   |   nslookup
+|           |   |   ntfs-3g
+|           |   |   openssl
+|           |   |   passwd
+|           |   |   paste
+|           |   |   pcm_dump
+|           |   |   pdbedit
+|           |   |   pgrep
+|           |   |   phoneoff
+|           |   |   portdetect
+|           |   |   pppoe-start
+|           |   |   prbs.sh
+|           |   |   proslic_set
+|           |   |   pulse_dial
+|           |   |   readlink
+|           |   |   rebootProcess
+|           |   |   renice
+|           |   |   rfc2833
+|           |   |   ring
+|           |   |   ripd
+|           |   |   rtp
+|           |   |   rtp2
+|           |   |   rtp_rtcp_stats
+|           |   |   rtp_v6
+|           |   |   scp
+|           |   |   send_2833
+|           |   |   seq
+|           |   |   setcfg
+|           |   |   setfattr
+|           |   |   shred
+|           |   |   shuf
+|           |   |   signify
+|           |   |   sip_reg_led
+|           |   |   slicset
+|           |   |   ssl_client
+|           |   |   svok
+|           |   |   SysInfo.sh
+|           |   |   t38_get
+|           |   |   t38_v6
+|           |   |   tail
+|           |   |   tcpsvd
+|           |   |   tftp
+|           |   |   top
+|           |   |   tr
+|           |   |   traceroute
+|           |   |   traceroute6
+|           |   |   ts
+|           |   |   UDPEchoServer
+|           |   |   udpsvd
+|           |   |   unlink
+|           |   |   unshare
+|           |   |   unzip
+|           |   |   usign
+|           |   |   verify_config.sh
+|           |   |   vmwigen
+|           |   |   voiceApp
+|           |   |   voip_def_init
+|           |   |   wan_event_notify.sh
+|           |   |   wc
+|           |   |   wget
+|           |   |   which
+|           |   |   x2r
+|           |   |   xargs
+|           |   |   xxd
+|           |   |   zebra
+|           |   |   ztr69
+|           |   |   ztr69cmd
+|           |   |   zydbg.sh
+|           |   |   zyims.sh
+|           |   |   
+|           |   +---bin
+|           |   |       dmesg
+|           |   |       kill
+|           |   |       wdctl
+|           |   |       
+|           |   +---home
+|           |   |   \---square
+|           |   |       \---R_2.11_NEW
+|           |   |           +---MSTC
+|           |   |           |   +---build
+|           |   |           |   |   \---rootfs
+|           |   |           |   |       +---etc
+|           |   |           |   |       |   \---init.d
+|           |   |           |   |       \---usr
+|           |   |           |   |           \---sbin
+|           |   |           |   \---makecode
+|           |   |           \---openwrt
+|           |   +---lib
+|           |   |       libblkid.so.1
+|           |   |       libblkid.so.1.1.0
+|           |   |       libsmartcols.so.1
+|           |   |       libsmartcols.so.1.1.0
+|           |   |       libuuid.so.1
+|           |   |       libuuid.so.1.3.0
+|           |   |       
+|           |   +---sbin
+|           |   |       blkdiscard
+|           |   |       blkid
+|           |   |       blockdev
+|           |   |       chcpu
+|           |   |       ctrlaltdel
+|           |   |       findfs
+|           |   |       fsck.cramfs
+|           |   |       fsck.minix
+|           |   |       fsfreeze
+|           |   |       hwclock
+|           |   |       losetup
+|           |   |       mkfs
+|           |   |       mkfs.bfs
+|           |   |       mkfs.cramfs
+|           |   |       mkfs.minix
+|           |   |       mkswap
+|           |   |       nologin
+|           |   |       pivot_root
+|           |   |       raw
+|           |   |       sulogin
+|           |   |       swaplabel
+|           |   |       switch_root
+|           |   |       wipefs
+|           |   |       zramctl
+|           |   |       
+|           |   \---usr
+|           |       +---bin
+|           |       |       chrt
+|           |       |       col
+|           |       |       colcrt
+|           |       |       colrm
+|           |       |       column
+|           |       |       fallocate
+|           |       |       flock
+|           |       |       getopt
+|           |       |       hexdump
+|           |       |       ionice
+|           |       |       ipcmk
+|           |       |       ipcrm
+|           |       |       ipcs
+|           |       |       isosize
+|           |       |       linux32
+|           |       |       linux64
+|           |       |       look
+|           |       |       lscpu
+|           |       |       lsipc
+|           |       |       lslogins
+|           |       |       lsns
+|           |       |       mcookie
+|           |       |       mesg
+|           |       |       namei
+|           |       |       newgrp
+|           |       |       prlimit
+|           |       |       rename
+|           |       |       renice
+|           |       |       rev
+|           |       |       script
+|           |       |       scriptreplay
+|           |       |       setarch
+|           |       |       setsid
+|           |       |       tailf
+|           |       |       taskset
+|           |       |       uname26
+|           |       |       unshare
+|           |       |       uuidgen
+|           |       |       wall
+|           |       |       whereis
+|           |       |       
+|           |       +---include
+|           |       |   +---blkid
+|           |       |   |       blkid.h
+|           |       |   |       
+|           |       |   +---libsmartcols
+|           |       |   |       libsmartcols.h
+|           |       |   |       
+|           |       |   \---uuid
+|           |       |           uuid.h
+|           |       |           
+|           |       +---lib
+|           |       |   |   libblkid.a
+|           |       |   |   libblkid.la
+|           |       |   |   libblkid.so
+|           |       |   |   libsmartcols.a
+|           |       |   |   libsmartcols.la
+|           |       |   |   libsmartcols.so
+|           |       |   |   libuuid.a
+|           |       |   |   libuuid.la
+|           |       |   |   libuuid.so
+|           |       |   |   
+|           |       |   \---pkgconfig
+|           |       |           blkid.pc
+|           |       |           smartcols.pc
+|           |       |           uuid.pc
+|           |       |           
+|           |       +---sbin
+|           |       |       addpart
+|           |       |       delpart
+|           |       |       fdformat
+|           |       |       ldattach
+|           |       |       partx
+|           |       |       readprofile
+|           |       |       resizepart
+|           |       |       rtcwake
+|           |       |       uuidd
+|           |       |       
+|           |       \---share
+|           |           +---bash-completion
+|           |           |   \---completions
+|           |           |           addpart
+|           |           |           blkdiscard
+|           |           |           blkid
+|           |           |           blockdev
+|           |           |           chcpu
+|           |           |           chrt
+|           |           |           col
+|           |           |           colcrt
+|           |           |           colrm
+|           |           |           column
+|           |           |           ctrlaltdel
+|           |           |           delpart
+|           |           |           dmesg
+|           |           |           fallocate
+|           |           |           fdformat
+|           |           |           flock
+|           |           |           fsck.cramfs
+|           |           |           fsck.minix
+|           |           |           fsfreeze
+|           |           |           getopt
+|           |           |           hexdump
+|           |           |           hwclock
+|           |           |           ionice
+|           |           |           ipcmk
+|           |           |           ipcrm
+|           |           |           ipcs
+|           |           |           isosize
+|           |           |           ldattach
+|           |           |           look
+|           |           |           losetup
+|           |           |           lscpu
+|           |           |           lsipc
+|           |           |           lslogins
+|           |           |           lsns
+|           |           |           mcookie
+|           |           |           mesg
+|           |           |           mkfs
+|           |           |           mkfs.bfs
+|           |           |           mkfs.cramfs
+|           |           |           mkfs.minix
+|           |           |           mkswap
+|           |           |           namei
+|           |           |           newgrp
+|           |           |           partx
+|           |           |           pivot_root
+|           |           |           prlimit
+|           |           |           raw
+|           |           |           readprofile
+|           |           |           rename
+|           |           |           renice
+|           |           |           resizepart
+|           |           |           rev
+|           |           |           rtcwake
+|           |           |           script
+|           |           |           scriptreplay
+|           |           |           setarch
+|           |           |           setsid
+|           |           |           swaplabel
+|           |           |           tailf
+|           |           |           taskset
+|           |           |           unshare
+|           |           |           uuidd
+|           |           |           uuidgen
+|           |           |           wall
+|           |           |           wdctl
+|           |           |           whereis
+|           |           |           wipefs
+|           |           |           zramctl
+|           |           |           
+|           |           +---doc
+|           |           |   \---util-linux
+|           |           |       \---getopt
+|           |           |               getopt-parse.bash
+|           |           |               getopt-parse.tcsh
+|           |           |               
+|           |           \---man
+|           |               +---man1
+|           |               |       chrt.1
+|           |               |       col.1
+|           |               |       colcrt.1
+|           |               |       colrm.1
+|           |               |       column.1
+|           |               |       dmesg.1
+|           |               |       fallocate.1
+|           |               |       flock.1
+|           |               |       getopt.1
+|           |               |       hexdump.1
+|           |               |       ionice.1
+|           |               |       ipcmk.1
+|           |               |       ipcrm.1
+|           |               |       ipcs.1
+|           |               |       kill.1
+|           |               |       look.1
+|           |               |       lscpu.1
+|           |               |       lsipc.1
+|           |               |       lslogins.1
+|           |               |       mcookie.1
+|           |               |       mesg.1
+|           |               |       namei.1
+|           |               |       newgrp.1
+|           |               |       prlimit.1
+|           |               |       rename.1
+|           |               |       renice.1
+|           |               |       rev.1
+|           |               |       script.1
+|           |               |       scriptreplay.1
+|           |               |       setsid.1
+|           |               |       tailf.1
+|           |               |       taskset.1
+|           |               |       unshare.1
+|           |               |       uuidgen.1
+|           |               |       wall.1
+|           |               |       whereis.1
+|           |               |       
+|           |               +---man3
+|           |               |       libblkid.3
+|           |               |       uuid.3
+|           |               |       uuid_clear.3
+|           |               |       uuid_compare.3
+|           |               |       uuid_copy.3
+|           |               |       uuid_generate.3
+|           |               |       uuid_generate_random.3
+|           |               |       uuid_generate_time.3
+|           |               |       uuid_generate_time_safe.3
+|           |               |       uuid_is_null.3
+|           |               |       uuid_parse.3
+|           |               |       uuid_time.3
+|           |               |       uuid_unparse.3
+|           |               |       
+|           |               +---man5
+|           |               |       terminal-colors.d.5
+|           |               |       
+|           |               \---man8
+|           |                       addpart.8
+|           |                       blkdiscard.8
+|           |                       blkid.8
+|           |                       blockdev.8
+|           |                       chcpu.8
+|           |                       ctrlaltdel.8
+|           |                       delpart.8
+|           |                       fdformat.8
+|           |                       findfs.8
+|           |                       fsck.cramfs.8
+|           |                       fsck.minix.8
+|           |                       fsfreeze.8
+|           |                       hwclock.8
+|           |                       isosize.8
+|           |                       ldattach.8
+|           |                       linux32.8
+|           |                       linux64.8
+|           |                       losetup.8
+|           |                       lsns.8
+|           |                       mkfs.8
+|           |                       mkfs.bfs.8
+|           |                       mkfs.cramfs.8
+|           |                       mkfs.minix.8
+|           |                       mkswap.8
+|           |                       nologin.8
+|           |                       partx.8
+|           |                       pivot_root.8
+|           |                       raw.8
+|           |                       readprofile.8
+|           |                       resizepart.8
+|           |                       rtcwake.8
+|           |                       setarch.8
+|           |                       sulogin.8
+|           |                       swaplabel.8
+|           |                       switch_root.8
+|           |                       uname26.8
+|           |                       uuidd.8
+|           |                       wdctl.8
+|           |                       wipefs.8
+|           |                       zramctl.8
+|           |                       
+|           \---lib
+|               +---ebtables
+|               |       libebtable_broute.so
+|               |       libebtable_filter.so
+|               |       libebtable_nat.so
+|               |       libebt_802_3.so
+|               |       libebt_among.so
+|               |       libebt_arp.so
+|               |       libebt_arpreply.so
+|               |       libebt_ip.so
+|               |       libebt_ip6.so
+|               |       libebt_limit.so
+|               |       libebt_log.so
+|               |       libebt_mark.so
+|               |       libebt_mark_m.so
+|               |       libebt_nat.so
+|               |       libebt_nflog.so
+|               |       libebt_pkttype.so
+|               |       libebt_redirect.so
+|               |       libebt_standard.so
+|               |       libebt_stp.so
+|               |       libebt_string.so
+|               |       libebt_ulog.so
+|               |       libebt_vlan.so
+|               |       
+|               +---engines-1.1
+|               +---iptables
+|               |       libip6t_HL.so
+|               |       libip6t_NETMAP.so
+|               |       libipt_ECN.so
+|               |       libipt_NETMAP.so
+|               |       libipt_TTL.so
+|               |       libxt_bpf.so
+|               |       libxt_cgroup.so
+|               |       libxt_DSCP.so
+|               |       libxt_MARK2.so
+|               |       libxt_TOS.so
+|               |       
+|               \---MSTC
+|                   |   libcgic.so
+|                   |   libcups.so
+|                   |   libcups.so.2
+|                   |   libcupsimage.so
+|                   |   libcupsimage.so.2
+|                   |   libcupsmime.so
+|                   |   libcupsmime.so.1
+|                   |   libcupsppdc.so
+|                   |   libcupsppdc.so.1
+|                   |   libflate.so
+|                   |   libweblanguage.so
+|                   |   libwebutil.so
+|                   |   libzcfg_msg.so
+|                   |   
+|                   +---cups
+|                   |   +---backend
+|                   |   |       http
+|                   |   |       ipp
+|                   |   |       socket
+|                   |   |       usb
+|                   |   |       
+|                   |   +---daemon
+|                   |   |       cups-deviced
+|                   |   |       cups-driverd
+|                   |   |       cups-exec
+|                   |   |       
+|                   |   \---filter
+|                   |           commandtops
+|                   |           gziptoany
+|                   |           pstops
+|                   |           rastertodymo
+|                   |           rastertoepson
+|                   |           rastertohp
+|                   |           rastertolabel
+|                   |           rastertopwg
+|                   |           
+|                   +---firmware
+|                   |   |   2.6.20.19
+|                   |   |   
+|                   |   \---2.6.32.32
+|                   +---modules
+|                   |   |   2.6.20.19
+|                   |   |   
+|                   |   \---2.6.32.32
+|                   +---tc
+|                   |       m_ipt.so
+|                   |       m_xt.so
+|                   |       
+|                   \---wifi_module
+|                           libzywl_rtk.so
+|                           
++---flash
+|   |   physical-mtd-sha256.csv
+|   |   ubi-volumes-sha256.csv
+|   |   
+|   +---physical-mtd
+|   |       mtd0-uboot.bin
+|   |       mtd1-env.bin
+|   |       mtd10-reserved.bin
+|   |       mtd2-env2.bin
+|   |       mtd3-zboot.bin
+|   |       mtd4-devconf.bin
+|   |       mtd5-devconf_backup.bin
+|   |       mtd6-pon_info.bin
+|   |       mtd7-mrd.bin
+|   |       mtd8-ubi_device.bin
+|   |       mtd9-piubi.bin
+|   |       
+|   \---ubi-volumes
+|           apps.bin
+|           dtb-slot0.bin
+|           dtb-slot1.bin
+|           kernel-slot0.bin
+|           kernel-slot1.bin
+|           rootfs-slot0.bin
+|           rootfs-slot1.bin
+|           
++---hardware
+|       device-tree.dtb
+|       router-device-tree.dts
+|       
++---inventory
+|       flash-layout.txt
+|       system-inventory.txt
+|       utility-and-ubi-details.txt
+|       
++---logs
+\---private-volumes
+        private-volumes-sha256.csv
+        ubi_backup_tlv.bin
+        ubi_Config.bin
+        ubi_mrdcert1.bin
+        ubi_mrdcert2.bin
+        ubi_romd.bin
+        ubi_tlv.bin
+        

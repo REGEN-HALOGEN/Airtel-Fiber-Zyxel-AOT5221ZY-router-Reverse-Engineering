@@ -1,0 +1,97 @@
+=== Disassembly of beWanDoLayer3InterfaceAction_PPP (0x6c780, 384 bytes) in libbemodules.so ===
+0x0006c780:  mov      w1, #0                           
+0x0006c784:  mov      x0, x21                          
+0x0006c788:  bl       #0x1c180                         
+0x0006c78c:  cmp      w19, #1                          
+0x0006c790:  b.eq     #0x6c7c4                         
+0x0006c794:  cbz      w23, #0x6c920                    
+0x0006c798:  cbnz     w19, #0x6ce9c                    
+0x0006c79c:  ldr      x19, [sp, #0xc8]                 
+0x0006c7a0:  adrp     x1, #0xab000                     
+0x0006c7a4:  add      x1, x1, #0xf68                    ; "IP_Routed"
+0x0006c7a8:  add      x0, x19, #0x92                   
+0x0006c7ac:  bl       #0x1e4a0                         
+0x0006c7b0:  mov      w21, w0                          
+0x0006c7b4:  cbz      w0, #0x6c9c0                     
+0x0006c7b8:  mov      w21, #0                          
+0x0006c7bc:  ldr      x25, [sp, #0x40]                 
+0x0006c7c0:  b        #0x6c2ac                         
+0x0006c7c4:  ldr      x0, [sp, #0xc0]                  
+0x0006c7c8:  ldrb     w0, [x0, #0x42]                  
+0x0006c7cc:  cbnz     w0, #0x6c8b8                     
+0x0006c7d0:  cbz      w23, #0x6c920                    
+0x0006c7d4:  ldr      x19, [sp, #0xc0]                 
+0x0006c7d8:  ldr      w0, [sp, #0xd0]                  
+0x0006c7dc:  stur     w0, [x19, #0x37]                 
+0x0006c7e0:  ldrh     w0, [sp, #0xd4]                  
+0x0006c7e4:  sturh    w0, [x19, #0x3b]                 
+0x0006c7e8:  add      x20, sp, #0x250                  
+0x0006c7ec:  mov      x0, x20                          
+0x0006c7f0:  bl       #0x1f0d0                         
+0x0006c7f4:  mov      x3, #0x20                        
+0x0006c7f8:  mov      x2, x0                           
+0x0006c7fc:  mov      x1, x20                          
+0x0006c800:  mov      x0, x20                          
+0x0006c804:  bl       #0x1e560                         
+0x0006c808:  ldrb     w0, [x19, #0x324]                
+0x0006c80c:  cbnz     w0, #0x6c818                     
+0x0006c810:  ldrb     w0, [x19, #0x365]                
+0x0006c814:  cbz      w0, #0x6c838                     
+0x0006c818:  mov      x2, #0x14                        
+0x0006c81c:  adrp     x1, #0xb5000                     
+0x0006c820:  add      x1, x1, #0x600                    ; "Connecting"
+0x0006c824:  add      x0, x19, #0x81f                  
+0x0006c828:  bl       #0x1c7e0                         
+0x0006c82c:  add      x1, sp, #0x250                   
+0x0006c830:  add      x0, sp, #0x58                    
+0x0006c834:  bl       #0x1c070                         
+0x0006c838:  adrp     x0, #0xe6000                     
+0x0006c83c:  ldr      x0, [x0, #0xf00]                 
+0x0006c840:  ldr      w0, [x0]                         
+0x0006c844:  tbz      w0, #5, #0x6c8a0                 
+0x0006c848:  adrp     x0, #0xe6000                     
+0x0006c84c:  ldr      x0, [x0, #0xdf8]                 
+0x0006c850:  ldr      w0, [x0]                         
+0x0006c854:  cmp      w0, #5                           
+0x0006c858:  b.ls     #0x6c8a0                         
+0x0006c85c:  ldr      x0, [sp, #0xc0]                  
+0x0006c860:  ldrb     w1, [x0, #0x43]                  
+0x0006c864:  adrp     x0, #0xa8000                     
+0x0006c868:  add      x0, x0, #0x9a0                    ; "Disable"
+0x0006c86c:  adrp     x5, #0xa8000                     
+0x0006c870:  add      x5, x5, #0xc08                    ; "Enable"
+0x0006c874:  cmp      w1, #0                           
+0x0006c878:  csel     x5, x5, x0, ne                   
+0x0006c87c:  mov      w4, #0xa79                       
+0x0006c880:  adrp     x3, #0xbe000                     
+0x0006c884:  add      x3, x3, #0xc88                   
+0x0006c888:  add      x3, x3, #0x328                    ; "beWanDoLayer3InterfaceAction"
+0x0006c88c:  adrp     x2, #0xbe000                     
+0x0006c890:  add      x2, x2, #0x458                   
+0x0006c894:  mov      w1, #1                           
+0x0006c898:  mov      w0, #6                           
+0x0006c89c:  bl       #0x1cc50                         
+0x0006c8a0:  ldr      x0, [sp, #0xc0]                  
+0x0006c8a4:  ldrb     w1, [x0, #0x43]                  
+0x0006c8a8:  mov      w21, #0                          
+0x0006c8ac:  cbnz     w1, #0x6cc04                     
+0x0006c8b0:  ldr      x25, [sp, #0x40]                 
+0x0006c8b4:  b        #0x6c2ac                         
+0x0006c8b8:  add      x21, sp, #0x110                  
+0x0006c8bc:  movi     v0.4s, #0                        
+0x0006c8c0:  stp      q0, q0, [x21]                    
+0x0006c8c4:  stp      q0, q0, [x21, #0x20]             
+0x0006c8c8:  stp      q0, q0, [x21, #0x40]             
+0x0006c8cc:  stp      q0, q0, [x21, #0x60]             
+0x0006c8d0:  stp      q0, q0, [x21, #0x80]             
+0x0006c8d4:  stp      q0, q0, [x21, #0xa0]             
+0x0006c8d8:  stp      q0, q0, [x21, #0xc0]             
+0x0006c8dc:  stp      q0, q0, [x21, #0xe0]             
+0x0006c8e0:  add      x5, sp, #0x250                   
+0x0006c8e4:  adrp     x4, #0xbe000                     
+0x0006c8e8:  add      x4, x4, #0x3e0                    ; "echo 0 > /proc/sys/net/ipv6/conf/%s/router_solicitations"
+0x0006c8ec:  mov      x3, #0x100                       
+0x0006c8f0:  mov      w2, #1                           
+0x0006c8f4:  mov      x1, x3                           
+0x0006c8f8:  mov      x0, x21                          
+0x0006c8fc:  bl       #0x1f1b0                         

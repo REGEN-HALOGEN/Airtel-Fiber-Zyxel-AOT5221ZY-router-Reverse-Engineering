@@ -1,0 +1,13 @@
+#!/bin/sh /etc/rc.common
+RELEASEVERSION=`/bin/sys atsh | /bin/grep "External Version" | /bin/grep "dbg"`
+DEBUGFLAG=`/bin/sys atsh | /bin/grep "Debug" | /usr/bin/awk '{print $6}'`
+
+START=10
+boot() {
+if [ ${#RELEASEVERSION} = 0 ]; then
+if [ $DEBUGFLAG = 0 ]; then
+        echo lock_console > /dev/console
+	echo 133 > /sys/class/gpio/export
+fi
+fi
+}

@@ -1,0 +1,31 @@
+#!/bin/sh
+
+CUPSD="/usr/sbin/cupsd"
+CONFIG="/etc/cups/cupsd.conf"
+PID=`ps | awk '{if (match($5, ".*/cupsd$") || $5 == "cupsd") print $1}'`
+
+# start/stop/restart/reload processes required for cups server
+case "$1" in
+
+	'start' | 'restart' | 'reload')
+		echo -n "${1}ing cups... "
+		if test "$PID" != ""; then
+			kill -HUP $PID
+		else
+			$CUPSD -c $CONFIG
+		fi
+			echo "done"
+		;;
+	'stop')
+		echo -n "stopping cups... "
+		if test "$PID" != ""; then
+			kill $PID
+		fi
+		echo "done"
+		;;
+	*)
+	   echo "Usage: $0 [ start | stop | restart | reload ]"
+	   ;;
+esac
+
+exit 0

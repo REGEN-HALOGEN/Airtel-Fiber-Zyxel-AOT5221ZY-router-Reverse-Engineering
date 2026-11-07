@@ -1,0 +1,558 @@
+=== Disassembly of libcccBeWan_processPPPoEPassThrough (0x373b8, 2228 bytes) in libcccbe.so ===
+0x000373b8:  sub      sp, sp, #0xf0                    
+0x000373bc:  stp      x29, x30, [sp, #0x30]            
+0x000373c0:  add      x29, sp, #0x30                   
+0x000373c4:  stp      xzr, xzr, [sp, #0x70]            
+0x000373c8:  add      x0, sp, #0x80                    
+0x000373cc:  movi     v0.4s, #0                        
+0x000373d0:  stp      q0, q0, [x0]                     
+0x000373d4:  stp      q0, q0, [x0, #0x20]              
+0x000373d8:  stp      q0, q0, [x0, #0x40]              
+0x000373dc:  str      q0, [x0, #0x60]                  
+0x000373e0:  cbz      x3, #0x37434                     
+0x000373e4:  stp      x19, x20, [sp, #0x40]            
+0x000373e8:  stp      x21, x22, [sp, #0x50]            
+0x000373ec:  mov      x20, x1                          
+0x000373f0:  mov      x21, x2                          
+0x000373f4:  mov      x22, x3                          
+0x000373f8:  cmp      x1, #0                           
+0x000373fc:  cset     w1, eq                           
+0x00037400:  orr      x0, x20, x2                      
+0x00037404:  cbz      x0, #0x3742c                     
+0x00037408:  cmp      x2, #0                           
+0x0003740c:  ccmp     w1, #0, #4, ne                   
+0x00037410:  b.eq     #0x37718                         
+0x00037414:  ldrb     w0, [x2, #0x3e]                  
+0x00037418:  cbnz     w0, #0x3748c                     
+0x0003741c:  mov      w0, #0                           
+0x00037420:  ldp      x19, x20, [sp, #0x40]            
+0x00037424:  ldp      x21, x22, [sp, #0x50]            
+0x00037428:  b        #0x37730                         
+0x0003742c:  ldp      x19, x20, [sp, #0x40]            
+0x00037430:  ldp      x21, x22, [sp, #0x50]            
+0x00037434:  adrp     x0, #0x6a000                     
+0x00037438:  ldr      x0, [x0, #0xfb8]                 
+0x0003743c:  ldr      w1, [x0]                         
+0x00037440:  mov      w0, #-1                          
+0x00037444:  tbz      w1, #5, #0x37730                 
+0x00037448:  adrp     x0, #0x6a000                     
+0x0003744c:  ldr      x0, [x0, #0xfe0]                 
+0x00037450:  ldr      w1, [x0]                         
+0x00037454:  mov      w0, #-1                          
+0x00037458:  cmp      w1, #2                           
+0x0003745c:  b.ls     #0x37730                         
+0x00037460:  mov      w4, #0xade                       
+0x00037464:  adrp     x3, #0x4c000                     
+0x00037468:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x0003746c:  add      x3, x3, #0x210                    ; "libcccBeWan_processPPPoEPassThrough"
+0x00037470:  adrp     x2, #0x4b000                     
+0x00037474:  add      x2, x2, #0xa08                   
+0x00037478:  mov      w1, #1                           
+0x0003747c:  mov      w0, #3                           
+0x00037480:  bl       #0x1a110                         
+0x00037484:  mov      w0, #-1                          
+0x00037488:  b        #0x37730                         
+0x0003748c:  add      x19, sp, #0x70                   
+0x00037490:  adrp     x0, #0x4b000                     
+0x00037494:  add      x0, x0, #0xa20                    ; "ebtables -t nat -D POSTROUTING -j br_pppoe"
+0x00037498:  ldp      q0, q1, [x0]                     
+0x0003749c:  stp      q0, q1, [x19]                    
+0x000374a0:  ldur     q0, [x0, #0x1b]                  
+0x000374a4:  stur     q0, [x19, #0x1b]                 
+0x000374a8:  adrp     x20, #0x4c000                    
+0x000374ac:  add      x20, x20, #0x448                  ; "libcccBeWan_getL2IntfName_wrapper"
+0x000374b0:  add      x20, x20, #0x210                  ; "libcccBeWan_processPPPoEPassThrough"
+0x000374b4:  mov      w3, #0xae5                       
+0x000374b8:  mov      x2, x20                          
+0x000374bc:  mov      w1, #0                           
+0x000374c0:  mov      x0, x19                          
+0x000374c4:  bl       #0x197d0                         
+0x000374c8:  adrp     x0, #0x4b000                     
+0x000374cc:  add      x0, x0, #0xa50                    ; "ebtables -t nat -F br_pppoe"
+0x000374d0:  ldr      q0, [x0]                         
+0x000374d4:  str      q0, [sp, #0x70]                  
+0x000374d8:  ldur     q0, [x0, #0xc]                   
+0x000374dc:  stur     q0, [x19, #0xc]                  
+0x000374e0:  mov      w3, #0xae7                       
+0x000374e4:  mov      x2, x20                          
+0x000374e8:  mov      w1, #0                           
+0x000374ec:  mov      x0, x19                          
+0x000374f0:  bl       #0x197d0                         
+0x000374f4:  adrp     x0, #0x4b000                     
+0x000374f8:  add      x0, x0, #0xa70                    ; "ebtables -t nat -X br_pppoe"
+0x000374fc:  ldr      q0, [x0]                         
+0x00037500:  str      q0, [sp, #0x70]                  
+0x00037504:  ldur     q0, [x0, #0xc]                   
+0x00037508:  stur     q0, [x19, #0xc]                  
+0x0003750c:  mov      w3, #0xae9                       
+0x00037510:  mov      x2, x20                          
+0x00037514:  mov      w1, #0                           
+0x00037518:  mov      x0, x19                          
+0x0003751c:  bl       #0x197d0                         
+0x00037520:  adrp     x0, #0x4b000                     
+0x00037524:  add      x0, x0, #0xa90                    ; "ebtables -t nat -F br_pppoe_acl"
+0x00037528:  ldp      q0, q1, [x0]                     
+0x0003752c:  stp      q0, q1, [x19]                    
+0x00037530:  mov      w3, #0xaeb                       
+0x00037534:  mov      x2, x20                          
+0x00037538:  mov      w1, #0                           
+0x0003753c:  mov      x0, x19                          
+0x00037540:  bl       #0x197d0                         
+0x00037544:  adrp     x0, #0x4b000                     
+0x00037548:  add      x0, x0, #0xab0                    ; "ebtables -t nat -X br_pppoe_acl"
+0x0003754c:  ldp      q0, q1, [x0]                     
+0x00037550:  stp      q0, q1, [x19]                    
+0x00037554:  mov      w3, #0xaed                       
+0x00037558:  mov      x2, x20                          
+0x0003755c:  mov      w1, #0                           
+0x00037560:  mov      x0, x19                          
+0x00037564:  bl       #0x197d0                         
+0x00037568:  adrp     x0, #0x4b000                     
+0x0003756c:  add      x0, x0, #0xad0                    ; "ebtables -t filter -D FORWARD -j br_pppoe"
+0x00037570:  ldp      q0, q1, [x0]                     
+0x00037574:  stp      q0, q1, [x19]                    
+0x00037578:  ldur     q0, [x0, #0x1a]                  
+0x0003757c:  stur     q0, [x19, #0x1a]                 
+0x00037580:  mov      w3, #0xaef                       
+0x00037584:  mov      x2, x20                          
+0x00037588:  mov      w1, #0                           
+0x0003758c:  mov      x0, x19                          
+0x00037590:  bl       #0x197d0                         
+0x00037594:  adrp     x0, #0x4b000                     
+0x00037598:  add      x0, x0, #0xb00                    ; "ebtables -t filter -F br_pppoe"
+0x0003759c:  ldr      q0, [x0]                         
+0x000375a0:  str      q0, [sp, #0x70]                  
+0x000375a4:  ldur     q0, [x0, #0xf]                   
+0x000375a8:  stur     q0, [x19, #0xf]                  
+0x000375ac:  mov      w3, #0xaf1                       
+0x000375b0:  mov      x2, x20                          
+0x000375b4:  mov      w1, #0                           
+0x000375b8:  mov      x0, x19                          
+0x000375bc:  bl       #0x197d0                         
+0x000375c0:  adrp     x0, #0x4b000                     
+0x000375c4:  add      x0, x0, #0xb20                    ; "ebtables -t filter -X br_pppoe"
+0x000375c8:  ldr      q0, [x0]                         
+0x000375cc:  str      q0, [sp, #0x70]                  
+0x000375d0:  ldur     q0, [x0, #0xf]                   
+0x000375d4:  stur     q0, [x19, #0xf]                  
+0x000375d8:  mov      w3, #0xaf3                       
+0x000375dc:  mov      x2, x20                          
+0x000375e0:  mov      w1, #0                           
+0x000375e4:  mov      x0, x19                          
+0x000375e8:  bl       #0x197d0                         
+0x000375ec:  adrp     x0, #0x4b000                     
+0x000375f0:  add      x0, x0, #0xb40                    ; "ebtables -t filter -F br_pppoe_acl"
+0x000375f4:  ldp      q0, q1, [x0]                     
+0x000375f8:  stp      q0, q1, [x19]                    
+0x000375fc:  ldur     w0, [x0, #0x1f]                  
+0x00037600:  stur     w0, [x19, #0x1f]                 
+0x00037604:  mov      w3, #0xaf5                       
+0x00037608:  mov      x2, x20                          
+0x0003760c:  mov      w1, #0                           
+0x00037610:  mov      x0, x19                          
+0x00037614:  bl       #0x197d0                         
+0x00037618:  adrp     x0, #0x4b000                     
+0x0003761c:  add      x0, x0, #0xb68                    ; "ebtables -t filter -X br_pppoe_acl"
+0x00037620:  ldp      q0, q1, [x0]                     
+0x00037624:  stp      q0, q1, [x19]                    
+0x00037628:  ldur     w0, [x0, #0x1f]                  
+0x0003762c:  stur     w0, [x19, #0x1f]                 
+0x00037630:  mov      w3, #0xaf7                       
+0x00037634:  mov      x2, x20                          
+0x00037638:  mov      w1, #0                           
+0x0003763c:  mov      x0, x19                          
+0x00037640:  bl       #0x197d0                         
+0x00037644:  ldrh     w5, [x21, #0x1e]                 
+0x00037648:  adrp     x4, #0x4b000                     
+0x0003764c:  add      x4, x4, #0xb90                    ; "ebtables -t broute -D BROUTING -j PASSTHROUGH_WAN_%d"
+0x00037650:  mov      x3, #0x80                        
+0x00037654:  mov      w2, #1                           
+0x00037658:  mov      x1, #0x7f                        
+0x0003765c:  mov      x0, x19                          
+0x00037660:  bl       #0x198a0                         
+0x00037664:  mov      w3, #0xaf9                       
+0x00037668:  mov      x2, x20                          
+0x0003766c:  mov      w1, #0                           
+0x00037670:  mov      x0, x19                          
+0x00037674:  bl       #0x197d0                         
+0x00037678:  ldrh     w5, [x21, #0x1e]                 
+0x0003767c:  adrp     x4, #0x4b000                     
+0x00037680:  add      x4, x4, #0xbc8                    ; "ebtables -t broute -F PASSTHROUGH_WAN_%d"
+0x00037684:  mov      x3, #0x80                        
+0x00037688:  mov      w2, #1                           
+0x0003768c:  mov      x1, #0x7f                        
+0x00037690:  mov      x0, x19                          
+0x00037694:  bl       #0x198a0                         
+0x00037698:  mov      w3, #0xafb                       
+0x0003769c:  mov      x2, x20                          
+0x000376a0:  mov      w1, #0                           
+0x000376a4:  mov      x0, x19                          
+0x000376a8:  bl       #0x197d0                         
+0x000376ac:  ldrh     w5, [x21, #0x1e]                 
+0x000376b0:  adrp     x4, #0x4b000                     
+0x000376b4:  add      x4, x4, #0xbf8                    ; "ebtables -t broute -X PASSTHROUGH_WAN_%d"
+0x000376b8:  mov      x3, #0x80                        
+0x000376bc:  mov      w2, #1                           
+0x000376c0:  mov      x1, #0x7f                        
+0x000376c4:  mov      x0, x19                          
+0x000376c8:  bl       #0x198a0                         
+0x000376cc:  mov      w3, #0xafd                       
+0x000376d0:  mov      x2, x20                          
+0x000376d4:  mov      w1, #0                           
+0x000376d8:  mov      x0, x19                          
+0x000376dc:  bl       #0x197d0                         
+0x000376e0:  mov      x5, x22                          
+0x000376e4:  adrp     x4, #0x4b000                     
+0x000376e8:  add      x4, x4, #0xc28                    ; "brctl delif br0 %s"
+0x000376ec:  mov      x3, #0x80                        
+0x000376f0:  mov      w2, #1                           
+0x000376f4:  mov      x1, #0x7f                        
+0x000376f8:  mov      x0, x19                          
+0x000376fc:  bl       #0x198a0                         
+0x00037700:  mov      w3, #0xaff                       
+0x00037704:  mov      x2, x20                          
+0x00037708:  mov      w1, #0                           
+0x0003770c:  mov      x0, x19                          
+0x00037710:  bl       #0x197d0                         
+0x00037714:  b        #0x3741c                         
+0x00037718:  cbz      x20, #0x37c5c                    
+0x0003771c:  ldrb     w1, [x20, #0x3e]                 
+0x00037720:  mov      w0, #0                           
+0x00037724:  cbnz     w1, #0x3773c                     
+0x00037728:  ldp      x19, x20, [sp, #0x40]            
+0x0003772c:  ldp      x21, x22, [sp, #0x50]            
+0x00037730:  ldp      x29, x30, [sp, #0x30]            
+0x00037734:  add      sp, sp, #0xf0                    
+0x00037738:  ret                                       
+0x0003773c:  str      x23, [sp, #0x60]                 
+0x00037740:  add      x19, sp, #0x70                   
+0x00037744:  adrp     x0, #0x4b000                     
+0x00037748:  add      x0, x0, #0xc40                    ; "ebtables -t nat -N br_pppoe"
+0x0003774c:  ldr      q0, [x0]                         
+0x00037750:  str      q0, [sp, #0x70]                  
+0x00037754:  ldur     q0, [x0, #0xc]                   
+0x00037758:  stur     q0, [x19, #0xc]                  
+0x0003775c:  adrp     x21, #0x4c000                    
+0x00037760:  add      x21, x21, #0x448                  ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037764:  add      x21, x21, #0x210                  ; "libcccBeWan_processPPPoEPassThrough"
+0x00037768:  mov      w3, #0xb05                       
+0x0003776c:  mov      x2, x21                          
+0x00037770:  mov      w1, #0                           
+0x00037774:  mov      x0, x19                          
+0x00037778:  bl       #0x197d0                         
+0x0003777c:  adrp     x0, #0x4b000                     
+0x00037780:  add      x0, x0, #0xc60                    ; "ebtables -t nat -P br_pppoe RETURN"
+0x00037784:  ldp      q0, q1, [x0]                     
+0x00037788:  stp      q0, q1, [x19]                    
+0x0003778c:  ldur     w0, [x0, #0x1f]                  
+0x00037790:  stur     w0, [x19, #0x1f]                 
+0x00037794:  mov      w3, #0xb07                       
+0x00037798:  mov      x2, x21                          
+0x0003779c:  mov      w1, #0                           
+0x000377a0:  mov      x0, x19                          
+0x000377a4:  bl       #0x197d0                         
+0x000377a8:  ldrh     w3, [x20, #0x1e]                 
+0x000377ac:  adrp     x2, #0x4b000                     
+0x000377b0:  add      x2, x2, #0xc88                    ; "ebtables -t nat -N br_pppoe_acl"
+0x000377b4:  mov      x1, #0x7f                        
+0x000377b8:  mov      x0, x19                          
+0x000377bc:  bl       #0x19820                         
+0x000377c0:  mov      w3, #0xb09                       
+0x000377c4:  mov      x2, x21                          
+0x000377c8:  mov      w1, #0                           
+0x000377cc:  mov      x0, x19                          
+0x000377d0:  bl       #0x197d0                         
+0x000377d4:  ldrh     w3, [x20, #0x1e]                 
+0x000377d8:  adrp     x2, #0x4b000                     
+0x000377dc:  add      x2, x2, #0xca8                    ; "ebtables -t nat -P br_pppoe_acl DROP"
+0x000377e0:  mov      x1, #0x7f                        
+0x000377e4:  mov      x0, x19                          
+0x000377e8:  bl       #0x19820                         
+0x000377ec:  mov      w3, #0xb0b                       
+0x000377f0:  mov      x2, x21                          
+0x000377f4:  mov      w1, #0                           
+0x000377f8:  mov      x0, x19                          
+0x000377fc:  bl       #0x197d0                         
+0x00037800:  adrp     x0, #0x4b000                     
+0x00037804:  add      x0, x0, #0xcd0                    ; "ebtables -t nat -A br_pppoe_acl -p 802_1Q --vlan-encap PPP_DISC -j RETURN"
+0x00037808:  ldp      q0, q1, [x0]                     
+0x0003780c:  stp      q0, q1, [x19]                    
+0x00037810:  ldp      q0, q1, [x0, #0x20]              
+0x00037814:  stp      q0, q1, [x19, #0x20]             
+0x00037818:  ldur     q0, [x0, #0x3a]                  
+0x0003781c:  stur     q0, [x19, #0x3a]                 
+0x00037820:  mov      w3, #0xb0d                       
+0x00037824:  mov      x2, x21                          
+0x00037828:  mov      w1, #0                           
+0x0003782c:  mov      x0, x19                          
+0x00037830:  bl       #0x197d0                         
+0x00037834:  adrp     x0, #0x4b000                     
+0x00037838:  add      x0, x0, #0xd20                    ; "ebtables -t nat -A br_pppoe_acl -p 802_1Q --vlan-encap PPP_SES -j RETURN"
+0x0003783c:  ldp      q0, q1, [x0]                     
+0x00037840:  stp      q0, q1, [x19]                    
+0x00037844:  ldp      q0, q1, [x0, #0x20]              
+0x00037848:  stp      q0, q1, [x19, #0x20]             
+0x0003784c:  ldur     q0, [x0, #0x39]                  
+0x00037850:  stur     q0, [x19, #0x39]                 
+0x00037854:  mov      w3, #0xb0f                       
+0x00037858:  mov      x2, x21                          
+0x0003785c:  mov      w1, #0                           
+0x00037860:  mov      x0, x19                          
+0x00037864:  bl       #0x197d0                         
+0x00037868:  adrp     x0, #0x4b000                     
+0x0003786c:  add      x0, x0, #0xd70                    ; "ebtables -t nat -A br_pppoe_acl -p PPP_DISC -j RETURN"
+0x00037870:  ldp      q0, q1, [x0]                     
+0x00037874:  stp      q0, q1, [x19]                    
+0x00037878:  ldr      q0, [x0, #0x20]                  
+0x0003787c:  str      q0, [x19, #0x20]                 
+0x00037880:  ldur     x0, [x0, #0x2e]                  
+0x00037884:  stur     x0, [x19, #0x2e]                 
+0x00037888:  mov      w3, #0xb11                       
+0x0003788c:  mov      x2, x21                          
+0x00037890:  mov      w1, #0                           
+0x00037894:  mov      x0, x19                          
+0x00037898:  bl       #0x197d0                         
+0x0003789c:  adrp     x0, #0x4b000                     
+0x000378a0:  add      x0, x0, #0xda8                    ; "ebtables -t nat -A br_pppoe_acl -p PPP_SES -j RETURN"
+0x000378a4:  ldp      q0, q1, [x0]                     
+0x000378a8:  stp      q0, q1, [x19]                    
+0x000378ac:  ldr      q0, [x0, #0x20]                  
+0x000378b0:  str      q0, [x19, #0x20]                 
+0x000378b4:  ldur     x0, [x0, #0x2d]                  
+0x000378b8:  stur     x0, [x19, #0x2d]                 
+0x000378bc:  mov      w3, #0xb13                       
+0x000378c0:  mov      x2, x21                          
+0x000378c4:  mov      w1, #0                           
+0x000378c8:  mov      x0, x19                          
+0x000378cc:  bl       #0x197d0                         
+0x000378d0:  adrp     x0, #0x4b000                     
+0x000378d4:  add      x0, x0, #0xde0                    ; "ebtables -t nat -A POSTROUTING -j br_pppoe"
+0x000378d8:  ldp      q0, q1, [x0]                     
+0x000378dc:  stp      q0, q1, [x19]                    
+0x000378e0:  ldur     q0, [x0, #0x1b]                  
+0x000378e4:  stur     q0, [x19, #0x1b]                 
+0x000378e8:  mov      w3, #0xb15                       
+0x000378ec:  mov      x2, x21                          
+0x000378f0:  mov      w1, #0                           
+0x000378f4:  mov      x0, x19                          
+0x000378f8:  bl       #0x197d0                         
+0x000378fc:  add      x23, x20, #0x898                 
+0x00037900:  mov      x5, x23                          
+0x00037904:  adrp     x4, #0x4b000                     
+0x00037908:  add      x4, x4, #0xe10                    ; "ebtables -t nat -A br_pppoe -o %s -j br_pppoe_acl"
+0x0003790c:  mov      x3, #0x80                        
+0x00037910:  mov      w2, #1                           
+0x00037914:  mov      x1, #0x7f                        
+0x00037918:  mov      x0, x19                          
+0x0003791c:  bl       #0x198a0                         
+0x00037920:  mov      w3, #0xb17                       
+0x00037924:  mov      x2, x21                          
+0x00037928:  mov      w1, #0                           
+0x0003792c:  mov      x0, x19                          
+0x00037930:  bl       #0x197d0                         
+0x00037934:  adrp     x0, #0x4b000                     
+0x00037938:  add      x0, x0, #0xe48                    ; "ebtables -t filter -N br_pppoe"
+0x0003793c:  ldr      q0, [x0]                         
+0x00037940:  str      q0, [sp, #0x70]                  
+0x00037944:  ldur     q0, [x0, #0xf]                   
+0x00037948:  stur     q0, [x19, #0xf]                  
+0x0003794c:  mov      w3, #0xb19                       
+0x00037950:  mov      x2, x21                          
+0x00037954:  mov      w1, #0                           
+0x00037958:  mov      x0, x19                          
+0x0003795c:  bl       #0x197d0                         
+0x00037960:  adrp     x0, #0x4b000                     
+0x00037964:  add      x0, x0, #0xe68                    ; "ebtables -t filter -P br_pppoe RETURN"
+0x00037968:  ldp      q0, q1, [x0]                     
+0x0003796c:  stp      q0, q1, [x19]                    
+0x00037970:  ldur     x0, [x0, #0x1e]                  
+0x00037974:  stur     x0, [x19, #0x1e]                 
+0x00037978:  mov      w3, #0xb1b                       
+0x0003797c:  mov      x2, x21                          
+0x00037980:  mov      w1, #0                           
+0x00037984:  mov      x0, x19                          
+0x00037988:  bl       #0x197d0                         
+0x0003798c:  ldrh     w3, [x20, #0x1e]                 
+0x00037990:  adrp     x2, #0x4b000                     
+0x00037994:  add      x2, x2, #0xe90                    ; "ebtables -t filter -N br_pppoe_acl"
+0x00037998:  mov      x1, #0x7f                        
+0x0003799c:  mov      x0, x19                          
+0x000379a0:  bl       #0x19820                         
+0x000379a4:  mov      w3, #0xb1d                       
+0x000379a8:  mov      x2, x21                          
+0x000379ac:  mov      w1, #0                           
+0x000379b0:  mov      x0, x19                          
+0x000379b4:  bl       #0x197d0                         
+0x000379b8:  ldrh     w3, [x20, #0x1e]                 
+0x000379bc:  adrp     x2, #0x4b000                     
+0x000379c0:  add      x2, x2, #0xeb8                    ; "ebtables -t filter -P br_pppoe_acl DROP"
+0x000379c4:  mov      x1, #0x7f                        
+0x000379c8:  mov      x0, x19                          
+0x000379cc:  bl       #0x19820                         
+0x000379d0:  mov      w3, #0xb1f                       
+0x000379d4:  mov      x2, x21                          
+0x000379d8:  mov      w1, #0                           
+0x000379dc:  mov      x0, x19                          
+0x000379e0:  bl       #0x197d0                         
+0x000379e4:  adrp     x0, #0x4b000                     
+0x000379e8:  add      x0, x0, #0xee0                    ; "ebtables -t filter -A br_pppoe_acl -p 802_1Q --vlan-encap PPP_DISC -j RETURN"
+0x000379ec:  ldp      q0, q1, [x0]                     
+0x000379f0:  stp      q0, q1, [x19]                    
+0x000379f4:  ldp      q0, q1, [x0, #0x20]              
+0x000379f8:  stp      q0, q1, [x19, #0x20]             
+0x000379fc:  ldur     q0, [x0, #0x3d]                  
+0x00037a00:  stur     q0, [x19, #0x3d]                 
+0x00037a04:  mov      w3, #0xb21                       
+0x00037a08:  mov      x2, x21                          
+0x00037a0c:  mov      w1, #0                           
+0x00037a10:  mov      x0, x19                          
+0x00037a14:  bl       #0x197d0                         
+0x00037a18:  adrp     x0, #0x4b000                     
+0x00037a1c:  add      x0, x0, #0xf30                    ; "ebtables -t filter -A br_pppoe_acl -p 802_1Q --vlan-encap PPP_SES -j RETURN"
+0x00037a20:  ldp      q0, q1, [x0]                     
+0x00037a24:  stp      q0, q1, [x19]                    
+0x00037a28:  ldp      q0, q1, [x0, #0x20]              
+0x00037a2c:  stp      q0, q1, [x19, #0x20]             
+0x00037a30:  ldur     q0, [x0, #0x3c]                  
+0x00037a34:  stur     q0, [x19, #0x3c]                 
+0x00037a38:  mov      w3, #0xb23                       
+0x00037a3c:  mov      x2, x21                          
+0x00037a40:  mov      w1, #0                           
+0x00037a44:  mov      x0, x19                          
+0x00037a48:  bl       #0x197d0                         
+0x00037a4c:  adrp     x0, #0x4b000                     
+0x00037a50:  add      x0, x0, #0xf80                    ; "ebtables -t filter -A br_pppoe_acl -p PPP_DISC -j RETURN"
+0x00037a54:  ldp      q0, q1, [x0]                     
+0x00037a58:  stp      q0, q1, [x19]                    
+0x00037a5c:  ldr      q0, [x0, #0x20]                  
+0x00037a60:  str      q0, [x19, #0x20]                 
+0x00037a64:  ldur     q0, [x0, #0x29]                  
+0x00037a68:  stur     q0, [x19, #0x29]                 
+0x00037a6c:  mov      w3, #0xb25                       
+0x00037a70:  mov      x2, x21                          
+0x00037a74:  mov      w1, #0                           
+0x00037a78:  mov      x0, x19                          
+0x00037a7c:  bl       #0x197d0                         
+0x00037a80:  adrp     x0, #0x4b000                     
+0x00037a84:  add      x0, x0, #0xfc0                    ; "ebtables -t filter -A br_pppoe_acl -p PPP_SES -j RETURN"
+0x00037a88:  ldp      q0, q1, [x0]                     
+0x00037a8c:  stp      q0, q1, [x19]                    
+0x00037a90:  ldr      q0, [x0, #0x20]                  
+0x00037a94:  str      q0, [x19, #0x20]                 
+0x00037a98:  ldr      x0, [x0, #0x30]                  
+0x00037a9c:  str      x0, [x19, #0x30]                 
+0x00037aa0:  mov      w3, #0xb27                       
+0x00037aa4:  mov      x2, x21                          
+0x00037aa8:  mov      w1, #0                           
+0x00037aac:  mov      x0, x19                          
+0x00037ab0:  bl       #0x197d0                         
+0x00037ab4:  adrp     x0, #0x4b000                     
+0x00037ab8:  add      x0, x0, #0xff8                    ; "ebtables -t filter -I FORWARD 1 -j br_pppoe"
+0x00037abc:  ldp      q0, q1, [x0]                     
+0x00037ac0:  stp      q0, q1, [x19]                    
+0x00037ac4:  ldur     q0, [x0, #0x1c]                  
+0x00037ac8:  stur     q0, [x19, #0x1c]                 
+0x00037acc:  mov      w3, #0xb29                       
+0x00037ad0:  mov      x2, x21                          
+0x00037ad4:  mov      w1, #0                           
+0x00037ad8:  mov      x0, x19                          
+0x00037adc:  bl       #0x197d0                         
+0x00037ae0:  mov      x5, x23                          
+0x00037ae4:  adrp     x4, #0x4c000                     
+0x00037ae8:  add      x4, x4, #0x28                     ; "ebtables -t filter -A br_pppoe -i %s -j br_pppoe_acl"
+0x00037aec:  mov      x3, #0x80                        
+0x00037af0:  mov      w2, #1                           
+0x00037af4:  mov      x1, #0x7f                        
+0x00037af8:  mov      x0, x19                          
+0x00037afc:  bl       #0x198a0                         
+0x00037b00:  mov      w3, #0xb2b                       
+0x00037b04:  mov      x2, x21                          
+0x00037b08:  mov      w1, #0                           
+0x00037b0c:  mov      x0, x19                          
+0x00037b10:  bl       #0x197d0                         
+0x00037b14:  ldrh     w5, [x20, #0x1e]                 
+0x00037b18:  adrp     x4, #0x4c000                     
+0x00037b1c:  add      x4, x4, #0x60                     ; "ebtables -t broute -N PASSTHROUGH_WAN_%d"
+0x00037b20:  mov      x3, #0x80                        
+0x00037b24:  mov      w2, #1                           
+0x00037b28:  mov      x1, #0x7f                        
+0x00037b2c:  mov      x0, x19                          
+0x00037b30:  bl       #0x198a0                         
+0x00037b34:  mov      w3, #0xb2e                       
+0x00037b38:  mov      x2, x21                          
+0x00037b3c:  mov      w1, #0                           
+0x00037b40:  mov      x0, x19                          
+0x00037b44:  bl       #0x197d0                         
+0x00037b48:  ldrh     w5, [x20, #0x1e]                 
+0x00037b4c:  adrp     x4, #0x4c000                     
+0x00037b50:  add      x4, x4, #0x90                     ; "ebtables -t broute -P PASSTHROUGH_WAN_%d RETURN"
+0x00037b54:  mov      x3, #0x80                        
+0x00037b58:  mov      w2, #1                           
+0x00037b5c:  mov      x1, #0x7f                        
+0x00037b60:  mov      x0, x19                          
+0x00037b64:  bl       #0x198a0                         
+0x00037b68:  mov      w3, #0xb30                       
+0x00037b6c:  mov      x2, x21                          
+0x00037b70:  mov      w1, #0                           
+0x00037b74:  mov      x0, x19                          
+0x00037b78:  bl       #0x197d0                         
+0x00037b7c:  ldrh     w5, [x20, #0x1e]                 
+0x00037b80:  adrp     x4, #0x4c000                     
+0x00037b84:  add      x4, x4, #0xc0                     ; "ebtables -t broute -A BROUTING -j PASSTHROUGH_WAN_%d"
+0x00037b88:  mov      x3, #0x80                        
+0x00037b8c:  mov      w2, #1                           
+0x00037b90:  mov      x1, #0x7f                        
+0x00037b94:  mov      x0, x19                          
+0x00037b98:  bl       #0x198a0                         
+0x00037b9c:  mov      w3, #0xb32                       
+0x00037ba0:  mov      x2, x21                          
+0x00037ba4:  mov      w1, #0                           
+0x00037ba8:  mov      x0, x19                          
+0x00037bac:  bl       #0x197d0                         
+0x00037bb0:  ldrb     w0, [x20, #0x3c]                 
+0x00037bb4:  str      w0, [sp, #0x20]                  
+0x00037bb8:  ldrb     w0, [x20, #0x3b]                 
+0x00037bbc:  str      w0, [sp, #0x18]                  
+0x00037bc0:  ldrb     w0, [x20, #0x3a]                 
+0x00037bc4:  str      w0, [sp, #0x10]                  
+0x00037bc8:  ldrb     w0, [x20, #0x39]                 
+0x00037bcc:  str      w0, [sp, #8]                     
+0x00037bd0:  ldrb     w0, [x20, #0x38]                 
+0x00037bd4:  str      w0, [sp]                         
+0x00037bd8:  ldrb     w7, [x20, #0x37]                 
+0x00037bdc:  mov      x6, x23                          
+0x00037be0:  ldrh     w5, [x20, #0x1e]                 
+0x00037be4:  adrp     x4, #0x4c000                     
+0x00037be8:  add      x4, x4, #0xf8                     ; "ebtables -t broute -A PASSTHROUGH_WAN_%d -i %s -d %02x:%02x:%02x:%02x:%02x:%02x -j DROP"
+0x00037bec:  mov      x3, #0x80                        
+0x00037bf0:  mov      w2, #1                           
+0x00037bf4:  mov      x1, #0x7f                        
+0x00037bf8:  mov      x0, x19                          
+0x00037bfc:  bl       #0x198a0                         
+0x00037c00:  mov      w3, #0xb38                       
+0x00037c04:  mov      x2, x21                          
+0x00037c08:  mov      w1, #0                           
+0x00037c0c:  mov      x0, x19                          
+0x00037c10:  bl       #0x197d0                         
+0x00037c14:  mov      x5, x22                          
+0x00037c18:  adrp     x4, #0x4c000                     
+0x00037c1c:  add      x4, x4, #0x150                    ; "brctl addif br0 %s"
+0x00037c20:  mov      x3, #0x80                        
+0x00037c24:  mov      w2, #1                           
+0x00037c28:  mov      x1, #0x7f                        
+0x00037c2c:  mov      x0, x19                          
+0x00037c30:  bl       #0x198a0                         
+0x00037c34:  mov      w3, #0xb3a                       
+0x00037c38:  mov      x2, x21                          
+0x00037c3c:  mov      w1, #0                           
+0x00037c40:  mov      x0, x19                          
+0x00037c44:  bl       #0x197d0                         
+0x00037c48:  mov      w0, #0                           
+0x00037c4c:  ldp      x19, x20, [sp, #0x40]            
+0x00037c50:  ldp      x21, x22, [sp, #0x50]            
+0x00037c54:  ldr      x23, [sp, #0x60]                 
+0x00037c58:  b        #0x37730                         
+0x00037c5c:  mov      w0, #0                           
+0x00037c60:  ldp      x19, x20, [sp, #0x40]            
+0x00037c64:  ldp      x21, x22, [sp, #0x50]            
+0x00037c68:  b        #0x37730                         

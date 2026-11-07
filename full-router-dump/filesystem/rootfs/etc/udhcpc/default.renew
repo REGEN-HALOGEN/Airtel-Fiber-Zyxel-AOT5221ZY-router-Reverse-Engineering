@@ -1,0 +1,32 @@
+#!/bin/sh
+# Sample udhcpc renew script
+DHCP_INFO="/tmp/dhcp_info_${interface}"
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+if [ -n "$IP_IS_CHANGE" ];
+then
+        echo "blake: dhcp.renew address change, keep processing" >> /var/log/syslog.log
+else
+        echo "blake: dhcp.renew no change, exit" >> /var/log/syslog.log
+        exit
+fi
+/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+rm -f $DHCP_INFO
+touch $DHCP_INFO
+echo IPADDR $ip >> $DHCP_INFO
+echo IPMASK $subnet >> $DHCP_INFO
+# Send connection down event first
+rm -f /var/wan_connection_notify/${interface}"_connection_is_down"
+touch /var/wan_connection_notify/${interface}"_connection_is_down"
+echo "RDMNAME config;" >> /var/wan_connection_notify/${interface}"_connection_is_down"
+echo "EVENTNOTIFY 207 string ${interface};" >> /var/wan_connection_notify/${interface}"_connection_is_down"
+ccctest -f /var/wan_connection_notify/${interface}"_connection_is_down"
+
+# Send connection up event finally
+rm -f /var/wan_connection_notify/${interface}"_connection_is_up"
+touch /var/wan_connection_notify/${interface}"_connection_is_up"
+echo "RDMNAME config;" >> /var/wan_connection_notify/${interface}"_connection_is_up"
+echo "EVENTNOTIFY 206 string ${interface};" >> /var/wan_connection_notify/${interface}"_connection_is_up"
+ccctest -f /var/wan_connection_notify/${interface}"_connection_is_up"
+
+

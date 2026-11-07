@@ -1,0 +1,125 @@
+=== Disassembly of libcccBeWan_eth_Init (0x38074, 496 bytes) in libcccbe.so ===
+0x00038074:  stp      x29, x30, [sp, #-0x130]!         
+0x00038078:  mov      x29, sp                          
+0x0003807c:  cbz      x0, #0x381c0                     
+0x00038080:  stp      x19, x20, [sp, #0x10]            
+0x00038084:  str      x21, [sp, #0x20]                 
+0x00038088:  mov      x20, x0                          
+0x0003808c:  mov      w0, #1                           
+0x00038090:  bl       #0x19a20                         
+0x00038094:  cmn      w0, #1                           
+0x00038098:  b.eq     #0x38218                         
+0x0003809c:  stp      xzr, xzr, [sp, #0x30]            
+0x000380a0:  add      x2, sp, #0x40                    
+0x000380a4:  movi     v0.4s, #0                        
+0x000380a8:  stp      q0, q0, [x2]                     
+0x000380ac:  stp      q0, q0, [x2, #0x20]              
+0x000380b0:  stp      q0, q0, [x2, #0x40]              
+0x000380b4:  stp      q0, q0, [x2, #0x60]              
+0x000380b8:  stp      q0, q0, [x2, #0x80]              
+0x000380bc:  stp      q0, q0, [x2, #0xa0]              
+0x000380c0:  stp      q0, q0, [x2, #0xc0]              
+0x000380c4:  str      q0, [x2, #0xe0]                  
+0x000380c8:  add      x20, x20, #0x8a                  
+0x000380cc:  add      x19, sp, #0x30                   
+0x000380d0:  mov      x4, x20                          
+0x000380d4:  adrp     x3, #0x4c000                     
+0x000380d8:  add      x3, x3, #0x1e0                    ; "/bin/smuxctl --if %s --set-if-rsmux --set-if-rx-policy DROP --set-if-tx-policy CONTINUE --set-if-rxmc-policy DROP --set-if-rx-multi 1"
+0x000380dc:  mov      x2, #0x100                       
+0x000380e0:  mov      w1, #1                           
+0x000380e4:  mov      x0, x19                          
+0x000380e8:  bl       #0x195e0                         
+0x000380ec:  adrp     x21, #0x4c000                    
+0x000380f0:  add      x21, x21, #0x448                  ; "libcccBeWan_getL2IntfName_wrapper"
+0x000380f4:  add      x21, x21, #0x268                  ; "libcccBeWan_eth_Init"
+0x000380f8:  mov      w3, #0x916                       
+0x000380fc:  mov      x2, x21                          
+0x00038100:  mov      w1, #0                           
+0x00038104:  mov      x0, x19                          
+0x00038108:  bl       #0x197d0                         
+0x0003810c:  adrp     x0, #0x4c000                     
+0x00038110:  add      x0, x0, #0x268                    ; "echo switch_on > /proc/rtk_smuxdev/hw_vlan_filter"
+0x00038114:  ldp      q0, q1, [x0]                     
+0x00038118:  stp      q0, q1, [x19]                    
+0x0003811c:  ldr      q0, [x0, #0x20]                  
+0x00038120:  str      q0, [x19, #0x20]                 
+0x00038124:  ldrh     w0, [x0, #0x30]                  
+0x00038128:  strh     w0, [x19, #0x30]                 
+0x0003812c:  mov      w3, #0x919                       
+0x00038130:  mov      x2, x21                          
+0x00038134:  mov      w1, #0                           
+0x00038138:  mov      x0, x19                          
+0x0003813c:  bl       #0x197d0                         
+0x00038140:  mov      x4, x20                          
+0x00038144:  adrp     x3, #0x4c000                     
+0x00038148:  add      x3, x3, #0x2a0                    ; "echo enable %s MC > /proc/rtk_smuxdev/hw_vlan_filter"
+0x0003814c:  mov      x2, #0x100                       
+0x00038150:  mov      w1, #1                           
+0x00038154:  mov      x0, x19                          
+0x00038158:  bl       #0x195e0                         
+0x0003815c:  mov      w3, #0x91b                       
+0x00038160:  mov      x2, x21                          
+0x00038164:  mov      w1, #0                           
+0x00038168:  mov      x0, x19                          
+0x0003816c:  bl       #0x197d0                         
+0x00038170:  mov      x4, x20                          
+0x00038174:  adrp     x3, #0x4c000                     
+0x00038178:  add      x3, x3, #0x2d8                    ; "echo refresh %s > /proc/rtk_smuxdev/hw_vlan_filter"
+0x0003817c:  mov      x2, #0x100                       
+0x00038180:  mov      w1, #1                           
+0x00038184:  mov      x0, x19                          
+0x00038188:  bl       #0x195e0                         
+0x0003818c:  mov      w3, #0x91d                       
+0x00038190:  mov      x2, x21                          
+0x00038194:  mov      w1, #0                           
+0x00038198:  mov      x0, x19                          
+0x0003819c:  bl       #0x197d0                         
+0x000381a0:  mov      x1, x20                          
+0x000381a4:  mov      w0, #0                           
+0x000381a8:  bl       #0x19d50                         
+0x000381ac:  mov      w0, #0                           
+0x000381b0:  ldp      x19, x20, [sp, #0x10]            
+0x000381b4:  ldr      x21, [sp, #0x20]                 
+0x000381b8:  ldp      x29, x30, [sp], #0x130           
+0x000381bc:  ret                                       
+0x000381c0:  adrp     x0, #0x6a000                     
+0x000381c4:  ldr      x0, [x0, #0xfb8]                 
+0x000381c8:  ldr      w1, [x0]                         
+0x000381cc:  mov      w0, #-1                          
+0x000381d0:  tbz      w1, #5, #0x381b8                 
+0x000381d4:  adrp     x0, #0x6a000                     
+0x000381d8:  ldr      x0, [x0, #0xfe0]                 
+0x000381dc:  ldr      w1, [x0]                         
+0x000381e0:  mov      w0, #-1                          
+0x000381e4:  cmp      w1, #2                           
+0x000381e8:  b.ls     #0x381b8                         
+0x000381ec:  mov      w4, #0x909                       
+0x000381f0:  adrp     x3, #0x4c000                     
+0x000381f4:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x000381f8:  add      x3, x3, #0x268                    ; "libcccBeWan_eth_Init"
+0x000381fc:  adrp     x2, #0x45000                     
+0x00038200:  add      x2, x2, #0x4f0                   
+0x00038204:  mov      w1, #1                           
+0x00038208:  mov      w0, #3                           
+0x0003820c:  bl       #0x1a110                         
+0x00038210:  mov      w0, #-1                          
+0x00038214:  b        #0x381b8                         
+0x00038218:  adrp     x0, #0x6a000                     
+0x0003821c:  ldr      x0, [x0, #0xfb8]                 
+0x00038220:  ldr      w0, [x0]                         
+0x00038224:  tbz      w0, #5, #0x3809c                 
+0x00038228:  adrp     x0, #0x6a000                     
+0x0003822c:  ldr      x0, [x0, #0xfe0]                 
+0x00038230:  ldr      w0, [x0]                         
+0x00038234:  cmp      w0, #2                           
+0x00038238:  b.ls     #0x3809c                         
+0x0003823c:  mov      w4, #0x90e                       
+0x00038240:  adrp     x3, #0x4c000                     
+0x00038244:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00038248:  add      x3, x3, #0x268                    ; "libcccBeWan_eth_Init"
+0x0003824c:  adrp     x2, #0x4c000                     
+0x00038250:  add      x2, x2, #0x380                   
+0x00038254:  mov      w1, #1                           
+0x00038258:  mov      w0, #3                           
+0x0003825c:  bl       #0x1a110                         
+0x00038260:  b        #0x3809c                         

@@ -1,0 +1,23 @@
+#!/bin/sh
+# Sample udhcpc leasefail script
+DHCP_INFO="/tmp/dhcp_info"
+
+echo Lease failed: $message
+
+rm -f $DHCP_INFO
+touch $DHCP_INFO
+echo IPADDR 0.0.0.0 >> $DHCP_INFO
+echo IPMASK 0.0.0.0 >> $DHCP_INFO
+echo IPGATEWAY 0.0.0.0 >> $DHCP_INFO
+echo PRIDNS 0.0.0.0 >> $DHCP_INFO
+echo SECDNS 0.0.0.0 >> $DHCP_INFO
+
+echo -e "\x1b[31mDHCP lease time expired, IP address lost...... \x1b[0m" >> /dev/console
+if [ -e /var/wan_connection_notify/${interface}"_connection_is_down" ]; then
+	echo -e "\x1b[31mInterface ${interface} still down...... \x1b[0m" >> /dev/console
+else
+	touch /var/wan_connection_notify/${interface}"_connection_is_down"
+	echo "RDMNAME config;" >> /var/wan_connection_notify/${interface}"_connection_is_down"
+	echo "EVENTNOTIFY 207 string" ${interface}";" >> /var/wan_connection_notify/${interface}"_connection_is_down"
+	ccctest -f /var/wan_connection_notify/${interface}"_connection_is_down"
+fi

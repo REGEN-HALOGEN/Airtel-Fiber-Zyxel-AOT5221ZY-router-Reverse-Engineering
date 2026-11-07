@@ -1,0 +1,23 @@
+#!/bin/sh
+# Sample udhcpc renew script
+DHCP_INFO="/tmp/dhcp_info_${interface}"
+FACILITY="LOCAL2"
+LEVEL="INFO"
+IDENTI="dhcp"
+echo "leaes time =$leases" >>/var/log/syslog.log
+
+[ -n "$broadcast" ] && BROADCAST="broadcast $broadcast"
+[ -n "$subnet" ] && NETMASK="netmask $subnet"
+/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+rm -f $DHCP_INFO
+touch $DHCP_INFO
+echo IPADDR $ip >> $DHCP_INFO
+echo IPMASK $subnet >> $DHCP_INFO
+
+rm -f /var/wan_connection_notify/${interface}"_connection_is_up" /var/wan_connection_notify/${interface}"_connection_is_down"
+touch /var/wan_connection_notify/${interface}"_connection_is_up"
+echo "RDMNAME config;" >> /var/wan_connection_notify/${interface}"_connection_is_up"
+echo "EVENTNOTIFY 206 string ${interface};" >> /var/wan_connection_notify/${interface}"_connection_is_up"
+ccctest -f /var/wan_connection_notify/${interface}"_connection_is_up" 
+#Add syslog message
+logger -p $FACILITY.$LEVEL -t $IDENTI WAN'(DHCP)' $interface gets IP Address: $ip

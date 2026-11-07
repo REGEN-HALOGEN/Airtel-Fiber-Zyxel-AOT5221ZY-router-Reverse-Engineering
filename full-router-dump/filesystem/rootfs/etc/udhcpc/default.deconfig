@@ -1,0 +1,13 @@
+#!/bin/sh
+# Sample udhcpc deconfig script
+DHCP_INFO="/tmp/dhcp_info"
+/sbin/ifconfig $interface 0.0.0.0
+
+rm -f $DHCP_INFO
+touch $DHCP_INFO
+echo IPADDR 0.0.0.0 >> $DHCP_INFO
+echo IPMASK 0.0.0.0 >> $DHCP_INFO
+echo IPGATEWAY 0.0.0.0 >> $DHCP_INFO
+echo PRIDNS 0.0.0.0 >> $DHCP_INFO
+echo SECDNS 0.0.0.0 >> $DHCP_INFO
+

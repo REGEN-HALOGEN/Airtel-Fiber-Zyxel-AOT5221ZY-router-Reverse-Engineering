@@ -1,0 +1,429 @@
+=== Disassembly of beConfigWANByPPPoE (0x664a8, 1712 bytes) in libbemodules.so ===
+0x000664a8:  sub      sp, sp, #0x280                   
+0x000664ac:  stp      x29, x30, [sp, #0x20]            
+0x000664b0:  add      x29, sp, #0x20                   
+0x000664b4:  stp      x19, x20, [sp, #0x30]            
+0x000664b8:  stp      x21, x22, [sp, #0x40]            
+0x000664bc:  mov      x20, x0                          
+0x000664c0:  mov      x22, x1                          
+0x000664c4:  stp      xzr, xzr, [sp, #0x180]           
+0x000664c8:  add      x3, sp, #0x190                   
+0x000664cc:  movi     v0.4s, #0                        
+0x000664d0:  stp      q0, q0, [x3]                     
+0x000664d4:  stp      q0, q0, [x3, #0x20]              
+0x000664d8:  stp      q0, q0, [x3, #0x40]              
+0x000664dc:  stp      q0, q0, [x3, #0x60]              
+0x000664e0:  stp      q0, q0, [x3, #0x80]              
+0x000664e4:  stp      q0, q0, [x3, #0xa0]              
+0x000664e8:  stp      q0, q0, [x3, #0xc0]              
+0x000664ec:  str      q0, [x3, #0xe0]                  
+0x000664f0:  stp      xzr, xzr, [sp, #0x80]            
+0x000664f4:  add      x3, sp, #0x90                    
+0x000664f8:  stp      q0, q0, [x3]                     
+0x000664fc:  stp      q0, q0, [x3, #0x20]              
+0x00066500:  stp      q0, q0, [x3, #0x40]              
+0x00066504:  stp      q0, q0, [x3, #0x60]              
+0x00066508:  stp      q0, q0, [x3, #0x80]              
+0x0006650c:  stp      q0, q0, [x3, #0xa0]              
+0x00066510:  stp      q0, q0, [x3, #0xc0]              
+0x00066514:  str      q0, [x3, #0xe0]                  
+0x00066518:  adrp     x0, #0xbe000                     
+0x0006651c:  ldrh     w0, [x0, #0xd10]                 
+0x00066520:  strh     w0, [sp, #0x70]                  
+0x00066524:  stur     xzr, [sp, #0x72]                 
+0x00066528:  mov      x5, x2                           
+0x0006652c:  adrp     x4, #0xbd000                     
+0x00066530:  add      x4, x4, #0x598                    ; "/etc/ppp/options_%s"
+0x00066534:  mov      x3, #0x100                       
+0x00066538:  mov      w2, #1                           
+0x0006653c:  mov      x1, x3                           
+0x00066540:  add      x0, sp, #0x80                    
+0x00066544:  bl       #0x1f1b0                         
+0x00066548:  add      x21, x20, #0x2c8                 
+0x0006654c:  adrp     x1, #0xbd000                     
+0x00066550:  add      x1, x1, #0x5b0                    ; "Static"
+0x00066554:  mov      x0, x21                          
+0x00066558:  bl       #0x1e4a0                         
+0x0006655c:  cbnz     w0, #0x66568                     
+0x00066560:  ldrb     w0, [x20, #0x92]                 
+0x00066564:  cbnz     w0, #0x667a8                     
+0x00066568:  add      x6, sp, #0x80                    
+0x0006656c:  adrp     x5, #0xbd000                     
+0x00066570:  add      x5, x5, #0x5e8                    ; "/etc/ppp/default_options"
+0x00066574:  adrp     x4, #0xbd000                     
+0x00066578:  add      x4, x4, #0x5d8                    ; "cp -rf %s %s"
+0x0006657c:  mov      x3, #0x100                       
+0x00066580:  mov      w2, #1                           
+0x00066584:  mov      x1, x3                           
+0x00066588:  add      x0, sp, #0x180                   
+0x0006658c:  bl       #0x1f1b0                         
+0x00066590:  mov      w3, #0x2ae                       
+0x00066594:  adrp     x2, #0xbe000                     
+0x00066598:  add      x2, x2, #0xc88                   
+0x0006659c:  add      x2, x2, #0x98                     ; "beConfigWANByPPPoE"
+0x000665a0:  mov      w1, #0                           
+0x000665a4:  add      x0, sp, #0x180                   
+0x000665a8:  bl       #0x1c180                         
+0x000665ac:  adrp     x2, #0xe6000                     
+0x000665b0:  ldr      x2, [x2, #0xf00]                 
+0x000665b4:  ldr      w0, [x2]                         
+0x000665b8:  tbz      w0, #5, #0x665d0                 
+0x000665bc:  adrp     x0, #0xe6000                     
+0x000665c0:  ldr      x0, [x0, #0xdf8]                 
+0x000665c4:  ldr      w0, [x0]                         
+0x000665c8:  cmp      w0, #6                           
+0x000665cc:  b.hi     #0x667d4                         
+0x000665d0:  adrp     x1, #0xb6000                     
+0x000665d4:  add      x1, x1, #0xad8                    ; "a+"
+0x000665d8:  add      x0, sp, #0x80                    
+0x000665dc:  bl       #0x1d960                         
+0x000665e0:  mov      x19, x0                          
+0x000665e4:  cbz      x0, #0x66800                     
+0x000665e8:  adrp     x1, #0xbd000                     
+0x000665ec:  add      x1, x1, #0x5b0                    ; "Static"
+0x000665f0:  mov      x0, x21                          
+0x000665f4:  bl       #0x1e4a0                         
+0x000665f8:  cbnz     w0, #0x66604                     
+0x000665fc:  ldrb     w0, [x20, #0x92]                 
+0x00066600:  cbnz     w0, #0x6685c                     
+0x00066604:  adrp     x0, #0xe6000                     
+0x00066608:  ldr      x0, [x0, #0xf00]                 
+0x0006660c:  ldr      w0, [x0]                         
+0x00066610:  tbz      w0, #5, #0x66628                 
+0x00066614:  adrp     x0, #0xe6000                     
+0x00066618:  ldr      x0, [x0, #0xdf8]                 
+0x0006661c:  ldr      w0, [x0]                         
+0x00066620:  cmp      w0, #6                           
+0x00066624:  b.hi     #0x66878                         
+0x00066628:  add      x21, sp, #0x70                   
+0x0006662c:  mov      w3, #0xa                         
+0x00066630:  mov      x2, x21                          
+0x00066634:  mov      x1, #0                           
+0x00066638:  mov      x0, x22                          
+0x0006663c:  bl       #0x1e810                         
+0x00066640:  mov      x3, x21                          
+0x00066644:  adrp     x2, #0xbd000                     
+0x00066648:  add      x2, x2, #0x650                   
+0x0006664c:  mov      w1, #1                           
+0x00066650:  mov      x0, x19                          
+0x00066654:  bl       #0x1d6b0                         
+0x00066658:  add      x3, x20, #0x324                  
+0x0006665c:  adrp     x2, #0xbd000                     
+0x00066660:  add      x2, x2, #0x660                   
+0x00066664:  mov      w1, #1                           
+0x00066668:  mov      x0, x19                          
+0x0006666c:  bl       #0x1d6b0                         
+0x00066670:  add      x3, x20, #0x365                  
+0x00066674:  adrp     x2, #0xbd000                     
+0x00066678:  add      x2, x2, #0x670                   
+0x0006667c:  mov      w1, #1                           
+0x00066680:  mov      x0, x19                          
+0x00066684:  bl       #0x1d6b0                         
+0x00066688:  add      x22, x20, #0x3e7                 
+0x0006668c:  mov      x3, x22                          
+0x00066690:  adrp     x2, #0xbd000                     
+0x00066694:  add      x2, x2, #0x680                   
+0x00066698:  mov      w1, #1                           
+0x0006669c:  mov      x0, x19                          
+0x000666a0:  bl       #0x1d6b0                         
+0x000666a4:  ldrh     w3, [x20, #0x18]                 
+0x000666a8:  adrp     x2, #0xbd000                     
+0x000666ac:  add      x2, x2, #0x698                   
+0x000666b0:  mov      w1, #1                           
+0x000666b4:  mov      x0, x19                          
+0x000666b8:  bl       #0x1d6b0                         
+0x000666bc:  ldrh     w3, [x20, #0x1a]                 
+0x000666c0:  adrp     x2, #0xbd000                     
+0x000666c4:  add      x2, x2, #0x6a0                   
+0x000666c8:  mov      w1, #1                           
+0x000666cc:  mov      x0, x19                          
+0x000666d0:  bl       #0x1d6b0                         
+0x000666d4:  ldrh     w3, [x20, #0x20]                 
+0x000666d8:  adrp     x2, #0xbd000                     
+0x000666dc:  add      x2, x2, #0x6a8                   
+0x000666e0:  mov      w1, #1                           
+0x000666e4:  mov      x0, x19                          
+0x000666e8:  bl       #0x1d6b0                         
+0x000666ec:  ldrh     w3, [x20, #0x22]                 
+0x000666f0:  adrp     x2, #0xbd000                     
+0x000666f4:  add      x2, x2, #0x6c0                   
+0x000666f8:  mov      w1, #1                           
+0x000666fc:  mov      x0, x19                          
+0x00066700:  bl       #0x1d6b0                         
+0x00066704:  add      x21, x20, #0x649                 
+0x00066708:  adrp     x1, #0xbd000                     
+0x0006670c:  add      x1, x1, #0x6d8                    ; "PAP"
+0x00066710:  mov      x0, x21                          
+0x00066714:  bl       #0x1e4a0                         
+0x00066718:  cbz      w0, #0x668a4                     
+0x0006671c:  adrp     x1, #0xbd000                     
+0x00066720:  add      x1, x1, #0x728                    ; "CHAP"
+0x00066724:  mov      x0, x21                          
+0x00066728:  bl       #0x1e4a0                         
+0x0006672c:  cbz      w0, #0x669a8                     
+0x00066730:  adrp     x1, #0xbd000                     
+0x00066734:  add      x1, x1, #0x740                    ; "MS-CHAP"
+0x00066738:  mov      x0, x21                          
+0x0006673c:  bl       #0x1e4a0                         
+0x00066740:  cbnz     w0, #0x66904                     
+0x00066744:  mov      x3, x19                          
+0x00066748:  mov      x2, #0xb                         
+0x0006674c:  mov      x1, #1                           
+0x00066750:  adrp     x0, #0xbd000                     
+0x00066754:  add      x0, x0, #0x730                   
+0x00066758:  bl       #0x1ed70                         
+0x0006675c:  mov      x3, x19                          
+0x00066760:  mov      x2, #0xc                         
+0x00066764:  mov      x1, #1                           
+0x00066768:  adrp     x0, #0xbd000                     
+0x0006676c:  add      x0, x0, #0x6e0                   
+0x00066770:  bl       #0x1ed70                         
+0x00066774:  mov      x3, x19                          
+0x00066778:  mov      x2, #0x11                        
+0x0006677c:  mov      x1, #1                           
+0x00066780:  adrp     x0, #0xbd000                     
+0x00066784:  add      x0, x0, #0x700                   
+0x00066788:  bl       #0x1ed70                         
+0x0006678c:  mov      x3, x19                          
+0x00066790:  mov      x2, #0xb                         
+0x00066794:  mov      x1, #1                           
+0x00066798:  adrp     x0, #0xbd000                     
+0x0006679c:  add      x0, x0, #0x718                   
+0x000667a0:  bl       #0x1ed70                         
+0x000667a4:  b        #0x66904                         
+0x000667a8:  add      x6, sp, #0x80                    
+0x000667ac:  adrp     x5, #0xbd000                     
+0x000667b0:  add      x5, x5, #0x5b8                    ; "/etc/ppp/_options_static"
+0x000667b4:  adrp     x4, #0xbd000                     
+0x000667b8:  add      x4, x4, #0x5d8                    ; "cp -rf %s %s"
+0x000667bc:  mov      x3, #0x100                       
+0x000667c0:  mov      w2, #1                           
+0x000667c4:  mov      x1, x3                           
+0x000667c8:  add      x0, sp, #0x180                   
+0x000667cc:  bl       #0x1f1b0                         
+0x000667d0:  b        #0x66590                         
+0x000667d4:  add      x5, sp, #0x180                   
+0x000667d8:  mov      w4, #0x2af                       
+0x000667dc:  adrp     x3, #0xbe000                     
+0x000667e0:  add      x3, x3, #0xc88                   
+0x000667e4:  add      x3, x3, #0x98                     ; "beConfigWANByPPPoE"
+0x000667e8:  adrp     x2, #0xbd000                     
+0x000667ec:  add      x2, x2, #0x608                    ; "%s@%d: %s"
+0x000667f0:  mov      w1, #1                           
+0x000667f4:  mov      w0, #7                           
+0x000667f8:  bl       #0x1cc50                         
+0x000667fc:  b        #0x665d0                         
+0x00066800:  adrp     x0, #0xe6000                     
+0x00066804:  ldr      x0, [x0, #0xf00]                 
+0x00066808:  ldr      w0, [x0]                         
+0x0006680c:  tbz      w0, #5, #0x66b50                 
+0x00066810:  adrp     x0, #0xe6000                     
+0x00066814:  ldr      x0, [x0, #0xdf8]                 
+0x00066818:  ldr      w0, [x0]                         
+0x0006681c:  cmp      w0, #2                           
+0x00066820:  b.hi     #0x6682c                         
+0x00066824:  mov      w0, #-1                          
+0x00066828:  b        #0x66994                         
+0x0006682c:  add      x5, sp, #0x80                    
+0x00066830:  mov      w4, #0x2b4                       
+0x00066834:  adrp     x3, #0xbe000                     
+0x00066838:  add      x3, x3, #0xc88                   
+0x0006683c:  add      x3, x3, #0x98                     ; "beConfigWANByPPPoE"
+0x00066840:  adrp     x2, #0xbd000                     
+0x00066844:  add      x2, x2, #0x618                   
+0x00066848:  mov      w1, #1                           
+0x0006684c:  mov      w0, #3                           
+0x00066850:  bl       #0x1cc50                         
+0x00066854:  mov      w0, #-1                          
+0x00066858:  b        #0x66994                         
+0x0006685c:  add      x3, x20, #0x92                   
+0x00066860:  adrp     x2, #0xbd000                     
+0x00066864:  add      x2, x2, #0x638                   
+0x00066868:  mov      w1, #1                           
+0x0006686c:  mov      x0, x19                          
+0x00066870:  bl       #0x1d6b0                         
+0x00066874:  b        #0x66604                         
+0x00066878:  mov      w5, #0                           
+0x0006687c:  mov      w4, #0x2c1                       
+0x00066880:  adrp     x3, #0xbe000                     
+0x00066884:  add      x3, x3, #0xc88                   
+0x00066888:  add      x3, x3, #0x98                     ; "beConfigWANByPPPoE"
+0x0006688c:  adrp     x2, #0xbd000                     
+0x00066890:  add      x2, x2, #0x640                   
+0x00066894:  mov      w1, #1                           
+0x00066898:  mov      w0, #7                           
+0x0006689c:  bl       #0x1cc50                         
+0x000668a0:  b        #0x66628                         
+0x000668a4:  mov      x3, x19                          
+0x000668a8:  mov      x2, #0xc                         
+0x000668ac:  mov      x1, #1                           
+0x000668b0:  adrp     x0, #0xbd000                     
+0x000668b4:  add      x0, x0, #0x6e0                   
+0x000668b8:  bl       #0x1ed70                         
+0x000668bc:  mov      x3, x19                          
+0x000668c0:  mov      x2, #0xe                         
+0x000668c4:  mov      x1, #1                           
+0x000668c8:  adrp     x0, #0xbd000                     
+0x000668cc:  add      x0, x0, #0x6f0                   
+0x000668d0:  bl       #0x1ed70                         
+0x000668d4:  mov      x3, x19                          
+0x000668d8:  mov      x2, #0x11                        
+0x000668dc:  mov      x1, #1                           
+0x000668e0:  adrp     x0, #0xbd000                     
+0x000668e4:  add      x0, x0, #0x700                   
+0x000668e8:  bl       #0x1ed70                         
+0x000668ec:  mov      x3, x19                          
+0x000668f0:  mov      x2, #0xb                         
+0x000668f4:  mov      x1, #1                           
+0x000668f8:  adrp     x0, #0xbd000                     
+0x000668fc:  add      x0, x0, #0x718                   
+0x00066900:  bl       #0x1ed70                         
+0x00066904:  add      x21, x20, #0x633                 
+0x00066908:  adrp     x1, #0xbd000                     
+0x0006690c:  add      x1, x1, #0x748                    ; "OnDemand"
+0x00066910:  mov      x0, x21                          
+0x00066914:  bl       #0x1e4a0                         
+0x00066918:  cbz      w0, #0x66a0c                     
+0x0006691c:  adrp     x1, #0xbd000                     
+0x00066920:  add      x1, x1, #0x7b0                    ; "AlwaysOn"
+0x00066924:  mov      x0, x21                          
+0x00066928:  bl       #0x1e4a0                         
+0x0006692c:  cbnz     w0, #0x66968                     
+0x00066930:  ldrb     w0, [x20, #0x43]                 
+0x00066934:  cbnz     w0, #0x66adc                     
+0x00066938:  mov      x3, x19                          
+0x0006693c:  mov      x2, #8                           
+0x00066940:  mov      x1, #1                           
+0x00066944:  adrp     x0, #0xbd000                     
+0x00066948:  add      x0, x0, #0x7e8                   
+0x0006694c:  bl       #0x1ed70                         
+0x00066950:  mov      x3, x19                          
+0x00066954:  mov      x2, #8                           
+0x00066958:  mov      x1, #1                           
+0x0006695c:  adrp     x0, #0xbd000                     
+0x00066960:  add      x0, x0, #0x7f8                   
+0x00066964:  bl       #0x1ed70                         
+0x00066968:  ldrb     w0, [x20, #0x532]                
+0x0006696c:  cbnz     w0, #0x66b34                     
+0x00066970:  mov      x3, x22                          
+0x00066974:  adrp     x2, #0xbd000                     
+0x00066978:  add      x2, x2, #0x820                   
+0x0006697c:  mov      w1, #1                           
+0x00066980:  mov      x0, x19                          
+0x00066984:  bl       #0x1d6b0                         
+0x00066988:  mov      x0, x19                          
+0x0006698c:  bl       #0x1e250                         
+0x00066990:  mov      w0, #0                           
+0x00066994:  ldp      x19, x20, [sp, #0x30]            
+0x00066998:  ldp      x21, x22, [sp, #0x40]            
+0x0006699c:  ldp      x29, x30, [sp, #0x20]            
+0x000669a0:  add      sp, sp, #0x280                   
+0x000669a4:  ret                                       
+0x000669a8:  mov      x3, x19                          
+0x000669ac:  mov      x2, #0xb                         
+0x000669b0:  mov      x1, #1                           
+0x000669b4:  adrp     x0, #0xbd000                     
+0x000669b8:  add      x0, x0, #0x730                   
+0x000669bc:  bl       #0x1ed70                         
+0x000669c0:  mov      x3, x19                          
+0x000669c4:  mov      x2, #0xe                         
+0x000669c8:  mov      x1, #1                           
+0x000669cc:  adrp     x0, #0xbd000                     
+0x000669d0:  add      x0, x0, #0x6f0                   
+0x000669d4:  bl       #0x1ed70                         
+0x000669d8:  mov      x3, x19                          
+0x000669dc:  mov      x2, #0x11                        
+0x000669e0:  mov      x1, #1                           
+0x000669e4:  adrp     x0, #0xbd000                     
+0x000669e8:  add      x0, x0, #0x700                   
+0x000669ec:  bl       #0x1ed70                         
+0x000669f0:  mov      x3, x19                          
+0x000669f4:  mov      x2, #0xb                         
+0x000669f8:  mov      x1, #1                           
+0x000669fc:  adrp     x0, #0xbd000                     
+0x00066a00:  add      x0, x0, #0x718                   
+0x00066a04:  bl       #0x1ed70                         
+0x00066a08:  b        #0x66904                         
+0x00066a0c:  stp      x23, x24, [sp, #0x50]            
+0x00066a10:  stp      x25, x26, [sp, #0x60]            
+0x00066a14:  mov      x3, x19                          
+0x00066a18:  mov      x2, #7                           
+0x00066a1c:  mov      x1, #1                           
+0x00066a20:  adrp     x0, #0xbd000                     
+0x00066a24:  add      x0, x0, #0x758                   
+0x00066a28:  bl       #0x1ed70                         
+0x00066a2c:  ldr      w3, [x20, #8]                    
+0x00066a30:  cbnz     w3, #0x66ac4                     
+0x00066a34:  mov      x3, x19                          
+0x00066a38:  mov      x2, #0x14                        
+0x00066a3c:  mov      x1, #1                           
+0x00066a40:  adrp     x0, #0xbd000                     
+0x00066a44:  add      x0, x0, #0x770                   
+0x00066a48:  bl       #0x1ed70                         
+0x00066a4c:  bl       #0x1be50                         
+0x00066a50:  mov      x24, x0                          
+0x00066a54:  bl       #0x1be50                         
+0x00066a58:  mov      x25, x0                          
+0x00066a5c:  bl       #0x1be50                         
+0x00066a60:  mov      x26, x0                          
+0x00066a64:  bl       #0x1be50                         
+0x00066a68:  mov      x21, x0                          
+0x00066a6c:  bl       #0x1be50                         
+0x00066a70:  mov      x23, x0                          
+0x00066a74:  bl       #0x1be50                         
+0x00066a78:  and      w0, w0, #0xffff                  
+0x00066a7c:  str      w0, [sp, #0x10]                  
+0x00066a80:  and      w23, w23, #0xffff                
+0x00066a84:  str      w23, [sp, #8]                    
+0x00066a88:  and      w21, w21, #0xffff                
+0x00066a8c:  str      w21, [sp]                        
+0x00066a90:  mov      w7, #0                           
+0x00066a94:  and      w6, w26, #0xffff                 
+0x00066a98:  and      w5, w25, #0xffff                 
+0x00066a9c:  and      w4, w24, #0xffff                 
+0x00066aa0:  mov      w3, #0                           
+0x00066aa4:  adrp     x2, #0xbd000                     
+0x00066aa8:  add      x2, x2, #0x788                   
+0x00066aac:  mov      w1, #1                           
+0x00066ab0:  mov      x0, x19                          
+0x00066ab4:  bl       #0x1d6b0                         
+0x00066ab8:  ldp      x23, x24, [sp, #0x50]            
+0x00066abc:  ldp      x25, x26, [sp, #0x60]            
+0x00066ac0:  b        #0x66968                         
+0x00066ac4:  adrp     x2, #0xbd000                     
+0x00066ac8:  add      x2, x2, #0x760                   
+0x00066acc:  mov      w1, #1                           
+0x00066ad0:  mov      x0, x19                          
+0x00066ad4:  bl       #0x1d6b0                         
+0x00066ad8:  b        #0x66a34                         
+0x00066adc:  mov      x3, x19                          
+0x00066ae0:  mov      x2, #6                           
+0x00066ae4:  mov      x1, #1                           
+0x00066ae8:  adrp     x0, #0xbd000                     
+0x00066aec:  add      x0, x0, #0x7c0                   
+0x00066af0:  bl       #0x1ed70                         
+0x00066af4:  mov      x3, x19                          
+0x00066af8:  mov      x2, #0x16                        
+0x00066afc:  mov      x1, #1                           
+0x00066b00:  adrp     x0, #0xbd000                     
+0x00066b04:  add      x0, x0, #0x7c8                   
+0x00066b08:  bl       #0x1ed70                         
+0x00066b0c:  ldrb     w0, [x20, #0x42]                 
+0x00066b10:  cmp      w0, #2                           
+0x00066b14:  b.ne     #0x66938                         
+0x00066b18:  mov      x3, x19                          
+0x00066b1c:  mov      x2, #5                           
+0x00066b20:  mov      x1, #1                           
+0x00066b24:  adrp     x0, #0xbd000                     
+0x00066b28:  add      x0, x0, #0x7e0                   
+0x00066b2c:  bl       #0x1ed70                         
+0x00066b30:  b        #0x66938                         
+0x00066b34:  add      x3, x20, #0x532                  
+0x00066b38:  adrp     x2, #0xbd000                     
+0x00066b3c:  add      x2, x2, #0x808                    ; "pppoe_srv_name %s"
+0x00066b40:  mov      w1, #1                           
+0x00066b44:  mov      x0, x19                          
+0x00066b48:  bl       #0x1d6b0                         
+0x00066b4c:  b        #0x66970                         
+0x00066b50:  mov      w0, #-1                          
+0x00066b54:  b        #0x66994                         

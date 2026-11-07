@@ -1,0 +1,21 @@
+#!/bin/sh 
+REALNAME=$1 #PPPx
+REALDEV=$2  #nas0_x
+IP=$4       #ip
+GW=$5       #gateway
+
+echo "################ Sean debug PPP ip-down start ################" >> /var/log/syslog.log
+echo "interface_name=$REALNAME" >> /var/log/syslog.log
+echo "################ Sean debug PPP ip-down end ################" >> /var/log/syslog.log
+
+WWAN=$( echo $REALDEV | grep "ttyUSB")
+if [ "$WWAN" != "" ]
+then
+	REALDEV=$REALNAME
+fi
+rm -f /var/wan_connection_notify/$REALDEV"_connection_is_down"
+touch /var/wan_connection_notify/$REALDEV"_connection_is_down"
+echo "RDMNAME config;" >> /var/wan_connection_notify/$REALDEV"_connection_is_down"
+echo "EVENTNOTIFY 207 string $REALNAME;" >> /var/wan_connection_notify/$REALDEV"_connection_is_down"
+ccctest -f /var/wan_connection_notify/$REALDEV"_connection_is_down"
+

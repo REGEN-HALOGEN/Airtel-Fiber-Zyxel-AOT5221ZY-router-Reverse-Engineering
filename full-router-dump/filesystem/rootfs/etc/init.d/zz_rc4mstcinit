@@ -1,0 +1,29 @@
+#!/bin/sh /etc/rc.common
+# Copyright (C) 2013-2014 OpenWrt.org
+
+## Script to bring up all mstc_rc.d (MSTC's application script, ccc...)
+## Note: Output will be consumed by /etc/rc.common
+
+
+START=99
+
+start() {
+        echo "Run MSTC INIT scripts" > /dev/console
+        #core dump setting, unit is 512 bytes#
+        ulimit -c 102400
+        echo 1 > /proc/sys/kernel/core_uses_pid
+        echo "/tmp/core-%e-%s-%u-%g-%p-%t" > /proc/sys/kernel/core_pattern
+        echo 1 > /proc/sys/fs/suid_dumpable
+
+        for i in /etc/rc4_mstc.d/S*; do
+                echo "Running $i..." > /dev/console
+                $i start
+        done
+
+        ##/usr/bin/btm normal &
+        /etc/init.d/btm.sh start
+
+        #sleep 60
+        sh /usr/bin/SysInfo.sh &
+        sh /etc/scripts/led_leave_bootup_state.sh &
+}

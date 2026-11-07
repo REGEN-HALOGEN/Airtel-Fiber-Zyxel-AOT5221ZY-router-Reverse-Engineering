@@ -1,0 +1,115 @@
+#!/bin/sh
+
+# CEVENT_IPV6_WAN_CONNECTION_UP is definef on ccc_event.h
+DHCP6C_GET_IANA=408
+DHCP6C_GET_IAPD=409
+DHCP6C_GET_DNS=410
+DHCP6C_GET_DSLITE_INFO=412
+DHCP6C_GET_DNSSEARCH_LIST=416
+DEVICE=$2
+echo "~~~~~~~~~~~~~~~~~~~DEVICE $DEVICE~~~~~~~~~~~~~~~~~~~~"> /dev/console
+if [ -n "$new_domain_name" -o -n "$new_domain_name_servers" ]; then
+	new_resolv_conf=/etc/resolv.conf.dhcp6c-new
+	value=$DEVICE
+	rm -f $new_resolv_conf
+	if [ -n "$new_domain_name_servers" ]; then
+		for nameserver in $new_domain_name_servers; do
+			value=$value","$nameserver
+			echo nameserver $nameserver >> $new_resolv_conf
+		done
+	fi
+    # Use resolvconf if available
+#    cat $new_resolv_conf > /etc/dnsmasq/resolv6.conf
+#    rm -f $new_resolv_conf
+	echo "~~~~~~~~~~~~~~~~~~DNS~~~~~~~~~~~~~~~~~~~~~~~~~~~"> /dev/console
+	echo "get new_domain_name_servers $new_domain_name_servers" > /dev/console
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS" ]
+	then
+		rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS"
+	fi
+	touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS"
+	#value=$DEVICE+","+$new_domain_name_servers
+	echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS"
+	echo "EVENTNOTIFY $DHCP6C_GET_DNS string $value;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNS"
+
+	echo "~~~~~~~~~~~~~~~~~~DNS SERACH LIST~~~~~~~~~~~~~~~~~~~~~~~~~~~"> /dev/console
+	echo "get new_domain_name $new_domain_name" > /dev/console
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL" ]
+	then
+		rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL"
+	fi
+	touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL"
+	value1=$DEVICE
+	if [ -n "$new_domain_name" ]; then
+		value1=$value1","$new_domain_name
+	fi
+	echo "value1=$value1" > /dev/console
+	echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL"
+	echo "EVENTNOTIFY $DHCP6C_GET_DNSSEARCH_LIST string $value1;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DNSSL"
+
+#/usr/bin/ccctest -f /etc/wide-dhcpv6/dnsv6_config_notify
+fi
+
+if [ -n "$new_iapd" ]; then
+	echo "~~~~~~~~~~~~~~~~~~~~~~IAPD~~~~~~~~~~~~~~~~~~~~"> /dev/console
+        echo "get iapd $new_iapd" > /dev/console
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD" ]
+        then
+                rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD"
+        fi
+        touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD"
+	value=$DEVICE","$new_iapd
+        echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD"
+        echo "EVENTNOTIFY $DHCP6C_GET_IAPD string $value;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IAPD"
+#   /usr/bin/ccctest -f /etc/wide-dhcpv6/dhcp6c_iapd_config_notify
+fi
+
+if [ -n "$new_iana" ]; then
+	echo "~~~~~~~~~~~~~~~~~~~~~~IANA~~~~~~~~~~~~~~~~~~~~~"> /dev/console
+        echo "get iana $new_iana" > /dev/console
+#        /etc/wide-dhcpv6/dhcp6c-connection-up
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA" ]
+	then
+		rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA"
+	fi
+	touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA"
+	value=$DEVICE","$new_iana
+	echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA"
+	echo "EVENTNOTIFY $DHCP6C_GET_IANA string $value;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_IANA"
+fi
+
+if [ -n "$dslite_address" ]; then
+	echo "~~~~~~~~~~~~~~~~~~~~~~DS-LITE ADDRESS~~~~~~~~~~~~~~~~~~~~~"> /dev/console
+	echo "get DS-Lite address $dslite_address" > /dev/console
+	echo dslite_address=$dslite_address >> $1
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS" ]
+	then
+		rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS"
+	fi
+	touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS"
+	value=$DEVICE","$dslite_address
+	echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS"
+	echo "EVENTNOTIFY $DHCP6C_GET_DSLITE_INFO string $value;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_ADDRESS"
+fi
+
+if [ -n "$dslite_name" ]; then
+	echo "~~~~~~~~~~~~~~~~~~~~~~DS-LITE NAME~~~~~~~~~~~~~~~~~~~~~"> /dev/console
+	echo "get DS-Lite name $dslite_name" > /dev/console
+	echo dslite_name=$dslite_name >> $1
+	if [ -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME" ]
+	then
+		rm -rf /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME"
+	fi
+	touch /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME"
+	value=$DEVICE","$dslite_name
+	echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME"
+	echo "EVENTNOTIFY $DHCP6C_GET_DSLITE_INFO string $value;" >> /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME"
+	ccctest -f /var/wan_connection_notify/$DEVICE"_DHCP6C_GET_DSLITE_NAME"
+fi
+
+exit 0

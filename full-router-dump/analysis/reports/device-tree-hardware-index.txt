@@ -1,0 +1,250 @@
+4:	model = "Realtek Taurus ENG Board";
+5:	compatible = "realtek,taurus";
+11:		compatible = "cortina,atu";
+21:		compatible = "cortina,atu";
+31:		compatible = "cortina,atu";
+41:		compatible = "cortina,atu";
+50:		compatible = "cortina,atu";
+59:		compatible = "cortina,atu";
+68:		compatible = "cortina,atu";
+77:		compatible = "arm,cortex-rtk_a55-pmu";
+83:		compatible = "arm,dsu-pmu";
+90:		compatible = "cortina,thermal-sensor";
+104:			compatible = "arm,cortex-a55\0arm,armv8";
+116:			compatible = "arm,cortex-a55\0arm,armv8";
+128:			compatible = "arm,cortex-a55\0arm,armv8";
+140:			compatible = "arm,cortex-a55\0arm,armv8";
+184:		compatible = "arm,psci-0.2";
+189:		compatible = "arm,gic-v3";
+199:		compatible = "fixed-clock";
+205:	reserved-memory {
+281:		compatible = "cortina,rst-mgr";
+288:		compatible = "cortina,rst-mgr";
+295:		compatible = "cortina,rst-mgr";
+302:		compatible = "rtk,taurus-pe-reset";
+309:		compatible = "cortina,cortina-otp";
+341:		compatible = "cortina,per-ictl";
+351:		compatible = "cortina,per-ictl";
+361:		compatible = "cortina,per-ictl";
+371:		compatible = "cortina,per-ictl";
+381:		compatible = "cortina,per-ictl";
+391:		compatible = "arm,armv8-timer";
+398:		compatible = "cortina,g3-pinctrl";
+413:				pins = "GPIO_000\0GPIO_001\0PMUX_004";
+421:				pins = "GPIO_002\0GPIO_003\0PMUX_005";
+429:				pins = "GPIO_004\0PMUX_006";
+437:				pins = "GPIO_005\0PMUX_007";
+445:				pins = "GPIO_006\0PMUX_008";
+453:				pins = "GPIO_007\0PMUX_009";
+461:				pins = "GPIO_011\0GPIO_012\0PMUX_019";
+466:		mdio_default {
+469:				pins = "GPIO_402\0GPIO_403\0PMUX_111";
+478:				pins = "GPIO_204\0GPIO_205\0PMUX_120";
+486:				pins = "GPIO_313\0GPIO_314\0GPIO_315\0GPIO_316\0GPIO_317\0GPIO_318\0GPIO_319\0GPIO_320\0GPIO_321\0GPIO_322\0GPIO_323\0GPIO_324\0PMUX_114";
+495:				pins = "GPIO_200\0GPIO_201\0GPIO_202\0GPIO_203\0PMUX_106";
+504:				pins = "GPIO_206\0GPIO_207\0GPIO_208\0GPIO_209\0GPIO_210\0GPIO_211\0PMUX_104";
+512:		compatible = "cortina,serial";
+521:		compatible = "cortina,serial";
+528:		compatible = "realtek,rtk_spare_reg";
+532:	gpio-controller@f43292c0 {
+535:		compatible = "cortina,ca77xx-gpio";
+540:			gpio-controller;
+543:			ngpios = <0x10>;
+544:			#gpio-cells = <0x02>;
+548:			gpio-ranges = <0x0b 0x00 0x00 0x20>;
+553:			gpio-controller;
+556:			ngpios = <0x11>;
+557:			#gpio-cells = <0x02>;
+561:			gpio-ranges = <0x0b 0x00 0x20 0x20>;
+565:			gpio-controller;
+568:			ngpios = <0x0c>;
+569:			#gpio-cells = <0x02>;
+573:			gpio-ranges = <0x0b 0x00 0x40 0x20>;
+577:			gpio-controller;
+580:			ngpios = <0x19>;
+581:			#gpio-cells = <0x02>;
+585:			gpio-ranges = <0x0b 0x00 0x60 0x20>;
+590:			gpio-controller;
+593:			ngpios = <0x11>;
+594:			#gpio-cells = <0x02>;
+598:			gpio-ranges = <0x0b 0x00 0x80 0x20>;
+603:	phy@0xf43200c4 {
+606:		compatible = "realtek,taurus-phy";
+610:		phy@0 {
+612:			#phy-cells = <0x00>;
+616:		phy@1 {
+618:			#phy-cells = <0x00>;
+622:		phy@9 {
+624:			#phy-cells = <0x00>;
+627:		phy@2 {
+629:			#phy-cells = <0x00>;
+633:		phy@3 {
+635:			#phy-cells = <0x00>;
+639:		phy@4 {
+641:			#phy-cells = <0x00>;
+645:		phy@5 {
+647:			#phy-cells = <0x00>;
+651:		phy@6 {
+653:			#phy-cells = <0x00>;
+657:		phy@7 {
+659:			#phy-cells = <0x00>;
+666:		compatible = "cortina,venus-pcie";
+668:		reg-names = "glbl_regs\0rc_dbi\0config\0iatu\0serdes_phy";
+669:		phys = <0x0c 0x0d>;
+670:		phy-names = "pcie-phy0\0pcie-phy1";
+693:		reset-names = "core_reset\0phy_reset\0device_reset";
+707:		compatible = "cortina,venus-pcie";
+709:		reg-names = "glbl_regs\0rc_dbi\0config\0iatu\0serdes_phy";
+710:		phys = <0x14 0x15>;
+711:		phy-names = "pcie-phy0\0pcie-phy1";
+734:		reset-names = "core_reset\0phy_reset\0device_reset";
+748:		compatible = "cortina,venus-pcie";
+750:		reg-names = "glbl_regs\0rc_dbi\0config\0iatu\0serdes_phy";
+751:		phys = <0x1a>;
+752:		phy-names = "pcie-phy0";
+774:		reset-names = "core_reset\0phy_reset\0device_reset";
+787:		compatible = "realtek,taurus";
+792:	ethernet@f4300000 {
+793:		compatible = "cortina,ni-interface";
+797:		phys = <0x1f>;
+798:		phy-names = "sgmii-phy";
+800:		nvmem-cell-names = "param\0calibration\0phy_patch";
+802:		reset-names = "ni_reset\0l2fe_reset\0l2tm_reset\0l3fe_reset\0sdram_reset\0tqm_reset\0phy_sdsif_reset\0phy_sgmii_reset\0ptp_timer_reset\0ptp_reset";
+803:		memory-region = <0x24 0x25>;
+805:		ethernet@0 {
+809:		ethernet@1 {
+813:		pon_ictl@0 {
+843:			compatible = "cortina,per-ictl";
+850:		ni_gphy_ictl@0 {
+875:		compatible = "cortina,ca-peri";
+883:		compatible = "cortina,adma";
+892:		compatible = "cortina,adma";
+901:		compatible = "cortina,wdt";
+911:		compatible = "realtek,vsfc";
+927:		compatible = "cortina,ca77xx-i2c";
+943:		compatible = "cortina,ca77xx-i2c";
+956:		compatible = "realtek,i2s";
+964:		compatible = "cortina,ca77xx-spi";
+973:			compatible = "realtek,support-slic";
+977:			reset-gpio = <0x28 0x03 0x01>;
+984:		compatible = "cortina,ca77xx-audio";
+993:		compatible = "realtek,trng";
+1000:	usbphy@f432b020 {
+1001:		compatible = "realtek,taurus-usb2phy";
+1010:		phy_data_verA = "revA v1.1 (2021.12.13)";
+1011:		phy_data_sizeA = <0x0a>;
+1012:		phy_data_addrA = [e0 e2 e4 e7 f4 e7 f4 e0 e0 e0];
+1013:		phy_data_arrayA = [1f f9 68 71 db 44 bb 25 21 25];
+1014:		phy_data_verB = "revB v1.2 (2022.09.13)";
+1015:		phy_data_sizeB = <0x0a>;
+1016:		phy_data_addrB = [e0 e2 e4 e7 f4 e7 f4 e0 e0 e0];
+1017:		phy_data_arrayB = [1f f9 6b 71 db 83 bb 26 22 26];
+1021:	usbphy@f432b000 {
+1022:		compatible = "realtek,taurus-usb3phy";
+1024:		reg-names = "u3host_reg\0u3ext_reg\0s2usbphy_u3port\0s3usbphy_u3port";
+1028:		phys = <0x2c 0x2d>;
+1029:		phy-names = "s2usb3-phy\0s3usb3-phy";
+1030:		phymask = <0x01>;
+1031:		phy_data_verA = "revA v1.1 (2021.10.28)";
+1032:		phy_data_sizeA = <0x10>;
+1033:		phy_data_addrA = <0x1040508 0x90a0b0d 0xe202122 0x23272b33>;
+1034:		phy_data_arrayA = <0xaccc7000 0x631330d1 0x424ca610 0xb905ef2e 0x1000705e 0xf8e80003 0xb660241 0x380001>;
+1035:		phy_data_verB = "revB v1.0 (2022.02.24)";
+1036:		phy_data_sizeB = <0x13>;
+1037:		phy_data_addrB = [01 04 05 08 09 0a 0b 0d 0e 20 21 22 23 27 2b 33 09 09 09];
+1038:		phy_data_arrayB = [ac cc 70 00 63 13 30 d1 42 4c c6 10 a9 05 ef 2e 10 00 70 5e f8 e8 00 03 0b 66 02 41 00 38 00 01 42 4c 40 4c 42 4c];
+1039:		usb2-phy = <0x2e>;
+1040:		usb-vbus-gpio = <0x2f 0x04 0x00>;
+1045:		compatible = "cortina,ca77xx-xhci";
+1053:		usb-phy = <0x30>;
+1057:		compatible = "Realtek,rtk119x-emmc";
+1075:	ext_gphy {
+1076:		compatible = "realtek,ext-gphy";
+1078:		port_mapping_phyAddr = <0x04 0x07>;
+1082:		compatible = "realtek, sndcard_rtl8277c_dummy";
+1087:			compatible = "realtek,platform";
+1093:		compatible = "realtek,rtl8277c-protect";
+1101:		compatible = "realtek,rtk-crypto";
+1112:		compatible = "cortina,ca-qspi";
+1121:			compatible = "spi-nand";
+1127:		compatible = "cortina,voip_ipc";
+1129:		memory-region = <0x32 0x33>;
+1137:		compatible = "rtk,voip_taurus_pe_reset";
+1143:		compatible = "realtek,ssp_pinctrl";
+1151:		compatible = "fixed-clock";
+1158:		compatible = "cortina,rtl8277c-soc-clks";
+1164:			compatible = "cortina,rtl8277c-pll-cpll-clk";
+1171:			compatible = "cortina,rtl8277c-pll-fpll-clk";
+1178:			compatible = "cortina,div-cpll-clk";
+1187:			compatible = "cortina,div-fpll-clk";
+1196:			compatible = "cortina,div-fpll-clk";
+1205:			compatible = "cortina,mux-cpu-clk";
+1213:			compatible = "cortina,mux-pe-clk";
+1221:			compatible = "cortina,div-cpll-clk";
+1230:			compatible = "cortina,div-cpll-clk";
+1238:			compatible = "cortina,div-fpll-clk";
+1247:			compatible = "cortina,mux-pe-clk";
+1254:			compatible = "cortina,rtl8277c-pll-epll-clk";
+1261:			compatible = "cortina,div-epll-clk";
+1269:			compatible = "cortina,div-epll-clk";
+1277:			compatible = "cortina,div-epll2-clk";
+1285:			compatible = "cortina,div-epll-clk";
+1293:			compatible = "cortina,fixed-factor-clk";
+1300:			compatible = "cortina,fixed-factor-clk";
+1307:			compatible = "cortina,rtl8277c-cpu-daemon-clk";
+1314:			compatible = "cortina,gate-config-clk";
+1321:			compatible = "cortina,gate-config-clk";
+1328:			compatible = "cortina,gate-config-clk";
+1335:	gpio-keys {
+1336:		compatible = "gpio-keys";
+1342:			gpios = <0x28 0x08 0x01>;
+1349:			gpios = <0x2f 0x07 0x01>;
+1356:			gpios = <0x2f 0x03 0x01>;
+1361:	rtk_gpio_led {
+1362:		compatible = "realtek,g3hgu-gpio-led";
+1366:		gpio-led0 {
+1369:			led-gpio = <0x28 0x02 0x01>;
+1373:		gpio-led1 {
+1376:			led-gpio = <0x28 0x0a 0x01>;
+1379:		gpio-led2 {
+1382:			led-gpio = <0x28 0x07 0x00>;
+1386:		gpio-led3 {
+1388:			label = "LED_PON";
+1389:			led-gpio = <0x28 0x09 0x01>;
+1392:		gpio-led4 {
+1395:			led-gpio = <0x28 0x0b 0x00>;
+1398:		gpio-led5 {
+1401:			led-gpio = <0x28 0x0c 0x00>;
+1404:		gpio-led6 {
+1406:			label = "LED_EPHY0";
+1407:			led-gpio = <0x28 0x04 0x01>;
+1411:		gpio-led7 {
+1413:			label = "LED_EPHY1";
+1414:			led-gpio = <0x28 0x03 0x01>;
+1418:		gpio-led8 {
+1420:			label = "LED_EPHY2";
+1421:			led-gpio = <0x28 0x01 0x01>;
+1425:		gpio-led9 {
+1427:			label = "LED_EPHY3";
+1428:			led-gpio = <0x28 0x00 0x01>;
+1432:		gpio-led11 {
+1435:			led-gpio = <0x28 0x06 0x01>;
+1439:		gpio-led12 {
+1441:			led-gpio = <0x28 0x05 0x00>;
+1449:		compatible = "cortina,soft_ipc";
+1450:		memory-region = <0x41>;
+1458:		compatible = "cortina,pelog";
+1459:		memory-region = <0x42>;
+1463:		compatible = "cortina,pe-ctrl";
+1469:		compatible = "rtk,pe_taurus_pe_reset";
+1474:	memory {
+1475:		device_type = "memory";
+1479:	gpio-reset {
+1480:		compatible = "linux,gpio-reset";
+1484:			gpios = <0x2f 0x05 0x01>;
+1492:			gpios = <0x2f 0x06 0x01>;
+1500:			gpios = <0x2f 0xff 0x01>;
+1507:		xgphy_device {
+1509:			gpios = <0x43 0x0f 0x00>;
+1513:		xgphy2_device {
+1515:			gpios = <0x43 0x10 0x00>;

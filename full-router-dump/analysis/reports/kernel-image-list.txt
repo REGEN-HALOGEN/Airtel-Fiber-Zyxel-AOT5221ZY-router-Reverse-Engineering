@@ -1,0 +1,51 @@
+FIT description: fitImage for RTK aarch64 kernel
+Created:         Mon Jun  3 06:41:57 2024
+ Image 0 (kernel)
+  Description:  Linux Kernel
+  Created:      Mon Jun  3 06:41:57 2024
+  Type:         Kernel Image
+  Compression:  lzma compressed
+  Data Size:    3713955 Bytes = 3626.91 KiB = 3.54 MiB
+  Architecture: AArch64
+  OS:           Linux
+  Load Address: 0x00000000
+  Entry Point:  0x00000000
+  Hash algo:    sha1
+  Hash value:   ed59857224396c36b000947222db7247682f9acd
+  Sign algo:    sha1,rsa2048:dev
+  Sign value:   1763954b27c37b6c8fdc4340a9eb0b351aebdc922f757a431c93eea159b97cef1111a3db2fecb6ca58de275e69434d4ab4508702696d2014ca3ba7e57cdb78af766e091a021cf542d9f2287baf90a0d97cb177ea4a9f1469922b5615643a4ba739e2e3687f5b92b13a649d9b11eee447520e8f7403857be39db605d636c509ee5bed24c2d225034b5fc1430ff69743cdd0f98f85db5b253cc1a701f2b05a7b4b1d090919cdd0fbfcea7b6ca95bca6773f9c3345ffdc94e770bd6387f4e4aa6f6a367b318b13ee6d93f1b9ce13badb126bf6efc9f5b156898d8b7cdbf1c36b63d2d32dce78da1102b095806f83a8fd411e984246e0aa9c85cb22846cf487ee41e
+  Timestamp:    Mon Jun  3 06:41:57 2024
+ Image 1 (fdt)
+  Description:  Flattened Device Tree blob
+  Created:      Mon Jun  3 06:41:57 2024
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    29325 Bytes = 28.64 KiB = 0.03 MiB
+  Architecture: AArch64
+  Load Address: 0x01000000
+  Hash algo:    sha1
+  Hash value:   f58635d37b07b8f1c49cb77b30f9a8d47c4be31c
+  Sign algo:    sha1,rsa2048:dev
+  Sign value:   aa140df03fbdd83ee46a389e9df628d2dbc087b8a721d4be94b8a61054883df54c5c5a873e58e765635219631cefc1438b63b49c87f1942aaeb7f47f317795928576384a42ef5f154709a3cef86def3dee916b643260e391c8bc4d3f59e9460a7a5fcd9fb8dbdcbf29cefce3bad97e8ca105da7b2f708842456ebbd5fc0f24156e39cca2768bf0ddfdb1ac473099764facb22f0a349e62a5d54368cfaf4a3fdc1e90bbb60856e9fdb9bb42ca461206b9ad8685cb2df02944c8e3a8daf8dd4027e92fa0699f5f35d14d874eff63b4d9a08bc0e17526b274cee354859c23f30101c1a333d0e5844fa1d5bf6eee01652346bc22e4b7accee182547a830117ac0c3c
+  Timestamp:    Mon Jun  3 06:41:57 2024
+ Image 2 (script)
+  Description:  Script
+  Created:      Mon Jun  3 06:41:57 2024
+  Type:         Script
+  Compression:  uncompressed
+  Data Size:    818 Bytes = 0.80 KiB = 0.00 MiB
+  Hash algo:    sha1
+  Hash value:   21b186a5de037d9e316849d3ec8b178cdb5b359d
+  Sign algo:    sha1,rsa2048:dev
+  Sign value:   92d9bbc70478917cc3b9e71d7b7a46a496f8ab7186ac3f7ee7a1afcec39781fe380510a3357b367f0ea4597bbff867a578eace0463967e7f43128857e03f0c75e5353ba93783c8d1c99a1dd7d3f897923e9fa8776ffdb4e1b529f181c21411f35e27db329b27938a6abbcad5493ce94437c611ea86ea641e89e5c3b06f431b01ed62585a59e628aeba2b69c0e6a6ffd2ddb4bfe4c9a22d50781cfbc79c56542a3c56d8d9d2819336d5d87729dd4ab42fe934906ed637bfe5e82ce2985dbf04e681d87f3a2024e7c497ad61d8da3a0f1c8621c091c11de2240d6ecaeb022aec59de1dbc6ffee7752d3b9be593c175af68d34f30321da65499d6015270a1e8d8f0
+  Timestamp:    Mon Jun  3 06:41:57 2024
+ Default Configuration: 'conf'
+ Configuration 0 (conf)
+  Description:  Boot Linux kernel with FDT blob 
+  Kernel:       kernel
+  FDT:          fdt
+  Hash algo:    sha1
+  Hash value:   unavailable
+  Sign algo:    sha1,rsa2048:dev
+  Sign value:   c75d4355398cad869293eb84ee52f2301524371b38854f31530ed8d6fb2e2c0b12a0b42ae9cb4777ba93b95de81f5ed815c5ea979c200c52c1d39ec59fb8b93217145b65440dc0763393e40f535d34d938599f8b27fb48a71d3af385b102be6a008a0c3c8079fb7a11d5c18bc06339a253d3de51289a64de38a31a3da47c0493a7d2ab2a4b6f18a15a5ea62e81378ad6c91e98f1d8c480f0b35548bd64c4ef9bb74cec484f1f98050feb6cb755facb5d72ae23b4af5c273d5ba5c0cb2ac7f9497e5b91077f220a487b635c4b6344f6b6aea6f58edbe3e275b3d61ad742b483b66a46922a6ea87e9a6c13a4c01c5eb37a2023f6635ff0b81db640314d57ccd603
+  Timestamp:    Mon Jun  3 06:41:57 2024

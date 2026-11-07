@@ -1,0 +1,783 @@
+035348: sub      sp, sp, #0x610                 
+03534c: stp      x29, x30, [sp, #0x30]          
+035350: add      x29, sp, #0x30                 
+035354: stp      x19, x20, [sp, #0x40]          
+035358: mov      x19, x0                        
+03535c: add      x0, sp, #0x200                 
+035360: stp      xzr, xzr, [x0, #0x10]          
+035364: mov      x2, #0x3f0                     
+035368: mov      w1, #0                         
+03536c: add      x0, sp, #0x220                 
+035370: bl       #0x19ae0                       memset
+035374: mov      x2, #0x180                     
+035378: mov      w1, #0                         
+03537c: add      x0, sp, #0x90                  
+035380: bl       #0x19ae0                       memset
+035384: cbz      x19, #0x353f4                  
+035388: ldr      w20, [x19, #4]                 
+03538c: cbz      w20, #0x3544c                  
+035390: cmp      w20, #1                        
+035394: b.eq     #0x35814                       
+035398: adrp     x0, #0x6a000                   
+03539c: ldr      x0, [x0, #0xfb8]               
+0353a0: ldr      w1, [x0]                       
+0353a4: mov      w0, #1                         
+0353a8: tbz      w1, #5, #0x35e78               
+0353ac: adrp     x0, #0x6a000                   
+0353b0: ldr      x0, [x0, #0xfe0]               
+0353b4: ldr      w1, [x0]                       
+0353b8: mov      w0, #1                         
+0353bc: cmp      w1, #2                         
+0353c0: b.ls     #0x35e78                       
+0353c4: mov      w5, w20                        
+0353c8: mov      w4, #0x3a2                     
+0353cc: adrp     x3, #0x4c000                   
+0353d0: add      x3, x3, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+0353d4: add      x3, x3, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+0353d8: adrp     x2, #0x4a000                   
+0353dc: add      x2, x2, #0xf38                 str: "%s@%d: unknown link type %d!!
+"
+0353e0: mov      w1, w0                         
+0353e4: mov      w0, #3                         
+0353e8: bl       #0x1a110                       __syslog_chk
+0353ec: mov      w0, #1                         
+0353f0: b        #0x35e78                       0x35e78
+0353f4: adrp     x0, #0x6a000                   
+0353f8: ldr      x0, [x0, #0xfb8]               
+0353fc: ldr      w1, [x0]                       
+035400: mov      w0, #-1                        
+035404: tbz      w1, #5, #0x35e78               
+035408: adrp     x0, #0x6a000                   
+03540c: ldr      x0, [x0, #0xfe0]               
+035410: ldr      w1, [x0]                       
+035414: mov      w0, #-1                        
+035418: cmp      w1, #2                         
+03541c: b.ls     #0x35e78                       
+035420: mov      w4, #0x2bb                     
+035424: adrp     x3, #0x4c000                   
+035428: add      x3, x3, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+03542c: add      x3, x3, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035430: adrp     x2, #0x45000                   
+035434: add      x2, x2, #0x4f0                 str: "%s@%d: input error!!
+"
+035438: mov      w1, #1                         
+03543c: mov      w0, #3                         
+035440: bl       #0x1a110                       __syslog_chk
+035444: mov      w0, #-1                        
+035448: b        #0x35e78                       0x35e78
+03544c: ldr      x5, [x19, #0x10]               
+035450: cbz      x5, #0x355e8                   
+035454: ldr      x6, [x19, #0x28]               
+035458: cbz      x6, #0x355e8                   
+03545c: stp      x21, x22, [sp, #0x50]          
+035460: adrp     x21, #0x41000                  
+035464: add      x21, x21, #0x278               str: "/bin/smuxctl"
+035468: add      x22, sp, #0x210                
+03546c: mov      x4, x21                        
+035470: adrp     x3, #0x4b000                   
+035474: add      x3, x3, #0x88                  str: "%s --if-create-name %s %s --set-if-rsmux"
+035478: mov      x2, #0x400                     
+03547c: mov      w1, #1                         
+035480: mov      x0, x22                        
+035484: bl       #0x195e0                       __sprintf_chk
+035488: mov      w3, #0x2d3                     
+03548c: adrp     x2, #0x4c000                   
+035490: add      x2, x2, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+035494: add      x2, x2, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035498: mov      w1, #0                         
+03549c: mov      x0, x22                        
+0354a0: bl       #0x197d0                       cccBeDoSystem
+0354a4: ldr      x5, [x19, #0x10]               
+0354a8: mov      x4, x21                        
+0354ac: adrp     x3, #0x4b000                   
+0354b0: add      x3, x3, #0xb8                  str: "%s --if %s --rx"
+0354b4: mov      x2, #0x400                     
+0354b8: mov      w1, #1                         
+0354bc: mov      x0, x22                        
+0354c0: bl       #0x195e0                       __sprintf_chk
+0354c4: add      x21, x22, w0, sxtw             
+0354c8: ldrb     w1, [x19, #0x18]               
+0354cc: cbz      w1, #0x35640                   
+0354d0: ldr      w4, [x19, #0x20]               
+0354d4: adrp     x3, #0x4b000                   
+0354d8: add      x3, x3, #0xc8                  str: " --tags 1 --filter-vid 0x%x 1"
+0354dc: mov      x2, #-1                        
+0354e0: mov      w1, #1                         
+0354e4: mov      x0, x21                        
+0354e8: bl       #0x195e0                       __sprintf_chk
+0354ec: add      x21, x21, w0, sxtw             str: "ce : %s
+"
+0354f0: ldr      w0, [x19, #8]                  
+0354f4: cbnz     w0, #0x35504                   
+0354f8: ldr      w0, [x19, #0x4c]               
+0354fc: cmp      w0, #1                         
+035500: b.ne     #0x35660                       
+035504: mov      w4, #0x384                     
+035508: adrp     x3, #0x4b000                   
+03550c: add      x3, x3, #0x128                 str: " --rule-priority %d"
+035510: mov      x2, #-1                        
+035514: mov      w1, #1                         
+035518: mov      x0, x21                        
+03551c: bl       #0x195e0                       __sprintf_chk
+035520: add      x0, x21, #0x14                 str: "st_member_query_count %d >> %s"
+035524: ldr      x4, [x19, #0x28]               
+035528: mov      x5, x4                         
+03552c: adrp     x3, #0x4b000                   
+035530: add      x3, x3, #0x140                 str: " --set-rxif %s --rule-alias %s-rx-default-root --target ACCEPT --rule-append"
+035534: mov      x2, #-1                        
+035538: mov      w1, #1                         
+03553c: bl       #0x195e0                       __sprintf_chk
+035540: mov      w3, #0x2eb                     
+035544: adrp     x2, #0x4c000                   
+035548: add      x2, x2, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+03554c: add      x2, x2, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035550: mov      w1, #0                         
+035554: add      x0, sp, #0x210                 
+035558: bl       #0x197d0                       cccBeDoSystem
+03555c: ldrb     w0, [x19, #0x18]               
+035560: cbnz     w0, #0x35684                   
+035564: add      x20, sp, #0x210                
+035568: ldr      x5, [x19, #0x28]               
+03556c: adrp     x4, #0x4a000                   
+035570: add      x4, x4, #0xf20                 str: "ifconfig %s mtu 1500"
+035574: mov      x3, #0x400                     
+035578: mov      w2, #1                         
+03557c: mov      x1, x3                         
+035580: mov      x0, x20                        
+035584: bl       #0x198a0                       __snprintf_chk
+035588: adrp     x21, #0x4c000                  
+03558c: add      x21, x21, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+035590: add      x21, x21, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035594: mov      w3, #0x306                     
+035598: mov      x2, x21                        
+03559c: mov      w1, #0                         
+0355a0: mov      x0, x20                        
+0355a4: bl       #0x197d0                       cccBeDoSystem
+0355a8: ldr      x5, [x19, #0x28]               
+0355ac: adrp     x4, #0x4b000                   
+0355b0: add      x4, x4, #0x2b8                 str: "ifconfig %s txqueuelen 10"
+0355b4: mov      x3, #0x400                     
+0355b8: mov      w2, #1                         
+0355bc: mov      x1, x3                         
+0355c0: mov      x0, x20                        
+0355c4: bl       #0x198a0                       __snprintf_chk
+0355c8: mov      w3, #0x308                     
+0355cc: mov      x2, x21                        
+0355d0: mov      w1, #0                         
+0355d4: mov      x0, x20                        
+0355d8: bl       #0x197d0                       cccBeDoSystem
+0355dc: mov      w0, #0                         
+0355e0: ldp      x21, x22, [sp, #0x50]          
+0355e4: b        #0x35e78                       0x35e78
+0355e8: adrp     x0, #0x6a000                   
+0355ec: ldr      x0, [x0, #0xfb8]               
+0355f0: ldr      w1, [x0]                       
+0355f4: mov      w0, #-1                        
+0355f8: tbz      w1, #5, #0x35e78               
+0355fc: adrp     x0, #0x6a000                   
+035600: ldr      x0, [x0, #0xfe0]               
+035604: ldr      w1, [x0]                       
+035608: mov      w0, #-1                        
+03560c: cmp      w1, #2                         
+035610: b.ls     #0x35e78                       
+035614: mov      w4, #0x2cd                     
+035618: adrp     x3, #0x4c000                   
+03561c: add      x3, x3, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+035620: add      x3, x3, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035624: adrp     x2, #0x45000                   
+035628: add      x2, x2, #0x4f0                 str: "%s@%d: input error!!
+"
+03562c: mov      w1, #1                         
+035630: mov      w0, #3                         
+035634: bl       #0x1a110                       __syslog_chk
+035638: mov      w0, #-1                        
+03563c: b        #0x35e78                       0x35e78
+035640: adrp     x1, #0x4b000                   
+035644: add      x1, x1, #0xe8                  str: " --tags 0"
+035648: ldr      x2, [x1]                       
+03564c: str      x2, [x22, w0, sxtw]            
+035650: ldrh     w0, [x1, #8]                   
+035654: strh     w0, [x21, #8]                  
+035658: add      x21, x21, #9                   str: "r -I FORWARD 1 -j br_pppoe"
+03565c: b        #0x354f0                       0x354f0
+035660: mov      w4, #0x384                     
+035664: adrp     x3, #0x4b000                   
+035668: add      x3, x3, #0xf8                  str: " --filter-unicast-mac 1 --rule-priority %d"
+03566c: mov      x2, #-1                        
+035670: mov      w1, #1                         
+035674: mov      x0, x21                        
+035678: bl       #0x195e0                       __sprintf_chk
+03567c: add      x0, x21, #0x2b                 str: "ables -t filter -A br_pppoe -i %s -j br_pppoe_acl"
+035680: b        #0x35524                       0x35524
+035684: ldr      x5, [x19, #0x28]               
+035688: add      x21, sp, #0x210                
+03568c: mov      x7, x5                         
+035690: ldr      w6, [x19, #0x20]               
+035694: adrp     x4, #0x41000                   
+035698: add      x4, x4, #0x278                 str: "/bin/smuxctl"
+03569c: adrp     x3, #0x4b000                   
+0356a0: add      x3, x3, #0x190                 str: "%s --if %s --rx --tags 1 --filter-vid 0x%x 1 --pop-tag --rule-alias %s-rx-default-leaf --rule-append"
+0356a4: mov      x2, #0x400                     
+0356a8: mov      w1, #1                         
+0356ac: mov      x0, x21                        
+0356b0: bl       #0x195e0                       __sprintf_chk
+0356b4: mov      w3, #0x2f0                     
+0356b8: adrp     x2, #0x4c000                   
+0356bc: add      x2, x2, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+0356c0: add      x2, x2, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+0356c4: mov      w1, #0                         
+0356c8: mov      x0, x21                        
+0356cc: bl       #0x197d0                       cccBeDoSystem
+0356d0: ldrb     w0, [x19, #0x18]               
+0356d4: cbz      w0, #0x35564                   
+0356d8: stp      x23, x24, [sp, #0x60]          
+0356dc: stp      x25, x26, [sp, #0x70]          
+0356e0: mov      w22, #1                        
+0356e4: adrp     x25, #0x41000                  
+0356e8: add      x25, x25, #0x278               str: "/bin/smuxctl"
+0356ec: adrp     x24, #0x4b000                  
+0356f0: add      x24, x24, #0x1f8               str: "%s --if %s --tx"
+0356f4: adrp     x23, #0x4c000                  
+0356f8: add      x23, x23, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+0356fc: add      x23, x23, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035700: b        #0x3575c                       0x3575c
+035704: ldr      w5, [x19, #0x1c]               
+035708: ldr      w4, [x19, #0x20]               
+03570c: adrp     x3, #0x4b000                   
+035710: add      x3, x3, #0x218                 str: " --push-tag --set-vid 0x%x 1 --set-priority %d 1"
+035714: mov      x2, #-1                        
+035718: mov      w1, #1                         
+03571c: mov      x0, x21                        
+035720: bl       #0x195e0                       __sprintf_chk
+035724: ldr      x4, [x19, #0x28]               
+035728: adrp     x3, #0x4b000                   
+03572c: add      x3, x3, #0x250                 str: " --target ACCEPT --rule-alias %s-tx-default --rule-append"
+035730: mov      x2, #-1                        
+035734: mov      w1, #1                         
+035738: add      x0, x21, w0, sxtw              str: "TURN"
+03573c: bl       #0x195e0                       __sprintf_chk
+035740: mov      w3, #0x301                     
+035744: mov      x2, x23                        
+035748: mov      w1, #0                         
+03574c: add      x0, sp, #0x210                 
+035750: bl       #0x197d0                       cccBeDoSystem
+035754: add      w20, w20, #1                   
+035758: add      w22, w22, #1                   
+03575c: strb     wzr, [sp, #0x210]              
+035760: add      x21, sp, #0x210                
+035764: ldr      x5, [x19, #0x28]               
+035768: mov      x4, x25                        
+03576c: mov      x3, x24                        
+035770: mov      x2, #0x400                     
+035774: mov      w1, #1                         
+035778: mov      x0, x21                        
+03577c: bl       #0x195e0                       __sprintf_chk
+035780: add      x21, x21, w0, sxtw             str: "TURN"
+035784: mov      w4, w20                        
+035788: adrp     x3, #0x4b000                   
+03578c: add      x3, x3, #0x208                 str: " --tags %d"
+035790: mov      x2, #-1                        
+035794: mov      w1, #1                         
+035798: mov      x0, x21                        
+03579c: bl       #0x195e0                       __sprintf_chk
+0357a0: add      x21, x21, #9                   str: "r -I FORWARD 1 -j br_pppoe"
+0357a4: cbz      w20, #0x35704                  
+0357a8: mov      w7, w20                        
+0357ac: ldr      w6, [x19, #0x1c]               
+0357b0: mov      w5, w20                        
+0357b4: ldr      w4, [x19, #0x20]               
+0357b8: adrp     x3, #0x4b000                   
+0357bc: add      x3, x3, #0x290                 str: " --set-vid 0x%x %d --set-priority %d %d"
+0357c0: mov      x2, #-1                        
+0357c4: mov      w1, #1                         
+0357c8: mov      x0, x21                        
+0357cc: bl       #0x195e0                       __sprintf_chk
+0357d0: ldr      x4, [x19, #0x28]               
+0357d4: adrp     x3, #0x4b000                   
+0357d8: add      x3, x3, #0x250                 str: " --target ACCEPT --rule-alias %s-tx-default --rule-append"
+0357dc: mov      x2, #-1                        
+0357e0: mov      w1, #1                         
+0357e4: add      x0, x21, w0, sxtw              str: "TURN"
+0357e8: bl       #0x195e0                       __sprintf_chk
+0357ec: mov      w3, #0x301                     
+0357f0: mov      x2, x23                        
+0357f4: mov      w1, #0                         
+0357f8: add      x0, sp, #0x210                 
+0357fc: bl       #0x197d0                       cccBeDoSystem
+035800: cmp      w22, #3                        
+035804: b.le     #0x35754                       
+035808: ldp      x23, x24, [sp, #0x60]          
+03580c: ldp      x25, x26, [sp, #0x70]          
+035810: b        #0x35564                       0x35564
+035814: ldr      x5, [x19, #0x10]               
+035818: cbz      x5, #0x3593c                   
+03581c: ldr      x6, [x19, #0x28]               
+035820: cbz      x6, #0x3593c                   
+035824: stp      x21, x22, [sp, #0x50]          
+035828: stp      x23, x24, [sp, #0x60]          
+03582c: stp      x25, x26, [sp, #0x70]          
+035830: add      x21, sp, #0x210                
+035834: adrp     x4, #0x41000                   
+035838: add      x4, x4, #0x278                 str: "/bin/smuxctl"
+03583c: adrp     x3, #0x4b000                   
+035840: add      x3, x3, #0x2d8                 str: "%s --if-create-name %s %s --set-if-rsmux --carrier MANUAL"
+035844: mov      x2, #0x400                     
+035848: mov      w1, #1                         
+03584c: mov      x0, x21                        
+035850: bl       #0x195e0                       __sprintf_chk
+035854: mov      w3, #0x315                     
+035858: adrp     x2, #0x4c000                   
+03585c: add      x2, x2, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+035860: add      x2, x2, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035864: mov      w1, #0                         
+035868: mov      x0, x21                        
+03586c: bl       #0x197d0                       cccBeDoSystem
+035870: ldrb     w0, [x19, #0x18]               
+035874: cbnz     w0, #0x35994                   
+035878: add      x20, sp, #0x210                
+03587c: ldr      x5, [x19, #0x28]               
+035880: adrp     x4, #0x4a000                   
+035884: add      x4, x4, #0xf20                 str: "ifconfig %s mtu 1500"
+035888: mov      x3, #0x400                     
+03588c: mov      w2, #1                         
+035890: mov      x1, x3                         
+035894: mov      x0, x20                        
+035898: bl       #0x198a0                       __snprintf_chk
+03589c: adrp     x21, #0x4c000                  
+0358a0: add      x21, x21, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+0358a4: add      x21, x21, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+0358a8: mov      w3, #0x32e                     
+0358ac: mov      x2, x21                        
+0358b0: mov      w1, #0                         
+0358b4: mov      x0, x20                        
+0358b8: bl       #0x197d0                       cccBeDoSystem
+0358bc: ldr      x5, [x19, #0x28]               
+0358c0: adrp     x4, #0x4b000                   
+0358c4: add      x4, x4, #0x2b8                 str: "ifconfig %s txqueuelen 10"
+0358c8: mov      x3, #0x400                     
+0358cc: mov      w2, #1                         
+0358d0: mov      x1, x3                         
+0358d4: mov      x0, x20                        
+0358d8: bl       #0x198a0                       __snprintf_chk
+0358dc: mov      w3, #0x330                     
+0358e0: mov      x2, x21                        
+0358e4: mov      w1, #0                         
+0358e8: mov      x0, x20                        
+0358ec: bl       #0x197d0                       cccBeDoSystem
+0358f0: add      x20, sp, #0x90                 
+0358f4: mov      x2, #0x180                     
+0358f8: mov      w1, #0                         
+0358fc: mov      x0, x20                        
+035900: bl       #0x19ae0                       memset
+035904: mov      x1, x20                        
+035908: mov      x0, x19                        
+03590c: bl       #0x19b80                       getMatchedGPONInfo
+035910: cmp      w0, #0                         
+035914: b.le     #0x35de0                       
+035918: str      x27, [sp, #0x80]               
+03591c: sub      w0, w0, #1                     
+035920: add      x0, x0, x0, lsl #1             
+035924: add      x1, sp, #0x9c                  
+035928: add      x22, x1, x0, lsl #2            str: "-vid 0x%x 1"
+03592c: adrp     x24, #0x41000                  
+035930: add      x24, x24, #0x278               str: "/bin/smuxctl"
+035934: mov      x23, x21                       
+035938: b        #0x35b84                       0x35b84
+03593c: adrp     x0, #0x6a000                   
+035940: ldr      x0, [x0, #0xfb8]               
+035944: ldr      w1, [x0]                       
+035948: mov      w0, #-1                        
+03594c: tbz      w1, #5, #0x35e78               
+035950: adrp     x0, #0x6a000                   
+035954: ldr      x0, [x0, #0xfe0]               
+035958: ldr      w1, [x0]                       
+03595c: mov      w0, #-1                        
+035960: cmp      w1, #2                         
+035964: b.ls     #0x35e78                       
+035968: mov      w4, #0x30f                     
+03596c: adrp     x3, #0x4c000                   
+035970: add      x3, x3, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+035974: add      x3, x3, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035978: adrp     x2, #0x45000                   
+03597c: add      x2, x2, #0x4f0                 str: "%s@%d: input error!!
+"
+035980: mov      w1, #1                         
+035984: mov      w0, #3                         
+035988: bl       #0x1a110                       __syslog_chk
+03598c: mov      w0, #-1                        
+035990: b        #0x35e78                       0x35e78
+035994: ldr      x5, [x19, #0x28]               
+035998: mov      x7, x5                         
+03599c: ldr      w6, [x19, #0x20]               
+0359a0: adrp     x4, #0x41000                   
+0359a4: add      x4, x4, #0x278                 str: "/bin/smuxctl"
+0359a8: adrp     x3, #0x4b000                   
+0359ac: add      x3, x3, #0x318                 str: "%s --if %s --rx --tags 1 --filter-vid 0x%x 1 --pop-tag --rule-alias %s-rx-default --rule-append"
+0359b0: mov      x2, #0x400                     
+0359b4: mov      w1, #1                         
+0359b8: mov      x0, x21                        
+0359bc: bl       #0x195e0                       __sprintf_chk
+0359c0: mov      w3, #0x31c                     
+0359c4: adrp     x2, #0x4c000                   
+0359c8: add      x2, x2, #0x448                 str: "libcccBeWan_getL2IntfName_wrapper"
+0359cc: add      x2, x2, #0xd0                  str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+0359d0: mov      w1, #0                         
+0359d4: mov      x0, x21                        
+0359d8: bl       #0x197d0                       cccBeDoSystem
+0359dc: mov      w22, #0                        
+0359e0: adrp     x25, #0x41000                  
+0359e4: add      x25, x25, #0x278               str: "/bin/smuxctl"
+0359e8: adrp     x24, #0x4b000                  
+0359ec: add      x24, x24, #0x1f8               str: "%s --if %s --tx"
+0359f0: adrp     x23, #0x4c000                  
+0359f4: add      x23, x23, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+0359f8: add      x23, x23, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+0359fc: b        #0x35a58                       0x35a58
+035a00: ldr      w5, [x19, #0x1c]               
+035a04: ldr      w4, [x19, #0x20]               
+035a08: adrp     x3, #0x4b000                   
+035a0c: add      x3, x3, #0x218                 str: " --push-tag --set-vid 0x%x 1 --set-priority %d 1"
+035a10: mov      x2, #-1                        
+035a14: mov      w1, #1                         
+035a18: mov      x0, x21                        
+035a1c: bl       #0x195e0                       __sprintf_chk
+035a20: ldr      x4, [x19, #0x28]               
+035a24: adrp     x3, #0x4b000                   
+035a28: add      x3, x3, #0x250                 str: " --target ACCEPT --rule-alias %s-tx-default --rule-append"
+035a2c: mov      x2, #-1                        
+035a30: mov      w1, #1                         
+035a34: add      x0, x21, w0, sxtw              str: "TURN"
+035a38: bl       #0x195e0                       __sprintf_chk
+035a3c: mov      w3, #0x32a                     
+035a40: mov      x2, x23                        
+035a44: mov      w1, #0                         
+035a48: add      x0, sp, #0x210                 
+035a4c: bl       #0x197d0                       cccBeDoSystem
+035a50: add      w22, w22, #1                   
+035a54: add      w20, w20, #1                   
+035a58: strb     wzr, [sp, #0x210]              
+035a5c: add      x21, sp, #0x210                
+035a60: ldr      x5, [x19, #0x28]               
+035a64: mov      x4, x25                        
+035a68: mov      x3, x24                        
+035a6c: mov      x2, #0x400                     
+035a70: mov      w1, #1                         
+035a74: mov      x0, x21                        
+035a78: bl       #0x195e0                       __sprintf_chk
+035a7c: add      x21, x21, w0, sxtw             str: "TURN"
+035a80: mov      w4, w22                        
+035a84: adrp     x3, #0x4b000                   
+035a88: add      x3, x3, #0x208                 str: " --tags %d"
+035a8c: mov      x2, #-1                        
+035a90: mov      w1, #1                         
+035a94: mov      x0, x21                        
+035a98: bl       #0x195e0                       __sprintf_chk
+035a9c: add      x21, x21, #9                   str: "r -I FORWARD 1 -j br_pppoe"
+035aa0: cbz      w22, #0x35a00                  
+035aa4: mov      w7, w22                        
+035aa8: ldr      w6, [x19, #0x1c]               
+035aac: mov      w5, w22                        
+035ab0: ldr      w4, [x19, #0x20]               
+035ab4: adrp     x3, #0x4b000                   
+035ab8: add      x3, x3, #0x290                 str: " --set-vid 0x%x %d --set-priority %d %d"
+035abc: mov      x2, #-1                        
+035ac0: mov      w1, #1                         
+035ac4: mov      x0, x21                        
+035ac8: bl       #0x195e0                       __sprintf_chk
+035acc: ldr      x4, [x19, #0x28]               
+035ad0: adrp     x3, #0x4b000                   
+035ad4: add      x3, x3, #0x250                 str: " --target ACCEPT --rule-alias %s-tx-default --rule-append"
+035ad8: mov      x2, #-1                        
+035adc: mov      w1, #1                         
+035ae0: add      x0, x21, w0, sxtw              str: "TURN"
+035ae4: bl       #0x195e0                       __sprintf_chk
+035ae8: mov      w3, #0x32a                     
+035aec: mov      x2, x23                        
+035af0: mov      w1, #0                         
+035af4: add      x0, sp, #0x210                 
+035af8: bl       #0x197d0                       cccBeDoSystem
+035afc: cmp      w20, #3                        
+035b00: b.le     #0x35a50                       
+035b04: b        #0x35878                       0x35878
+035b08: mov      w4, #0x384                     
+035b0c: adrp     x3, #0x4b000                   
+035b10: add      x3, x3, #0x128                 str: " --rule-priority %d"
+035b14: mov      x2, #-1                        
+035b18: mov      w1, #1                         
+035b1c: mov      x0, x25                        
+035b20: bl       #0x195e0                       __sprintf_chk
+035b24: add      x25, x25, #0x14                str: "st_member_query_count %d >> %s"
+035b28: ldrb     w0, [x21]                      
+035b2c: cmp      w0, #3                         
+035b30: b.eq     #0x35ca4                       
+035b34: ldr      x4, [x19, #0x28]               
+035b38: adrp     x3, #0x4b000                   
+035b3c: add      x3, x3, #0x498                 str: " --target ACCEPT --rule-alias %s-rx-default-root-ds --rule-append"
+035b40: mov      x2, #-1                        
+035b44: mov      w1, #1                         
+035b48: mov      x0, x25                        
+035b4c: bl       #0x195e0                       __sprintf_chk
+035b50: mov      w3, #0x362                     
+035b54: mov      x2, x23                        
+035b58: mov      w1, #0                         
+035b5c: add      x0, sp, #0x210                 
+035b60: bl       #0x197d0                       cccBeDoSystem
+035b64: ldrb     w0, [x21]                      
+035b68: sub      w0, w0, #2                     
+035b6c: and      w0, w0, #0xff                  
+035b70: cmp      w0, #1                         
+035b74: b.ls     #0x35cc4                       
+035b78: add      x20, x20, #0xc                 
+035b7c: cmp      x20, x22                       
+035b80: b.eq     #0x35ddc                       
+035b84: mov      x21, x20                       
+035b88: ldrb     w0, [x20]                      
+035b8c: and      w0, w0, #0xfffffffd            
+035b90: and      w0, w0, #0xff                  
+035b94: cmp      w0, #1                         
+035b98: b.ne     #0x35b64                       
+035b9c: add      x25, sp, #0x210                
+035ba0: mov      x26, #0x400                    
+035ba4: mov      x2, x26                        
+035ba8: mov      w1, #0                         
+035bac: mov      x0, x25                        
+035bb0: bl       #0x19ae0                       memset
+035bb4: ldr      x6, [x19, #0x28]               
+035bb8: ldr      x5, [x19, #0x10]               
+035bbc: mov      x4, x24                        
+035bc0: adrp     x3, #0x4b000                   
+035bc4: add      x3, x3, #0x378                 str: "%s --if %s --rx --set-rxif %s"
+035bc8: mov      x2, x26                        
+035bcc: mov      w1, #1                         
+035bd0: mov      x0, x25                        
+035bd4: bl       #0x195e0                       __sprintf_chk
+035bd8: add      x25, x25, w0, sxtw             str: "ce : %s
+"
+035bdc: ldr      w4, [x20, #4]                  
+035be0: adrp     x3, #0x4b000                   
+035be4: add      x3, x3, #0x398                 str: " --tags 1 --filter-tpid 0x8100 1 --filter-vid 0x%x 1"
+035be8: mov      x2, #-1                        
+035bec: mov      w1, #1                         
+035bf0: mov      x0, x25                        
+035bf4: bl       #0x195e0                       __sprintf_chk
+035bf8: add      x25, x25, w0, sxtw             str: "ce : %s
+"
+035bfc: ldrb     w5, [x20, #1]                  
+035c00: lsl      w5, w5, #0xf                   
+035c04: orr      w5, w5, #0x400000              
+035c08: mov      w4, #0x7f8000                  
+035c0c: adrp     x3, #0x4b000                   
+035c10: add      x3, x3, #0x3d0                 str: " --filter-skb-mark2 0x%x 0x%x"
+035c14: mov      x2, #-1                        
+035c18: mov      w1, #1                         
+035c1c: mov      x0, x25                        
+035c20: bl       #0x195e0                       __sprintf_chk
+035c24: add      x25, x25, #0x25                str: "ount %d >> %s"
+035c28: ldr      w4, [x19, #0x20]               
+035c2c: adrp     x3, #0x4b000                   
+035c30: add      x3, x3, #0x3f0                 str: " --set-tpid 0x8100 1 --set-vid 0x%x 1 --copy-priority 1 1"
+035c34: mov      x2, #-1                        
+035c38: mov      w1, #1                         
+035c3c: mov      x0, x25                        
+035c40: bl       #0x195e0                       __sprintf_chk
+035c44: add      x2, x25, w0, sxtw              str: "ce : %s
+"
+035c48: adrp     x1, #0x4b000                   
+035c4c: add      x1, x1, #0x430                 str: " --set-cfi 0 1"
+035c50: ldr      x3, [x1]                       
+035c54: str      x3, [x25, w0, sxtw]            
+035c58: ldur     x0, [x1, #7]                   
+035c5c: stur     x0, [x2, #7]                   
+035c60: add      x25, x2, #0xe                  str: "FORWARD 1 -j br_pppoe"
+035c64: ldr      w0, [x19, #8]                  
+035c68: cbnz     w0, #0x35b28                   
+035c6c: ldr      w0, [x19, #0x4c]               
+035c70: cmp      w0, #1                         
+035c74: b.eq     #0x35b28                       
+035c78: ldrb     w0, [x20]                      
+035c7c: cmp      w0, #3                         
+035c80: b.ne     #0x35b08                       
+035c84: adrp     x0, #0x4b000                   
+035c88: add      x0, x0, #0x440                 str: " --filter-unicast-mac 1"
+035c8c: ldp      x4, x5, [x0]                   
+035c90: stp      x4, x5, [x25]                  
+035c94: ldr      x0, [x0, #0x10]                
+035c98: str      x0, [x25, #0x10]               
+035c9c: add      x25, x2, #0x25                 
+035ca0: b        #0x35b08                       0x35b08
+035ca4: ldr      x4, [x19, #0x28]               
+035ca8: adrp     x3, #0x4b000                   
+035cac: add      x3, x3, #0x458                 str: " --target ACCEPT --rule-alias %s-rx-default-root --rule-append"
+035cb0: mov      x2, #-1                        
+035cb4: mov      w1, #1                         
+035cb8: mov      x0, x25                        
+035cbc: bl       #0x195e0                       __sprintf_chk
+035cc0: b        #0x35b50                       0x35b50
+035cc4: add      x25, sp, #0x210                
+035cc8: mov      x26, #0x400                    
+035ccc: mov      x2, x26                        
+035cd0: mov      w1, #0                         
+035cd4: mov      x0, x25                        
+035cd8: bl       #0x19ae0                       memset
+035cdc: ldr      x6, [x19, #0x28]               
+035ce0: ldr      x5, [x19, #0x10]               
+035ce4: mov      x4, x24                        
+035ce8: adrp     x3, #0x4b000                   
+035cec: add      x3, x3, #0x4e0                 str: "%s --if %s --tx --filter-txif %s"
+035cf0: mov      x2, x26                        
+035cf4: mov      w1, #1                         
+035cf8: mov      x0, x25                        
+035cfc: bl       #0x195e0                       __sprintf_chk
+035d00: add      x26, x25, w0, sxtw             str: "ce : %s
+"
+035d04: ldr      w4, [x19, #0x20]               
+035d08: adrp     x3, #0x4b000                   
+035d0c: add      x3, x3, #0x398                 str: " --tags 1 --filter-tpid 0x8100 1 --filter-vid 0x%x 1"
+035d10: mov      x2, #-1                        
+035d14: mov      w1, #1                         
+035d18: mov      x0, x26                        
+035d1c: bl       #0x195e0                       __sprintf_chk
+035d20: add      x26, x26, w0, sxtw             
+035d24: ldrsb    w4, [x21, #9]                  
+035d28: adrp     x3, #0x4b000                   
+035d2c: add      x3, x3, #0x508                 str: " --filter-priority 0x%x 1"
+035d30: mov      x2, #-1                        
+035d34: mov      w1, #1                         
+035d38: mov      x0, x26                        
+035d3c: bl       #0x195e0                       __sprintf_chk
+035d40: add      x26, x26, w0, sxtw             
+035d44: ldr      w4, [x21, #4]                  
+035d48: adrp     x3, #0x4b000                   
+035d4c: add      x3, x3, #0x3f0                 str: " --set-tpid 0x8100 1 --set-vid 0x%x 1 --copy-priority 1 1"
+035d50: mov      x2, #-1                        
+035d54: mov      w1, #1                         
+035d58: mov      x0, x26                        
+035d5c: bl       #0x195e0                       __sprintf_chk
+035d60: add      x27, x26, w0, sxtw             
+035d64: adrp     x1, #0x4b000                   
+035d68: add      x1, x1, #0x430                 str: " --set-cfi 0 1"
+035d6c: ldr      x2, [x1]                       
+035d70: str      x2, [x26, w0, sxtw]            
+035d74: ldur     x0, [x1, #7]                   
+035d78: stur     x0, [x27, #7]                  
+035d7c: ldrb     w5, [x21, #2]                  
+035d80: lsl      w5, w5, #0xf                   
+035d84: orr      w5, w5, #0x400000              
+035d88: mov      w4, #0x7f8000                  
+035d8c: adrp     x3, #0x4b000                   
+035d90: add      x3, x3, #0x528                 str: " --set-skb-mark2 0x%x 0x%x"
+035d94: mov      x2, #-1                        
+035d98: mov      w1, #1                         
+035d9c: add      x0, x27, #0xe                  
+035da0: bl       #0x195e0                       __sprintf_chk
+035da4: mov      w5, #0x384                     
+035da8: ldr      x4, [x19, #0x28]               
+035dac: adrp     x3, #0x4b000                   
+035db0: add      x3, x3, #0x548                 str: " --rule-alias %s-tx-default-root --rule-priority %d --rule-append"
+035db4: mov      x2, #-1                        
+035db8: mov      w1, #1                         
+035dbc: add      x0, x27, #0x30                 
+035dc0: bl       #0x195e0                       __sprintf_chk
+035dc4: mov      w3, #0x388                     
+035dc8: mov      x2, x23                        
+035dcc: mov      w1, #0                         
+035dd0: mov      x0, x25                        
+035dd4: bl       #0x197d0                       cccBeDoSystem
+035dd8: b        #0x35b78                       0x35b78
+035ddc: ldr      x27, [sp, #0x80]               
+035de0: ldr      w7, [x19, #0x24]               
+035de4: cbnz     w7, #0x35e88                   
+035de8: add      x20, sp, #0x210                
+035dec: ldr      x5, [x19, #0x28]               
+035df0: adrp     x4, #0x4b000                   
+035df4: add      x4, x4, #0x6d0                 str: "echo "carrier %s on" > /proc/rtk_smuxdev/interface"
+035df8: mov      x3, #0x400                     
+035dfc: mov      w2, #1                         
+035e00: mov      x1, x3                         
+035e04: mov      x0, x20                        
+035e08: bl       #0x198a0                       __snprintf_chk
+035e0c: adrp     x21, #0x4c000                  
+035e10: add      x21, x21, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+035e14: add      x21, x21, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035e18: mov      w3, #0x39a                     
+035e1c: mov      x2, x21                        
+035e20: mov      w1, #0                         
+035e24: mov      x0, x20                        
+035e28: bl       #0x197d0                       cccBeDoSystem
+035e2c: ldr      x6, [x19, #0x28]               
+035e30: adrp     x5, #0x41000                   
+035e34: add      x5, x5, #0x278                 str: "/bin/smuxctl"
+035e38: adrp     x4, #0x4b000                   
+035e3c: add      x4, x4, #0x708                 str: "%s --if %s --carrier AUTO"
+035e40: mov      x3, #0x400                     
+035e44: mov      w2, #1                         
+035e48: mov      x1, x3                         
+035e4c: mov      x0, x20                        
+035e50: bl       #0x198a0                       __snprintf_chk
+035e54: mov      w3, #0x39c                     
+035e58: mov      x2, x21                        
+035e5c: mov      w1, #0                         
+035e60: mov      x0, x20                        
+035e64: bl       #0x197d0                       cccBeDoSystem
+035e68: mov      w0, #0                         
+035e6c: ldp      x21, x22, [sp, #0x50]          
+035e70: ldp      x23, x24, [sp, #0x60]          
+035e74: ldp      x25, x26, [sp, #0x70]          
+035e78: ldp      x19, x20, [sp, #0x40]          
+035e7c: ldp      x29, x30, [sp, #0x30]          
+035e80: add      sp, sp, #0x610                 
+035e84: ret                                     
+035e88: ldr      x0, [x19, #0x28]               
+035e8c: adrp     x22, #0x41000                  
+035e90: add      x22, x22, #0x278               str: "/bin/smuxctl"
+035e94: add      x20, sp, #0x210                
+035e98: mov      w1, #0x2ee                     
+035e9c: str      w1, [sp, #0x20]                
+035ea0: str      x0, [sp, #0x18]                
+035ea4: adrp     x23, #0x4b000                  
+035ea8: add      x23, x23, #0x620               str: "bcmc_veip_"
+035eac: str      x23, [sp, #0x10]               
+035eb0: str      x0, [sp, #8]                   
+035eb4: ldr      w0, [x19, #0x20]               
+035eb8: str      w0, [sp]                       
+035ebc: ldr      x6, [x19, #0x10]               
+035ec0: mov      x5, x22                        
+035ec4: adrp     x4, #0x4b000                   
+035ec8: add      x4, x4, #0x590                 str: "%s --if %s --rxmc --tags 1 --filter-vid %d 1 --set-vid %d 1 --set-rxif %s --target ACCEPT --rule-alias %s%s --rule-priority %d --rule-append"
+035ecc: mov      x3, #0x400                     
+035ed0: mov      w2, #1                         
+035ed4: mov      x1, x3                         
+035ed8: mov      x0, x20                        
+035edc: bl       #0x198a0                       __snprintf_chk
+035ee0: adrp     x21, #0x4c000                  
+035ee4: add      x21, x21, #0x448               str: "libcccBeWan_getL2IntfName_wrapper"
+035ee8: add      x21, x21, #0xd0                str: "te -A BROUTING -j PASSTHROUGH_WAN_%d"
+035eec: mov      w3, #0x391                     
+035ef0: mov      x2, x21                        
+035ef4: mov      w1, #0                         
+035ef8: mov      x0, x20                        
+035efc: bl       #0x197d0                       cccBeDoSystem
+035f00: ldr      x0, [x19, #0x28]               
+035f04: mov      w1, #0x384                     
+035f08: str      w1, [sp, #0x20]                
+035f0c: str      x0, [sp, #0x18]                
+035f10: str      x23, [sp, #0x10]               
+035f14: str      x0, [sp, #8]                   
+035f18: ldr      w0, [x19, #0x20]               
+035f1c: str      w0, [sp]                       
+035f20: ldr      w7, [x19, #0x24]               
+035f24: ldr      x6, [x19, #0x10]               
+035f28: mov      x5, x22                        
+035f2c: adrp     x4, #0x4b000                   
+035f30: add      x4, x4, #0x630                 str: "%s --if %s --rx --tags 1 --filter-vid %d 1 --filter-multicast --set-vid %d 1 --set-rxif %s --target ACCEPT --rule-alias %s%s --rule-priority %d --rule-append"
+035f34: mov      x3, #0x400                     
+035f38: mov      w2, #1                         
+035f3c: mov      x1, x3                         
+035f40: mov      x0, x20                        
+035f44: bl       #0x198a0                       __snprintf_chk
+035f48: mov      w3, #0x396                     
+035f4c: mov      x2, x21                        
+035f50: mov      w1, #0                         
+035f54: mov      x0, x20                        
+035f58: bl       #0x197d0                       cccBeDoSystem
+035f5c: b        #0x35de8                       0x35de8

@@ -1,0 +1,238 @@
+=== Disassembly of OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot (0x50d08, 948 bytes) in libbemodules.so ===
+0x00050d08:  stp      x29, x30, [sp, #-0x120]!         
+0x00050d0c:  mov      x29, sp                          
+0x00050d10:  stp      x19, x20, [sp, #0x10]            
+0x00050d14:  stp      x25, x26, [sp, #0x40]            
+0x00050d18:  mov      x20, x0                          
+0x00050d1c:  mov      x25, x1                          
+0x00050d20:  str      xzr, [sp, #0x118]                
+0x00050d24:  stp      xzr, xzr, [sp, #0x98]            
+0x00050d28:  add      x0, sp, #0xa8                    
+0x00050d2c:  movi     v0.4s, #0                        
+0x00050d30:  stp      q0, q0, [x0]                     
+0x00050d34:  stp      q0, q0, [x0, #0x20]              
+0x00050d38:  stp      q0, q0, [x0, #0x40]              
+0x00050d3c:  str      q0, [x0, #0x60]                  
+0x00050d40:  stp      xzr, xzr, [sp, #0x78]            
+0x00050d44:  stp      xzr, xzr, [sp, #0x88]            
+0x00050d48:  add      x19, sp, #0x98                   
+0x00050d4c:  adrp     x4, #0xb4000                     
+0x00050d50:  add      x4, x4, #0x2b0                    ; "/usr/sbin/linkdetection"
+0x00050d54:  adrp     x3, #0xad000                     
+0x00050d58:  add      x3, x3, #0xe50                    ; "%s &"
+0x00050d5c:  mov      x2, #0x80                        
+0x00050d60:  mov      w1, #1                           
+0x00050d64:  mov      x0, x19                          
+0x00050d68:  bl       #0x1f110                         
+0x00050d6c:  mov      w3, #0x83e                       
+0x00050d70:  adrp     x2, #0xb4000                     
+0x00050d74:  add      x2, x2, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x00050d78:  add      x2, x2, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x00050d7c:  mov      w1, #0                           
+0x00050d80:  mov      x0, x19                          
+0x00050d84:  bl       #0x1c180                         
+0x00050d88:  add      x1, sp, #0x78                    
+0x00050d8c:  mov      x0, x20                          
+0x00050d90:  bl       #0x1e660                         
+0x00050d94:  mov      w1, #0xc3                        
+0x00050d98:  mov      x0, x20                          
+0x00050d9c:  bl       #0x1ed10                         
+0x00050da0:  str      x0, [sp, #0x118]                 
+0x00050da4:  cbz      x0, #0x51038                     
+0x00050da8:  stp      x21, x22, [sp, #0x20]            
+0x00050dac:  stp      x23, x24, [sp, #0x30]            
+0x00050db0:  stp      x27, x28, [sp, #0x50]            
+0x00050db4:  mov      x19, x0                          
+0x00050db8:  mov      w23, #0                          
+0x00050dbc:  mov      x22, #0                          
+0x00050dc0:  mov      w24, #0                          
+0x00050dc4:  mov      x21, #0                          
+0x00050dc8:  adrp     x26, #0xe6000                    
+0x00050dcc:  ldr      x26, [x26, #0xf00]               
+0x00050dd0:  adrp     x27, #0xe6000                    
+0x00050dd4:  adrp     x0, #0xb4000                     
+0x00050dd8:  add      x0, x0, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x00050ddc:  add      x0, x0, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x00050de0:  str      x0, [sp, #0x68]                  
+0x00050de4:  b        #0x50e08                         
+0x00050de8:  cbz      w24, #0x50e60                    
+0x00050dec:  cbz      w23, #0x50e8c                    
+0x00050df0:  mov      x2, x25                          
+0x00050df4:  ldr      x1, [x19, #0x18]                 
+0x00050df8:  mov      x0, x20                          
+0x00050dfc:  bl       #0x1dfe0                         
+0x00050e00:  ldr      x19, [x19]                       
+0x00050e04:  cbz      x19, #0x50eb8                    
+0x00050e08:  ldr      w0, [x26]                        
+0x00050e0c:  tbz      w0, #5, #0x50de8                 
+0x00050e10:  ldr      x0, [x27, #0xdf8]                
+0x00050e14:  ldr      w0, [x0]                         
+0x00050e18:  cmp      w0, #6                           
+0x00050e1c:  b.ls     #0x50de8                         
+0x00050e20:  ldr      w28, [x19, #0x10]                
+0x00050e24:  ldr      x0, [x19, #0x18]                 
+0x00050e28:  str      x0, [sp, #0x60]                  
+0x00050e2c:  mov      w0, w28                          
+0x00050e30:  bl       #0x1e7c0                         
+0x00050e34:  mov      x7, x0                           
+0x00050e38:  ldr      x6, [sp, #0x60]                  
+0x00050e3c:  mov      w5, w28                          
+0x00050e40:  mov      w4, #0x849                       
+0x00050e44:  ldr      x3, [sp, #0x68]                  
+0x00050e48:  adrp     x2, #0xa7000                     
+0x00050e4c:  add      x2, x2, #0xc8                    
+0x00050e50:  mov      w1, #1                           
+0x00050e54:  mov      w0, #7                           
+0x00050e58:  bl       #0x1cc50                         
+0x00050e5c:  b        #0x50de8                         
+0x00050e60:  mov      w3, #1                           
+0x00050e64:  ldr      x2, [x19, #0x18]                 
+0x00050e68:  mov      w1, #0xca                        
+0x00050e6c:  mov      x0, x20                          
+0x00050e70:  bl       #0x1de40                         
+0x00050e74:  mov      x21, x0                          
+0x00050e78:  cbz      x0, #0x50dec                     
+0x00050e7c:  ldrb     w0, [x0, #4]                     
+0x00050e80:  cmp      w0, #0                           
+0x00050e84:  cset     w24, ne                          
+0x00050e88:  b        #0x50dec                         
+0x00050e8c:  mov      w3, #1                           
+0x00050e90:  ldr      x2, [x19, #0x18]                 
+0x00050e94:  mov      w1, #0xc7                        
+0x00050e98:  mov      x0, x20                          
+0x00050e9c:  bl       #0x1de40                         
+0x00050ea0:  mov      x22, x0                          
+0x00050ea4:  cbz      x0, #0x50df0                     
+0x00050ea8:  ldrb     w0, [x0]                         
+0x00050eac:  cmp      w0, #0                           
+0x00050eb0:  cset     w23, ne                          
+0x00050eb4:  b        #0x50df0                         
+0x00050eb8:  cbz      w24, #0x50f00                    
+0x00050ebc:  adrp     x1, #0xb4000                     
+0x00050ec0:  add      x1, x1, #0x2c8                    ; "ETHER"
+0x00050ec4:  add      x0, sp, #0x78                    
+0x00050ec8:  bl       #0x1e4a0                         
+0x00050ecc:  cbnz     w0, #0x50f54                     
+0x00050ed0:  mov      x0, x21                          
+0x00050ed4:  bl       #0x1e980                         
+0x00050ed8:  cbz      w0, #0x50f00                     
+0x00050edc:  adrp     x0, #0xe6000                     
+0x00050ee0:  ldr      x0, [x0, #0xf00]                 
+0x00050ee4:  ldr      w0, [x0]                         
+0x00050ee8:  tbz      w0, #5, #0x50f00                 
+0x00050eec:  adrp     x0, #0xe6000                     
+0x00050ef0:  ldr      x0, [x0, #0xdf8]                 
+0x00050ef4:  ldr      w0, [x0]                         
+0x00050ef8:  cmp      w0, #2                           
+0x00050efc:  b.hi     #0x50f28                         
+0x00050f00:  cbz      w23, #0x5102c                    
+0x00050f04:  adrp     x1, #0xab000                     
+0x00050f08:  add      x1, x1, #0x9a8                    ; "GPON"
+0x00050f0c:  add      x0, sp, #0x78                    
+0x00050f10:  bl       #0x1e4a0                         
+0x00050f14:  cbz      w0, #0x50fb4                     
+0x00050f18:  ldp      x21, x22, [sp, #0x20]            
+0x00050f1c:  ldp      x23, x24, [sp, #0x30]            
+0x00050f20:  ldp      x27, x28, [sp, #0x50]            
+0x00050f24:  b        #0x51038                         
+0x00050f28:  add      x5, x21, #0x8a                   
+0x00050f2c:  mov      w4, #0x8c4                       
+0x00050f30:  adrp     x3, #0xb4000                     
+0x00050f34:  add      x3, x3, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x00050f38:  add      x3, x3, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x00050f3c:  adrp     x2, #0xb4000                     
+0x00050f40:  add      x2, x2, #0x2d0                   
+0x00050f44:  mov      w1, #1                           
+0x00050f48:  mov      w0, #3                           
+0x00050f4c:  bl       #0x1cc50                         
+0x00050f50:  b        #0x50f00                         
+0x00050f54:  add      x21, x21, #0x8a                  
+0x00050f58:  mov      x0, x21                          
+0x00050f5c:  bl       #0x1d720                         
+0x00050f60:  cbz      w0, #0x50f00                     
+0x00050f64:  adrp     x0, #0xe6000                     
+0x00050f68:  ldr      x0, [x0, #0xf00]                 
+0x00050f6c:  ldr      w0, [x0]                         
+0x00050f70:  tbz      w0, #5, #0x50f00                 
+0x00050f74:  adrp     x0, #0xe6000                     
+0x00050f78:  ldr      x0, [x0, #0xdf8]                 
+0x00050f7c:  ldr      w0, [x0]                         
+0x00050f80:  cmp      w0, #2                           
+0x00050f84:  b.ls     #0x50f00                         
+0x00050f88:  mov      x5, x21                          
+0x00050f8c:  mov      w4, #0x8cb                       
+0x00050f90:  adrp     x3, #0xb4000                     
+0x00050f94:  add      x3, x3, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x00050f98:  add      x3, x3, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x00050f9c:  adrp     x2, #0xb4000                     
+0x00050fa0:  add      x2, x2, #0x2f8                   
+0x00050fa4:  mov      w1, #1                           
+0x00050fa8:  mov      w0, #3                           
+0x00050fac:  bl       #0x1cc50                         
+0x00050fb0:  b        #0x50f00                         
+0x00050fb4:  mov      x0, x22                          
+0x00050fb8:  bl       #0x1e5e0                         
+0x00050fbc:  cbz      w0, #0x51074                     
+0x00050fc0:  adrp     x0, #0xe6000                     
+0x00050fc4:  ldr      x0, [x0, #0xf00]                 
+0x00050fc8:  ldr      w0, [x0]                         
+0x00050fcc:  tbz      w0, #5, #0x51084                 
+0x00050fd0:  adrp     x0, #0xe6000                     
+0x00050fd4:  ldr      x0, [x0, #0xdf8]                 
+0x00050fd8:  ldr      w0, [x0]                         
+0x00050fdc:  cmp      w0, #2                           
+0x00050fe0:  b.hi     #0x50ff4                         
+0x00050fe4:  ldp      x21, x22, [sp, #0x20]            
+0x00050fe8:  ldp      x23, x24, [sp, #0x30]            
+0x00050fec:  ldp      x27, x28, [sp, #0x50]            
+0x00050ff0:  b        #0x51038                         
+0x00050ff4:  add      x5, x22, #2                      
+0x00050ff8:  mov      w4, #0x8e0                       
+0x00050ffc:  adrp     x3, #0xb4000                     
+0x00051000:  add      x3, x3, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x00051004:  add      x3, x3, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x00051008:  adrp     x2, #0xb4000                     
+0x0005100c:  add      x2, x2, #0x2d0                   
+0x00051010:  mov      w1, #1                           
+0x00051014:  mov      w0, #3                           
+0x00051018:  bl       #0x1cc50                         
+0x0005101c:  ldp      x21, x22, [sp, #0x20]            
+0x00051020:  ldp      x23, x24, [sp, #0x30]            
+0x00051024:  ldp      x27, x28, [sp, #0x50]            
+0x00051028:  b        #0x51038                         
+0x0005102c:  ldp      x21, x22, [sp, #0x20]            
+0x00051030:  ldp      x23, x24, [sp, #0x30]            
+0x00051034:  ldp      x27, x28, [sp, #0x50]            
+0x00051038:  add      x0, sp, #0x118                   
+0x0005103c:  bl       #0x1d9c0                         
+0x00051040:  adrp     x0, #0xe6000                     
+0x00051044:  ldr      x0, [x0, #0xf00]                 
+0x00051048:  ldr      w0, [x0]                         
+0x0005104c:  tbz      w0, #5, #0x51064                 
+0x00051050:  adrp     x0, #0xe6000                     
+0x00051054:  ldr      x0, [x0, #0xdf8]                 
+0x00051058:  ldr      w0, [x0]                         
+0x0005105c:  cmp      w0, #6                           
+0x00051060:  b.hi     #0x51094                         
+0x00051064:  ldp      x19, x20, [sp, #0x10]            
+0x00051068:  ldp      x25, x26, [sp, #0x40]            
+0x0005106c:  ldp      x29, x30, [sp], #0x120           
+0x00051070:  ret                                       
+0x00051074:  ldp      x21, x22, [sp, #0x20]            
+0x00051078:  ldp      x23, x24, [sp, #0x30]            
+0x0005107c:  ldp      x27, x28, [sp, #0x50]            
+0x00051080:  b        #0x51038                         
+0x00051084:  ldp      x21, x22, [sp, #0x20]            
+0x00051088:  ldp      x23, x24, [sp, #0x30]            
+0x0005108c:  ldp      x27, x28, [sp, #0x50]            
+0x00051090:  b        #0x51038                         
+0x00051094:  mov      w4, #0x8e9                       
+0x00051098:  adrp     x3, #0xb4000                     
+0x0005109c:  add      x3, x3, #0x348                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_L4ObjectChanged"
+0x000510a0:  add      x3, x3, #0x340                    ; "OID_InternetGatewayDevice_WANDevice_i_ConfigLoaderFunc_Boot"
+0x000510a4:  adrp     x2, #0xb4000                     
+0x000510a8:  add      x2, x2, #0x328                   
+0x000510ac:  mov      w1, #1                           
+0x000510b0:  mov      w0, #7                           
+0x000510b4:  bl       #0x1cc50                         
+0x000510b8:  b        #0x51064                         

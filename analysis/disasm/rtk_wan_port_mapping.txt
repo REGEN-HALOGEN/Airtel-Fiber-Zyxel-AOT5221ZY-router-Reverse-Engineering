@@ -1,0 +1,253 @@
+=== Disassembly of rtk_wan_port_mapping (0x37c84, 1008 bytes) in libcccbe.so ===
+0x00037c84:  stp      x29, x30, [sp, #-0xa0]!          
+0x00037c88:  mov      x29, sp                          
+0x00037c8c:  stp      xzr, xzr, [sp, #0x20]            
+0x00037c90:  add      x2, sp, #0x30                    
+0x00037c94:  movi     v0.4s, #0                        
+0x00037c98:  stp      q0, q0, [x2]                     
+0x00037c9c:  stp      q0, q0, [x2, #0x20]              
+0x00037ca0:  stp      q0, q0, [x2, #0x40]              
+0x00037ca4:  str      q0, [x2, #0x60]                  
+0x00037ca8:  cbz      x1, #0x37d10                     
+0x00037cac:  mov      x6, x1                           
+0x00037cb0:  cbz      w0, #0x37d68                     
+0x00037cb4:  cmp      w0, #1                           
+0x00037cb8:  b.eq     #0x37dd8                         
+0x00037cbc:  adrp     x0, #0x6a000                     
+0x00037cc0:  ldr      x0, [x0, #0xfb8]                 
+0x00037cc4:  ldr      w0, [x0]                         
+0x00037cc8:  tbz      w0, #5, #0x37e54                 
+0x00037ccc:  adrp     x0, #0x6a000                     
+0x00037cd0:  ldr      x0, [x0, #0xfe0]                 
+0x00037cd4:  ldr      w1, [x0]                         
+0x00037cd8:  mov      w0, #-1                          
+0x00037cdc:  cmp      w1, #2                           
+0x00037ce0:  b.ls     #0x37dd0                         
+0x00037ce4:  mov      w4, #0xba9                       
+0x00037ce8:  adrp     x3, #0x4c000                     
+0x00037cec:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037cf0:  add      x3, x3, #0x238                    ; "rtk_wan_port_mapping"
+0x00037cf4:  adrp     x2, #0x4c000                     
+0x00037cf8:  add      x2, x2, #0x198                   
+0x00037cfc:  mov      w1, #1                           
+0x00037d00:  mov      w0, #3                           
+0x00037d04:  bl       #0x1a110                         
+0x00037d08:  mov      w0, #-1                          
+0x00037d0c:  b        #0x37dd0                         
+0x00037d10:  adrp     x0, #0x6a000                     
+0x00037d14:  ldr      x0, [x0, #0xfb8]                 
+0x00037d18:  ldr      w1, [x0]                         
+0x00037d1c:  mov      w0, #-1                          
+0x00037d20:  tbz      w1, #5, #0x37dd0                 
+0x00037d24:  adrp     x0, #0x6a000                     
+0x00037d28:  ldr      x0, [x0, #0xfe0]                 
+0x00037d2c:  ldr      w1, [x0]                         
+0x00037d30:  mov      w0, #-1                          
+0x00037d34:  cmp      w1, #2                           
+0x00037d38:  b.ls     #0x37dd0                         
+0x00037d3c:  mov      w4, #0xb87                       
+0x00037d40:  adrp     x3, #0x4c000                     
+0x00037d44:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037d48:  add      x3, x3, #0x238                    ; "rtk_wan_port_mapping"
+0x00037d4c:  adrp     x2, #0x45000                     
+0x00037d50:  add      x2, x2, #0x4f0                   
+0x00037d54:  mov      w1, #1                           
+0x00037d58:  mov      w0, #3                           
+0x00037d5c:  bl       #0x1a110                         
+0x00037d60:  mov      w0, #-1                          
+0x00037d64:  b        #0x37dd0                         
+0x00037d68:  str      x19, [sp, #0x10]                 
+0x00037d6c:  adrp     x7, #0x4c000                     
+0x00037d70:  add      x7, x7, #0x168                    ; "/proc/ni/dev_port_mapping"
+0x00037d74:  mov      w5, #3                           
+0x00037d78:  adrp     x4, #0x4c000                     
+0x00037d7c:  add      x4, x4, #0x188                    ; "echo %d %s > %s"
+0x00037d80:  mov      x3, #0x80                        
+0x00037d84:  mov      w2, #1                           
+0x00037d88:  mov      x1, #0x7f                        
+0x00037d8c:  add      x0, sp, #0x20                    
+0x00037d90:  bl       #0x198a0                         
+0x00037d94:  mov      w0, #8                           
+0x00037d98:  adrp     x19, #0x6b000                    
+0x00037d9c:  str      w0, [x19, #0xc04]                
+0x00037da0:  mov      w3, #0xbad                       
+0x00037da4:  adrp     x2, #0x4c000                     
+0x00037da8:  add      x2, x2, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037dac:  add      x2, x2, #0x238                    ; "rtk_wan_port_mapping"
+0x00037db0:  mov      w1, #0                           
+0x00037db4:  add      x0, sp, #0x20                    
+0x00037db8:  bl       #0x197d0                         
+0x00037dbc:  ldr      w5, [x19, #0xc04]                
+0x00037dc0:  mov      w0, #0                           
+0x00037dc4:  cmp      w5, #0                           
+0x00037dc8:  b.gt     #0x37e0c                         
+0x00037dcc:  ldr      x19, [sp, #0x10]                 
+0x00037dd0:  ldp      x29, x30, [sp], #0xa0            
+0x00037dd4:  ret                                       
+0x00037dd8:  str      x19, [sp, #0x10]                 
+0x00037ddc:  adrp     x7, #0x4c000                     
+0x00037de0:  add      x7, x7, #0x168                    ; "/proc/ni/dev_port_mapping"
+0x00037de4:  mov      w5, #7                           
+0x00037de8:  adrp     x4, #0x4c000                     
+0x00037dec:  add      x4, x4, #0x188                    ; "echo %d %s > %s"
+0x00037df0:  mov      x3, #0x80                        
+0x00037df4:  mov      w2, #1                           
+0x00037df8:  mov      x1, #0x7f                        
+0x00037dfc:  add      x0, sp, #0x20                    
+0x00037e00:  bl       #0x198a0                         
+0x00037e04:  mov      w0, #0x80                        
+0x00037e08:  b        #0x37d98                         
+0x00037e0c:  add      x19, sp, #0x20                   
+0x00037e10:  adrp     x4, #0x4c000                     
+0x00037e14:  add      x4, x4, #0x1b8                    ; "echo %d > /proc/fc/ctrl/wan_port_mask"
+0x00037e18:  mov      x3, #0x80                        
+0x00037e1c:  mov      w2, #1                           
+0x00037e20:  mov      x1, #0x7f                        
+0x00037e24:  mov      x0, x19                          
+0x00037e28:  bl       #0x198a0                         
+0x00037e2c:  mov      w3, #0xbbe                       
+0x00037e30:  adrp     x2, #0x4c000                     
+0x00037e34:  add      x2, x2, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037e38:  add      x2, x2, #0x238                    ; "rtk_wan_port_mapping"
+0x00037e3c:  mov      w1, #0                           
+0x00037e40:  mov      x0, x19                          
+0x00037e44:  bl       #0x197d0                         
+0x00037e48:  mov      w0, #0                           
+0x00037e4c:  ldr      x19, [sp, #0x10]                 
+0x00037e50:  b        #0x37dd0                         
+0x00037e54:  mov      w0, #-1                          
+0x00037e58:  b        #0x37dd0                         
+0x00037e5c:  sub      sp, sp, #0x160                   
+0x00037e60:  stp      x29, x30, [sp, #0x10]            
+0x00037e64:  add      x29, sp, #0x10                   
+0x00037e68:  cbz      x0, #0x3801c                     
+0x00037e6c:  stp      x19, x20, [sp, #0x20]            
+0x00037e70:  stp      x21, x22, [sp, #0x30]            
+0x00037e74:  stp      x23, x24, [sp, #0x40]            
+0x00037e78:  str      x25, [sp, #0x50]                 
+0x00037e7c:  add      x20, x0, #2                      
+0x00037e80:  mov      x1, x20                          
+0x00037e84:  mov      w0, #1                           
+0x00037e88:  bl       #0x19d50                         
+0x00037e8c:  stp      xzr, xzr, [sp, #0x60]            
+0x00037e90:  add      x0, sp, #0x70                    
+0x00037e94:  movi     v0.4s, #0                        
+0x00037e98:  stp      q0, q0, [x0]                     
+0x00037e9c:  stp      q0, q0, [x0, #0x20]              
+0x00037ea0:  stp      q0, q0, [x0, #0x40]              
+0x00037ea4:  stp      q0, q0, [x0, #0x60]              
+0x00037ea8:  stp      q0, q0, [x0, #0x80]              
+0x00037eac:  stp      q0, q0, [x0, #0xa0]              
+0x00037eb0:  stp      q0, q0, [x0, #0xc0]              
+0x00037eb4:  str      q0, [x0, #0xe0]                  
+0x00037eb8:  add      x19, sp, #0x60                   
+0x00037ebc:  mov      x4, x20                          
+0x00037ec0:  adrp     x3, #0x4c000                     
+0x00037ec4:  add      x3, x3, #0x1e0                    ; "/bin/smuxctl --if %s --set-if-rsmux --set-if-rx-policy DROP --set-if-tx-policy CONTINUE --set-if-rxmc-policy DROP --set-if-rx-multi 1"
+0x00037ec8:  mov      x2, #0x100                       
+0x00037ecc:  mov      w1, #1                           
+0x00037ed0:  mov      x0, x19                          
+0x00037ed4:  bl       #0x195e0                         
+0x00037ed8:  adrp     x21, #0x4c000                    
+0x00037edc:  add      x21, x21, #0x448                  ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037ee0:  add      x21, x21, #0x250                  ; "libcccBeWan_gpon_Init"
+0x00037ee4:  mov      w3, #0x3f9                       
+0x00037ee8:  mov      x2, x21                          
+0x00037eec:  mov      w1, #0                           
+0x00037ef0:  mov      x0, x19                          
+0x00037ef4:  bl       #0x197d0                         
+0x00037ef8:  adrp     x0, #0x4c000                     
+0x00037efc:  add      x0, x0, #0x268                    ; "echo switch_on > /proc/rtk_smuxdev/hw_vlan_filter"
+0x00037f00:  ldp      q0, q1, [x0]                     
+0x00037f04:  stp      q0, q1, [x19]                    
+0x00037f08:  ldr      q0, [x0, #0x20]                  
+0x00037f0c:  str      q0, [x19, #0x20]                 
+0x00037f10:  ldrh     w0, [x0, #0x30]                  
+0x00037f14:  strh     w0, [x19, #0x30]                 
+0x00037f18:  mov      w3, #0x3fc                       
+0x00037f1c:  mov      x2, x21                          
+0x00037f20:  mov      w1, #0                           
+0x00037f24:  mov      x0, x19                          
+0x00037f28:  bl       #0x197d0                         
+0x00037f2c:  mov      x4, x20                          
+0x00037f30:  adrp     x3, #0x4c000                     
+0x00037f34:  add      x3, x3, #0x2a0                    ; "echo enable %s MC > /proc/rtk_smuxdev/hw_vlan_filter"
+0x00037f38:  mov      x2, #0x100                       
+0x00037f3c:  mov      w1, #1                           
+0x00037f40:  mov      x0, x19                          
+0x00037f44:  bl       #0x195e0                         
+0x00037f48:  mov      w3, #0x3fe                       
+0x00037f4c:  mov      x2, x21                          
+0x00037f50:  mov      w1, #0                           
+0x00037f54:  mov      x0, x19                          
+0x00037f58:  bl       #0x197d0                         
+0x00037f5c:  mov      x4, x20                          
+0x00037f60:  adrp     x3, #0x4c000                     
+0x00037f64:  add      x3, x3, #0x2d8                    ; "echo refresh %s > /proc/rtk_smuxdev/hw_vlan_filter"
+0x00037f68:  mov      x2, #0x100                       
+0x00037f6c:  mov      w1, #1                           
+0x00037f70:  mov      x0, x19                          
+0x00037f74:  bl       #0x195e0                         
+0x00037f78:  mov      w3, #0x400                       
+0x00037f7c:  mov      x2, x21                          
+0x00037f80:  mov      w1, #0                           
+0x00037f84:  mov      x0, x19                          
+0x00037f88:  bl       #0x197d0                         
+0x00037f8c:  mov      w19, #0                          
+0x00037f90:  adrp     x24, #0x41000                    
+0x00037f94:  add      x24, x24, #0x278                  ; "/bin/smuxctl"
+0x00037f98:  adrp     x23, #0x4c000                    
+0x00037f9c:  add      x23, x23, #0x310                  ; "%s --if %s --rxmc --tags %d --rule-alias rxmc_def_filter_drop --rule-priority %d --target DROP --rule-append"
+0x00037fa0:  add      x22, sp, #0x60                   
+0x00037fa4:  mov      w25, #0x2e4                      
+0x00037fa8:  adrp     x21, #0x4c000                    
+0x00037fac:  add      x21, x21, #0x448                  ; "libcccBeWan_getL2IntfName_wrapper"
+0x00037fb0:  add      x21, x21, #0x250                  ; "libcccBeWan_gpon_Init"
+0x00037fb4:  str      w25, [sp]                        
+0x00037fb8:  mov      w7, w19                          
+0x00037fbc:  mov      x6, x20                          
+0x00037fc0:  mov      x5, x24                          
+0x00037fc4:  mov      x4, x23                          
+0x00037fc8:  mov      x3, #0x100                       
+0x00037fcc:  mov      w2, #1                           
+0x00037fd0:  mov      x1, x3                           
+0x00037fd4:  mov      x0, x22                          
+0x00037fd8:  bl       #0x198a0                         
+0x00037fdc:  mov      w3, #0x408                       
+0x00037fe0:  mov      x2, x21                          
+0x00037fe4:  mov      w1, #0                           
+0x00037fe8:  mov      x0, x22                          
+0x00037fec:  bl       #0x197d0                         
+0x00037ff0:  add      w19, w19, #1                     
+0x00037ff4:  cmp      w19, #4                          
+0x00037ff8:  b.ne     #0x37fb4                         
+0x00037ffc:  mov      w0, #0                           
+0x00038000:  ldp      x19, x20, [sp, #0x20]            
+0x00038004:  ldp      x21, x22, [sp, #0x30]            
+0x00038008:  ldp      x23, x24, [sp, #0x40]            
+0x0003800c:  ldr      x25, [sp, #0x50]                 
+0x00038010:  ldp      x29, x30, [sp, #0x10]            
+0x00038014:  add      sp, sp, #0x160                   
+0x00038018:  ret                                       
+0x0003801c:  adrp     x0, #0x6a000                     
+0x00038020:  ldr      x0, [x0, #0xfb8]                 
+0x00038024:  ldr      w1, [x0]                         
+0x00038028:  mov      w0, #-1                          
+0x0003802c:  tbz      w1, #5, #0x38010                 
+0x00038030:  adrp     x0, #0x6a000                     
+0x00038034:  ldr      x0, [x0, #0xfe0]                 
+0x00038038:  ldr      w1, [x0]                         
+0x0003803c:  mov      w0, #-1                          
+0x00038040:  cmp      w1, #2                           
+0x00038044:  b.ls     #0x38010                         
+0x00038048:  mov      w4, #0x3ee                       
+0x0003804c:  adrp     x3, #0x4c000                     
+0x00038050:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00038054:  add      x3, x3, #0x250                    ; "libcccBeWan_gpon_Init"
+0x00038058:  adrp     x2, #0x45000                     
+0x0003805c:  add      x2, x2, #0x4f0                   
+0x00038060:  mov      w1, #1                           
+0x00038064:  mov      w0, #3                           
+0x00038068:  bl       #0x1a110                         
+0x0003806c:  mov      w0, #-1                          
+0x00038070:  b        #0x38010                         

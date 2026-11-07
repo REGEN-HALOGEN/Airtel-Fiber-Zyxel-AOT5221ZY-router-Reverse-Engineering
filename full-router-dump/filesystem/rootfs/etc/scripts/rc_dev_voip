@@ -1,0 +1,47 @@
+#Luna SDK use awk by default
+major=`grep voip /proc/devices| awk '{print $1}'`
+#major=`grep voip /proc/devices| cut -f 1 -d ' '`
+
+mkdir -p /dev/voip
+
+/bin/mknod /dev/voip/dtmfdet0 c ${major} 76
+/bin/mknod /dev/voip/dtmfdet1 c ${major} 77
+/bin/mknod /dev/voip/ivr8k c ${major} 16
+/bin/mknod /dev/voip/mgr c ${major} 1
+/bin/mknod /dev/voip/pcmrx0 c ${major} 65
+/bin/mknod /dev/voip/pcmrx1 c ${major} 74
+/bin/mknod /dev/voip/pcmtx0 c ${major} 64
+/bin/mknod /dev/voip/pcmtx1 c ${major} 73
+/bin/mknod /dev/voip/pcmtx2 c ${major} 80
+/bin/mknod /dev/voip/pcmrx2 c ${major} 81
+/bin/mknod /dev/voip/pcmtx3 c ${major} 82
+/bin/mknod /dev/voip/pcmrx3 c ${major} 83
+/bin/mknod /dev/voip/pcmtx4 c ${major} 84
+/bin/mknod /dev/voip/pcmrx4 c ${major} 85
+/bin/mknod /dev/voip/pcmtx5 c ${major} 86
+/bin/mknod /dev/voip/pcmrx5 c ${major} 87
+/bin/mknod /dev/voip/pcmtx6 c ${major} 88
+/bin/mknod /dev/voip/pcmrx6 c ${major} 89
+/bin/mknod /dev/voip/pcmtx7 c ${major} 90
+/bin/mknod /dev/voip/pcmrx7 c ${major} 91
+/bin/mknod /dev/voip/pcmtx8 c ${major} 92
+/bin/mknod /dev/voip/pcmrx8 c ${major} 93
+/bin/mknod /dev/voip/pcmtx9 c ${major} 94
+/bin/mknod /dev/voip/pcmrx9 c ${major} 95
+/bin/mknod /dev/voip/pcmtx10 c ${major} 96
+/bin/mknod /dev/voip/pcmrx10 c ${major} 97
+/bin/mknod /dev/voip/pcmtx11 c ${major} 98
+/bin/mknod /dev/voip/pcmrx11 c ${major} 99
+/bin/mknod /dev/voip/pcmtx12 c ${major} 100
+/bin/mknod /dev/voip/pcmrx12 c ${major} 101
+/bin/mknod /dev/voip/pcmtx13 c ${major} 102
+/bin/mknod /dev/voip/pcmrx13 c ${major} 103
+/bin/mknod /dev/voip/pcmtx14 c ${major} 104
+/bin/mknod /dev/voip/pcmrx14 c ${major} 105
+/bin/mknod /dev/voip/pcmtx15 c ${major} 106
+/bin/mknod /dev/voip/pcmrx15 c ${major} 107
+
+
+/bin/mknod /dev/voip/ipc c ${major} 66
+/bin/mknod /dev/voip/log_ioctl c ${major} 40
+

@@ -1,0 +1,181 @@
+#!/bin/sh
+#
+# Initializes network interfaces
+#
+
+echo "Enabling IP forwarding"
+# echo 1 > /proc/sys/net/ipv4/ip_forward || echo "  Failed"
+echo 1 > /proc/sys/net/ipv4/ip_dynaddr || echo "  Failed"
+
+ONBOOT=""; DEVICE=""; BOOTPROTO=""; IPADDR=""; NETMASK=""; HWADDR=""; VPI=""; VCI=""; SC=""; PCR=""; SCR=""; MBS=""; ENCAP=""; BIND=""; TYPE=""; BRIDGE=""; ALLMULTI=""; HOSTNAME=""; CLIENT_ID=""; VENDOR_CLASS_ID="";
+
+  ifcfg="/etc/sysconfig/network-scripts/wan-multi/ifcfg-$1"
+
+  . $ifcfg
+
+  if [ -z "${DEVICE}" ]; then
+    echo "  Missing DEVICE for network interface ${ifcfg}"
+    exit 1
+  fi
+
+  # Save bridge interfaces for last
+  if [ "${TYPE}" = "Bridge" ]; then
+    echo "Bringing up bridge ${DEVICE}"
+  
+    params="${DEVICE}"
+    [ -n "${IPADDR}" ] && params="${params} ${IPADDR}"
+    [ -n "${NETMASK}" ] && params="${params} netmask ${NETMASK}"
+    /sbin/ifconfig ${params} up
+    exit 0
+  fi
+
+  echo "Bringing up interface ${DEVICE}"
+  
+  ifname="`echo ${DEVICE} | sed -e 's/[0-9]*$//'`"
+  ifnum="`echo ${DEVICE} | sed -e 's/[a-z]*//g'`"
+  
+  
+  # MAC Address setting
+  if [ -n "${HWADDR}" ]; then
+    # Set MAC address
+    /sbin/ifconfig ${DEVICE} down ether hw ${HWADDR}
+  fi
+  
+  
+  # ATM setting
+  if [ "${ifname}" = "atm" ]; then
+
+    # ATM VPI/VCI
+    if [ -n "${VPI}" ] && [ -n "${VCI}" ]; then
+      /sbin/atmconfig ${DEVICE} vpi_vci ${VPI} ${VCI}
+    fi
+
+    # ATM QoS
+    if [ "${SC}" = "cbr" ] || [ "${SC}" = "ubr" ]; then
+      if [ -n "${PCR}" ]; then
+        /sbin/atmconfig ${DEVICE} sc ${SC} pcr ${PCR}
+      else
+        echo "  Missing PCR for device ${DEVICE}"
+        exit 1
+      fi
+    else
+      if [ "${SC}" = "vbr" ]; then
+        if [ -n "${PCR}" ] && [ -n "${SCR}" ] && [ -n "${MBS}" ]; then
+          /sbin/atmconfig ${DEVICE} sc ${SC} pcr ${PCR} scr ${SCR} mbs ${MBS}
+        else
+          echo "  Missing PCR, SCR and/or MBS for device ${DEVICE}"
+          exit 1
+        fi
+      else
+        echo "  Incorrect ATM service category specified for device ${DEVICE}"
+        exit 1
+      fi
+    fi
+
+    # ATM Encap
+    if [ "${ENCAP}" = "llc" ] || [ "${ENCAP}" = "vc" ]; then
+      /sbin/atmconfig ${DEVICE} encap ${ENCAP}
+    else
+      echo "  Unknown RFC2684 encapsulation specified for device ${DEVICE}"
+      exit 1
+    fi
+
+  fi
+
+  if [ "${ALLMULTI}" = "yes" ]; then
+    # Set allmulti for interface
+    /sbin/ifconfig ${DEVICE} allmulti
+  fi
+
+  if [ "${BOOTPROTO}" = "dhcp" ]; then
+    # Use DHCP
+    echo " Configuring via udhcpc"
+    if [ -e /usr/sbin/ril_dhcp_acc ]; then
+        /usr/bin/get_lte_module_name.sh
+        LTE_MODULE_NAME=`cat /tmp/lte_module_name.tmp`
+        if [ "$LTE_MODULE_NAME" == "MC7710_DIP" ]; then
+            # Accelerate the speed Sierra MC7710 gets DHCP IP via udhcpc
+            /usr/sbin/ril_dhcp_acc &
+        fi
+    fi 
+    /sbin/ifconfig ${DEVICE} up
+    #mkdir -p /var/wan-pid
+	CMD="/sbin/udhcpc -b -S -i ${DEVICE} -s /etc/dhcp.script -p /var/wan-pid/$1.pid -O vendorspecific"
+	if [ -n "${HOSTNAME}" ]; then
+		CMD="${CMD} -h ${HOSTNAME}"
+	fi
+	if [ -n "${CLIENT_ID}" ]; then
+		CMD="${CMD} -c ${CLIENT_ID}"
+	fi
+	if [ -n "${VENDOR_CLASS_ID}" ]; then
+		CMD="${CMD} -V ${VENDOR_CLASS_ID}"
+	fi
+
+	CMD="${CMD} >/tmp/udhcpc-info.tmp 2>/tmp/udhcpc-info.tmp"
+	${CMD} # start udhcpc
+#    /sbin/udhcpc -i ${DEVICE} -s /etc/dhcp.script -p /var/wan-pid/$1.pid >/tmp/udhcpc-info.tmp 2>/tmp/udhcpc-info.tmp
+    exit 0
+  fi
+
+  if [ "${BOOTPROTO}" = "pppoe" ]; then
+    # Use PPPoE
+    echo " Configuring PPPoE"
+    /sbin/ifconfig ${DEVICE} up
+    #/usr/bin/pppoe-start ${DEVICE} &
+    echo "Running /sbin/pppd plugin rp-pppoe.so nic-${DEVICE}"
+    /sbin/pppd file $2 plugin rp-pppoe.so nic-${DEVICE} >/tmp/pppd-info.tmp 2>/tmp/pppd-info.tmp &
+    #mkdir -p /var/wan-pid
+    sleep 1
+    pgrep -lf pppd | grep $2 | sed -e 's/ .*//g' > /var/wan-pid/$1.pid
+    exit 0
+  fi
+
+  if [ "${BOOTPROTO}" = "pppoa" ]; then
+    # Use PPPoA
+    echo " Configuring PPPoA"
+    #/sbin/ifconfig ${DEVICE} up
+    #/usr/bin/pppoe-start ${DEVICE} &
+    echo "Running /sbin/pppd plugin plugin /lib/pppd/2.4.4/pppoatm.so"
+    /sbin/pppd file $2 plugin /lib/pppd/2.4.4/pppoatm.so ${ENCAP}-encaps 0.${VPI}.${VCI} >/dev/null 2>/dev/null &
+    #mkdir -p /var/wan-pid
+    sleep 1
+    pgrep -lf pppd | grep $2 | sed -e 's/ .*//g' > /var/wan-pid/$1.pid
+    exit 0
+  fi
+
+  if [ "${BOOTPROTO}" = "none" ]; then
+    echo " Configuring with no IP address (i.e. for PPP)"
+    /sbin/ifconfig ${DEVICE} up
+    exit 0
+  fi
+
+  # Static IP
+  if [ -z "${IPADDR}" ]; then
+    echo "  Missing IPADDR for device ${DEVICE}"
+    exit 1
+  fi
+  params="${DEVICE} ${IPADDR}"
+  [ -n "${NETMASK}" ] && params="${params} netmask ${NETMASK}"
+  [ -n "${BROADCAST}" ] && params="${params} broadcast ${BROADCAST}"
+  /sbin/ifconfig ${params}
+
+  if [ -n "${DEFAULTGW}" ] && [ "${DEFAULTGW}" == "yes" ]; then
+    route del default
+    if [ -n "${GATEWAY}" ]; then
+      route add default gw ${GATEWAY}
+    fi
+  fi
+  
+  ccctest -f /usr/bin/dns_config_notify
+  
+  echo "################ Sean debug create_connection start ################" >> /var/log/syslog.log
+  echo "!!! Send event [CEVENT_WAN_CONNECTION_UP], if_name=${DEVICE}" >> /var/log/syslog.log
+  echo "################ Sean debug create_connection end ################" >> /var/log/syslog.log
+  rm -f /var/wan_connection_notify/${DEVICE}"_connection_is_up" /var/wan_connection_notify/${DEVICE}"_connection_is_down"
+  touch /var/wan_connection_notify/${DEVICE}"_connection_is_up"
+  echo "RDMNAME config;" >> /var/wan_connection_notify/${DEVICE}"_connection_is_up"
+  echo "EVENTNOTIFY 206 string ${DEVICE};" >> /var/wan_connection_notify/${DEVICE}"_connection_is_up"
+  ccctest -f /var/wan_connection_notify/${DEVICE}"_connection_is_up"
+  
+  exit 0
+  

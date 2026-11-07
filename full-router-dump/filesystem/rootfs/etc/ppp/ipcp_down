@@ -1,0 +1,13 @@
+#!/bin/sh
+REALNAME=$1 #PPPx
+REALDEV=$2	#nas0_x
+WWAN=$( echo $REALDEV | grep "ttyUSB")
+if [ "$WWAN" != "" ]
+then
+	REALDEV=$REALNAME
+fi
+rm -f /var/wan_connection_notify/$REALDEV"_ppp_negotiate"
+touch /var/wan_connection_notify/$REALDEV"_ppp_negotiate"
+echo "RDMNAME config;" >> /var/wan_connection_notify/$REALDEV"_ppp_negotiate"
+echo "EVENTNOTIFY 780 string $REALNAME;" >> /var/wan_connection_notify/$REALDEV"_ppp_negotiate"
+ccctest -f /var/wan_connection_notify/$REALDEV"_ppp_negotiate"

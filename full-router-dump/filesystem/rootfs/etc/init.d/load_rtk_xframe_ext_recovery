@@ -1,0 +1,17 @@
+#!/bin/sh /etc/rc.common
+START=99
+PNAME=load_rtk_xframe_ext_recovery
+DEBUG=1
+
+W_LOG()
+{
+	if [ $DEBUG -eq 1 ]; then
+		echo "[${PNAME}] $@" > /dev/console
+	fi
+}
+
+start()
+{
+	W_LOG "Starting ${PNAME}..."
+	test -e /etc/scripts/rtk_xframe_ext_recovery_detect.sh && /etc/scripts/rtk_xframe_ext_recovery_detect.sh >  /dev/console &
+}

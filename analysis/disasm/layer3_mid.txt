@@ -1,0 +1,289 @@
+=== Disassembly of beWanDoLayer3InterfaceAction_mid (0x6c300, 1152 bytes) in libbemodules.so ===
+0x0006c300:  add      x2, x2, #0xe70                   
+0x0006c304:  mov      w1, #1                           
+0x0006c308:  mov      w0, #3                           
+0x0006c30c:  bl       #0x1cc50                         
+0x0006c310:  b        #0x6c2ac                         
+0x0006c314:  adrp     x0, #0xe6000                     
+0x0006c318:  ldr      x0, [x0, #0xf00]                 
+0x0006c31c:  ldr      w0, [x0]                         
+0x0006c320:  mov      w21, #-1                         
+0x0006c324:  tbz      w0, #5, #0x6c2ac                 
+0x0006c328:  adrp     x0, #0xe6000                     
+0x0006c32c:  ldr      x0, [x0, #0xdf8]                 
+0x0006c330:  ldr      w0, [x0]                         
+0x0006c334:  cmp      w0, #2                           
+0x0006c338:  b.ls     #0x6c2ac                         
+0x0006c33c:  mov      w4, #0x885                       
+0x0006c340:  adrp     x3, #0xbe000                     
+0x0006c344:  add      x3, x3, #0xc88                   
+0x0006c348:  add      x3, x3, #0x328                    ; "beWanDoLayer3InterfaceAction"
+0x0006c34c:  adrp     x2, #0xbe000                     
+0x0006c350:  add      x2, x2, #0x2d8                   
+0x0006c354:  mov      w1, #1                           
+0x0006c358:  mov      w0, #3                           
+0x0006c35c:  bl       #0x1cc50                         
+0x0006c360:  b        #0x6c2ac                         
+0x0006c364:  lsr      x1, x22, #0x38                   
+0x0006c368:  adrp     x0, #0xb0000                     
+0x0006c36c:  add      x0, x0, #0xbf8                    ; "%d"
+0x0006c370:  bl       #0x1dce0                         
+0x0006c374:  mov      w3, #1                           
+0x0006c378:  mov      x2, x0                           
+0x0006c37c:  mov      w1, #0xc7                        
+0x0006c380:  mov      x0, x20                          
+0x0006c384:  bl       #0x1de40                         
+0x0006c388:  cbz      x0, #0x6c0f4                     
+0x0006c38c:  add      x0, x0, #2                       
+0x0006c390:  str      x0, [sp, #0x68]                  
+0x0006c394:  b        #0x6c0f4                         
+0x0006c398:  lsr      x1, x22, #0x38                   
+0x0006c39c:  adrp     x0, #0xb0000                     
+0x0006c3a0:  add      x0, x0, #0xbf8                    ; "%d"
+0x0006c3a4:  bl       #0x1dce0                         
+0x0006c3a8:  mov      w3, #1                           
+0x0006c3ac:  mov      x2, x0                           
+0x0006c3b0:  mov      w1, #0xca                        
+0x0006c3b4:  mov      x0, x20                          
+0x0006c3b8:  bl       #0x1de40                         
+0x0006c3bc:  str      x0, [sp, #0xb8]                  
+0x0006c3c0:  cbz      x0, #0x6c0fc                     
+0x0006c3c4:  add      x0, x0, #0x8a                     ; "rmwareImage_ConfigLoaderFunc"
+0x0006c3c8:  str      x0, [sp, #0x68]                  
+0x0006c3cc:  b        #0x6c0fc                         
+0x0006c3d0:  str      x24, [sp, #0xc8]                 
+0x0006c3d4:  b        #0x6c128                         
+0x0006c3d8:  add      x5, sp, #0x250                   
+0x0006c3dc:  mov      w4, #0x8f8                       
+0x0006c3e0:  adrp     x3, #0xbe000                     
+0x0006c3e4:  add      x3, x3, #0xc88                   
+0x0006c3e8:  add      x3, x3, #0x328                    ; "beWanDoLayer3InterfaceAction"
+0x0006c3ec:  adrp     x2, #0xbe000                     
+0x0006c3f0:  add      x2, x2, #0x308                   
+0x0006c3f4:  mov      w1, #1                           
+0x0006c3f8:  mov      w0, #6                           
+0x0006c3fc:  bl       #0x1cc50                         
+0x0006c400:  b        #0x6c168                         
+0x0006c404:  mov      w25, #-1                         
+0x0006c408:  cmp      w19, #1                          
+0x0006c40c:  b.ne     #0x6c170                         
+0x0006c410:  ldr      x1, [sp, #0xc0]                  
+0x0006c414:  cmp      x24, #0                          
+0x0006c418:  cset     w0, ne                           
+0x0006c41c:  cmp      x1, #0                           
+0x0006c420:  ccmp     w0, #0, #4, eq                   
+0x0006c424:  b.ne     #0x6c4a0                         
+0x0006c428:  cmp      x1, #0                           
+0x0006c42c:  ccmp     w0, #0, #4, ne                   
+0x0006c430:  ccmp     w23, #0, #0, ne                  
+0x0006c434:  b.eq     #0x6c4a0                         
+0x0006c438:  adrp     x21, #0xc1000                    
+0x0006c43c:  add      x21, x21, #0x1f0                  ; "%s"
+0x0006c440:  ldr      x3, [sp, #0xc0]                  
+0x0006c444:  add      x3, x3, #0x898                   
+0x0006c448:  mov      x2, x21                          
+0x0006c44c:  mov      x1, #0x20                        
+0x0006c450:  add      x0, sp, #0x250                   
+0x0006c454:  bl       #0x1c470                         
+0x0006c458:  ldr      x3, [sp, #0xc0]                  
+0x0006c45c:  add      x3, x3, #0x3e7                    ; " ACCEPT "
+0x0006c460:  mov      x2, x21                          
+0x0006c464:  mov      x1, #0x20                        
+0x0006c468:  add      x0, sp, #0x230                   
+0x0006c46c:  bl       #0x1c470                         
+0x0006c470:  adrp     x0, #0xe6000                     
+0x0006c474:  ldr      x0, [x0, #0xf00]                 
+0x0006c478:  ldr      w0, [x0]                         
+0x0006c47c:  tbz      w0, #5, #0x6c494                 
+0x0006c480:  adrp     x0, #0xe6000                     
+0x0006c484:  ldr      x0, [x0, #0xdf8]                 
+0x0006c488:  ldr      w0, [x0]                         
+0x0006c48c:  cmp      w0, #5                           
+0x0006c490:  b.hi     #0x6c4a8                         
+0x0006c494:  ldr      x0, [sp, #0xc0]                  
+0x0006c498:  ldr      w25, [x0, #0x728]                
+0x0006c49c:  b        #0x6c170                         
+0x0006c4a0:  str      x24, [sp, #0xc0]                 
+0x0006c4a4:  b        #0x6c438                         
+0x0006c4a8:  add      x6, sp, #0x230                   
+0x0006c4ac:  add      x5, sp, #0x250                   
+0x0006c4b0:  mov      w4, #0x911                       
+0x0006c4b4:  adrp     x3, #0xbe000                     
+0x0006c4b8:  add      x3, x3, #0xc88                   
+0x0006c4bc:  add      x3, x3, #0x328                    ; "beWanDoLayer3InterfaceAction"
+0x0006c4c0:  adrp     x2, #0xbe000                     
+0x0006c4c4:  add      x2, x2, #0x320                   
+0x0006c4c8:  mov      w1, #1                           
+0x0006c4cc:  mov      w0, #6                           
+0x0006c4d0:  bl       #0x1cc50                         
+0x0006c4d4:  b        #0x6c494                         
+0x0006c4d8:  cbnz     w19, #0x6c5d4                    
+0x0006c4dc:  ldr      x21, [sp, #0xc8]                 
+0x0006c4e0:  adrp     x1, #0xab000                     
+0x0006c4e4:  add      x1, x1, #0xf68                    ; "IP_Routed"
+0x0006c4e8:  add      x0, x21, #0x92                   
+0x0006c4ec:  bl       #0x1e4a0                         
+0x0006c4f0:  cbz      w0, #0x6c6c8                     
+0x0006c4f4:  ldr      x19, [sp, #0xc8]                 
+0x0006c4f8:  adrp     x1, #0xb3000                     
+0x0006c4fc:  add      x1, x1, #0x6d8                    ; "IP_Bridged"
+0x0006c500:  add      x0, x19, #0x92                   
+0x0006c504:  bl       #0x1e4a0                         
+0x0006c508:  cbnz     w0, #0x6c79c                     
+0x0006c50c:  mov      w0, #1                           
+0x0006c510:  str      w0, [sp, #0x60]                  
+0x0006c514:  add      x0, x19, #0x5c5                  
+0x0006c518:  str      x0, [sp, #0x80]                  
+0x0006c51c:  add      x0, x19, #0x31e                  
+0x0006c520:  str      x0, [sp, #0x88]                  
+0x0006c524:  ldrb     w0, [x19, #0x2c]                 
+0x0006c528:  str      w0, [sp, #0xa4]                  
+0x0006c52c:  ldrb     w0, [x19, #0x23]                 
+0x0006c530:  cbz      w0, #0x6c550                     
+0x0006c534:  ldrh     w0, [x19, #0x10]                 
+0x0006c538:  str      w0, [sp, #0x78]                  
+0x0006c53c:  ldrb     w0, [x19, #0x2d]                 
+0x0006c540:  str      w0, [sp, #0x74]                  
+0x0006c544:  ldrh     w0, [x19, #0xe]                  
+0x0006c548:  str      w0, [sp, #0x7c]                  
+0x0006c54c:  mov      w0, #1                           
+0x0006c550:  strb     w0, [sp, #0x70]                  
+0x0006c554:  add      x0, sp, #0x58                    
+0x0006c558:  bl       #0x1bdb0                         
+0x0006c55c:  cbnz     w0, #0x6c79c                     
+0x0006c560:  add      x0, sp, #0x250                   
+0x0006c564:  bl       #0x1c810                         
+0x0006c568:  add      x2, sp, #0xd0                    
+0x0006c56c:  add      x1, sp, #0xd8                    
+0x0006c570:  mov      w0, w25                          
+0x0006c574:  bl       #0x1e190                         
+0x0006c578:  cbz      w0, #0x6c94c                     
+0x0006c57c:  ldr      w0, [sp, #0xd0]                  
+0x0006c580:  str      w0, [sp, #0xa8]                  
+0x0006c584:  ldrh     w0, [sp, #0xd4]                  
+0x0006c588:  strh     w0, [sp, #0xac]                  
+0x0006c58c:  add      x4, sp, #0x58                    
+0x0006c590:  mov      w3, #0                           
+0x0006c594:  ldr      x2, [sp, #0xc8]                  
+0x0006c598:  ldr      x1, [sp, #0xc0]                  
+0x0006c59c:  mov      x0, x20                          
+0x0006c5a0:  bl       #0x1c140                         
+0x0006c5a4:  ldr      w0, [sp, #0xa8]                  
+0x0006c5a8:  str      w0, [sp, #0xd0]                  
+0x0006c5ac:  ldrh     w0, [sp, #0xac]                  
+0x0006c5b0:  strh     w0, [sp, #0xd4]                  
+0x0006c5b4:  mov      w2, #0                           
+0x0006c5b8:  ldr      x1, [sp, #0xc8]                  
+0x0006c5bc:  add      x1, x1, #0xa0                    
+0x0006c5c0:  mov      x0, x20                          
+0x0006c5c4:  bl       #0x1bb40                         
+0x0006c5c8:  add      x0, sp, #0x250                   
+0x0006c5cc:  bl       #0x1c850                         
+0x0006c5d0:  b        #0x6c79c                         
+0x0006c5d4:  cmp      w19, #1                          
+0x0006c5d8:  b.ne     #0x6c6bc                         
+0x0006c5dc:  add      x0, sp, #0x250                   
+0x0006c5e0:  bl       #0x1d490                         
+0x0006c5e4:  mov      w21, #0                          
+0x0006c5e8:  cmp      w0, #1                           
+0x0006c5ec:  b.eq     #0x6d0c0                         
+0x0006c5f0:  str      wzr, [sp, #0x60]                 
+0x0006c5f4:  ldr      x0, [sp, #0xc0]                  
+0x0006c5f8:  add      x1, x0, #0x898                    ; "roc/net/arp"
+0x0006c5fc:  str      x1, [sp, #0x80]                  
+0x0006c600:  add      x1, x0, #0x3e7                    ; "n"
+0x0006c604:  str      x1, [sp, #0x88]                  
+0x0006c608:  ldrb     w1, [x0, #0x3e]                  
+0x0006c60c:  str      w1, [sp, #0xa4]                  
+0x0006c610:  ldrb     w1, [x0, #0x34]                  
+0x0006c614:  cbz      w1, #0x6c634                     
+0x0006c618:  ldrh     w1, [x0, #0x1e]                  
+0x0006c61c:  str      w1, [sp, #0x78]                  
+0x0006c620:  ldrb     w1, [x0, #0x3f]                  
+0x0006c624:  str      w1, [sp, #0x74]                  
+0x0006c628:  ldrh     w0, [x0, #0x1c]                  
+0x0006c62c:  str      w0, [sp, #0x7c]                  
+0x0006c630:  mov      w1, #1                           
+0x0006c634:  strb     w1, [sp, #0x70]                  
+0x0006c638:  add      x0, sp, #0x58                    
+0x0006c63c:  bl       #0x1bdb0                         
+0x0006c640:  mov      w23, w0                          
+0x0006c644:  cbz      w0, #0x6d008                     
+0x0006c648:  ldr      x0, [sp, #0xc0]                  
+0x0006c64c:  ldrb     w0, [x0, #0x42]                  
+0x0006c650:  cbnz     w0, #0x6c728                     
+0x0006c654:  add      x21, sp, #0x110                  
+0x0006c658:  movi     v0.4s, #0                        
+0x0006c65c:  stp      q0, q0, [x21]                    
+0x0006c660:  stp      q0, q0, [x21, #0x20]             
+0x0006c664:  stp      q0, q0, [x21, #0x40]             
+0x0006c668:  stp      q0, q0, [x21, #0x60]             
+0x0006c66c:  stp      q0, q0, [x21, #0x80]             
+0x0006c670:  stp      q0, q0, [x21, #0xa0]             
+0x0006c674:  stp      q0, q0, [x21, #0xc0]             
+0x0006c678:  stp      q0, q0, [x21, #0xe0]             
+0x0006c67c:  add      x5, sp, #0x250                   
+0x0006c680:  adrp     x4, #0xbe000                     
+0x0006c684:  add      x4, x4, #0x370                    ; "echo 1 > /proc/sys/net/ipv6/conf/%s/disable_ipv6"
+0x0006c688:  mov      x3, #0x100                       
+0x0006c68c:  mov      w2, #1                           
+0x0006c690:  mov      x1, x3                           
+0x0006c694:  mov      x0, x21                          
+0x0006c698:  bl       #0x1f1b0                         
+0x0006c69c:  mov      w3, #0x9cd                       
+0x0006c6a0:  adrp     x2, #0xbe000                     
+0x0006c6a4:  add      x2, x2, #0xc88                   
+0x0006c6a8:  add      x2, x2, #0x328                    ; "beWanDoLayer3InterfaceAction"
+0x0006c6ac:  mov      w1, #0                           
+0x0006c6b0:  mov      x0, x21                          
+0x0006c6b4:  bl       #0x1c180                         
+0x0006c6b8:  b        #0x6c78c                         
+0x0006c6bc:  mov      w21, #0                          
+0x0006c6c0:  ldr      x25, [sp, #0x40]                 
+0x0006c6c4:  b        #0x6c2ac                         
+0x0006c6c8:  str      wzr, [sp, #0x60]                 
+0x0006c6cc:  add      x0, x21, #0x5c5                  
+0x0006c6d0:  str      x0, [sp, #0x80]                  
+0x0006c6d4:  add      x0, x21, #0x31e                  
+0x0006c6d8:  str      x0, [sp, #0x88]                  
+0x0006c6dc:  ldrb     w0, [x21, #0x2c]                 
+0x0006c6e0:  str      w0, [sp, #0xa4]                  
+0x0006c6e4:  ldrb     w0, [x21, #0x23]                 
+0x0006c6e8:  cbz      w0, #0x6c708                     
+0x0006c6ec:  ldrh     w0, [x21, #0x10]                 
+0x0006c6f0:  str      w0, [sp, #0x78]                  
+0x0006c6f4:  ldrb     w0, [x21, #0x2d]                 
+0x0006c6f8:  str      w0, [sp, #0x74]                  
+0x0006c6fc:  ldrh     w0, [x21, #0xe]                  
+0x0006c700:  str      w0, [sp, #0x7c]                  
+0x0006c704:  mov      w0, #1                           
+0x0006c708:  strb     w0, [sp, #0x70]                  
+0x0006c70c:  add      x0, sp, #0x58                    
+0x0006c710:  bl       #0x1bdb0                         
+0x0006c714:  mov      w23, w0                          
+0x0006c718:  cbz      w0, #0x6cf18                     
+0x0006c71c:  ldr      x0, [sp, #0xc8]                  
+0x0006c720:  ldrb     w0, [x0, #0x30]                  
+0x0006c724:  cbz      w0, #0x6c654                     
+0x0006c728:  add      x21, sp, #0x110                  
+0x0006c72c:  movi     v0.4s, #0                        
+0x0006c730:  stp      q0, q0, [x21]                    
+0x0006c734:  stp      q0, q0, [x21, #0x20]             
+0x0006c738:  stp      q0, q0, [x21, #0x40]             
+0x0006c73c:  stp      q0, q0, [x21, #0x60]             
+0x0006c740:  stp      q0, q0, [x21, #0x80]             
+0x0006c744:  stp      q0, q0, [x21, #0xa0]             
+0x0006c748:  stp      q0, q0, [x21, #0xc0]             
+0x0006c74c:  stp      q0, q0, [x21, #0xe0]             
+0x0006c750:  add      x5, sp, #0x250                   
+0x0006c754:  adrp     x4, #0xbe000                     
+0x0006c758:  add      x4, x4, #0x3a8                    ; "echo 0 > /proc/sys/net/ipv6/conf/%s/disable_ipv6"
+0x0006c75c:  mov      x3, #0x100                       
+0x0006c760:  mov      w2, #1                           
+0x0006c764:  mov      x1, x3                           
+0x0006c768:  mov      x0, x21                          
+0x0006c76c:  bl       #0x1f1b0                         
+0x0006c770:  mov      w3, #0x9d3                       
+0x0006c774:  adrp     x2, #0xbe000                     
+0x0006c778:  add      x2, x2, #0xc88                   
+0x0006c77c:  add      x2, x2, #0x328                    ; "beWanDoLayer3InterfaceAction"

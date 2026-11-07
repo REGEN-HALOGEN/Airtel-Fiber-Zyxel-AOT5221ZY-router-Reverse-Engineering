@@ -1,0 +1,8 @@
+#===== Customized Startup Configurations ========
+# This file contains default startup configuration values
+# specific to ASCI: TAURUS
+# Values in this field will overwrite values in /config/default_scfg.txt
+
+
+
+

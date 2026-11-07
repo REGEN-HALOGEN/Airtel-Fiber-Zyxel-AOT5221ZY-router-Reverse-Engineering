@@ -1,0 +1,34 @@
+RDMNAME config;
+REQUEST;
+
+SEL InternetGatewayDevice.WANDevice.1.X_5067F0_GponInterafceConfig;
+SET Enable boolean 1;
+
+SEL InternetGatewayDevice.WANDevice.1.WANEthernetInterfaceConfig;
+SET Enable boolean 1;
+
+SEL InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1;
+SET Enable boolean 1;
+
+SEL InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANIPConnection.1;
+SET Enable boolean 1;
+
+SEL InternetGatewayDevice.WANDevice.1.WANConnectionDevice.3.WANIPConnection.1;
+SET Enable boolean 1;
+
+SEL InternetGatewayDevice.LANDevice.1.X_5067F0_IPv6LANHostConfigManagement.NDPPD;
+SET Enabled boolean 0;
+
+SEL InternetGatewayDevice.LANDevice.1.X_5067F0_IPv6LANHostConfigManagement.IPv6PDWanConnection;
+SET Interface string InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1;
+
+SEL InternetGatewayDevice.Layer3Forwarding;
+SET DefaultConnectionService string InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1;
+
+SEL InternetGatewayDevice.X_5067F0_IPv6Layer3Forwarding;
+SET DefaultConnectionService string InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1;
+
+SEL InternetGatewayDevice.X_5067F0_Ext.WANSwitch;
+SET WANMode string GPON;
+
+SEND;

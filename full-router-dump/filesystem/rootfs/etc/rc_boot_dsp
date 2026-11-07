@@ -1,0 +1,57 @@
+#!/bin/sh
+
+model=`cat /proc/device-tree/model | awk '{print $3}'`
+if [ "$model" == "Venus" ]; then
+# PE0 ATU setting
+devmem 0x90300004 32 0x00001030
+devmem 0x90300008 32 0x0000FFFF
+devmem 0x9030000C 32 0x00009030
+devmem 0x90300000 32 0x81000003
+fi
+
+model_taurus=`cat /proc/device-tree/model | awk '{print $2}'`
+if [ "$model_taurus" == "Taurus" ]; then
+#PE assert
+if [ -f /sys/devices/platform/pe_reset/cpu0/control ]; then
+	echo assert > /sys/devices/platform/pe_reset/cpu0/control
+fi
+
+#BIST
+if [ -f /sys/devices/platform/pe_reset/cpu0/control ]; then
+	echo "BIST operations in pe reset driver."
+else
+	# BIST
+	devmem 0xf4320004 32 0x00000020
+fi
+
+# PE0 ATU setting
+devmem 0x90300004 32 0x00001030
+devmem 0x90300008 32 0x0000FFFF
+devmem 0x9030000C 32 0x00009030
+devmem 0x90300000 32 0x81000003
+# PE1 ATU setting
+#devmem 0x90300104 32 0x00001030
+#devmem 0x90300108 32 0x0000FFFF
+#devmem 0x9030010C 32 0x00009030
+#devmem 0x90300100 32 0x81000003
+fi
+
+aipc_util -B
+aipc_util -e
+aipc_util -w -d 0x02000400 -i /image/dsp.img
+aipc_util -b
+
+if [ "$model_taurus" == "Taurus" ]; then
+#PE deassert
+if [ -f /sys/devices/platform/pe_reset/cpu0/control ]; then
+	echo deassert > /sys/devices/platform/pe_reset/cpu0/control
+fi
+fi
+
+if [ -x "/bin/wait_dsp" ]; then
+	wait_dsp
+else
+	echo "no wait_dsp, so force to sleep 5 seconds..."
+	sleep 5
+fi
+

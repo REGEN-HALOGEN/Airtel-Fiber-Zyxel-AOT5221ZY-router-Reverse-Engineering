@@ -1,0 +1,14 @@
+=== Disassembly of beWanEnablePPPv4Client (0x66ee4, 52 bytes) in libbemodules.so ===
+0x00066ee4:  stp      x29, x30, [sp, #-0x20]!          
+0x00066ee8:  mov      x29, sp                          
+0x00066eec:  str      x19, [sp, #0x10]                 
+0x00066ef0:  mov      x19, x1                          
+0x00066ef4:  adrp     x0, #0xbd000                     
+0x00066ef8:  add      x0, x0, #0x888                    ; "/bin/pppd"
+0x00066efc:  bl       #0x1d1d0                         
+0x00066f00:  mov      x0, x19                          
+0x00066f04:  bl       #0x1e9a0                         
+0x00066f08:  mov      w0, #0                           
+0x00066f0c:  ldr      x19, [sp, #0x10]                 
+0x00066f10:  ldp      x29, x30, [sp], #0x20            
+0x00066f14:  ret                                       

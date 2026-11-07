@@ -1,0 +1,17 @@
+#!/bin/sh
+REALNAME=$1 #PPPx
+REALDEV=$2	#nas0_x
+IP=$4		#ip
+GW=$5		#gateway
+WWAN=$( echo $REALDEV | grep "ttyUSB")
+if [ "$WWAN" != "" ]
+then
+	REALDEV=$REALNAME
+fi
+rm -f /var/wan_connection_notify/$REALDEV"_connection_is_up"
+touch /var/wan_connection_notify/$REALDEV"_connection_is_up"
+echo "RDMNAME config;" >> /var/wan_connection_notify/$REALDEV"_connection_is_up"
+echo "EVENTNOTIFY 206 string $REALNAME;" >> /var/wan_connection_notify/$REALDEV"_connection_is_up"
+ccctest -f /var/wan_connection_notify/$REALDEV"_connection_is_up"
+################## End configure BL PPP Gateway MAC ###############################
+

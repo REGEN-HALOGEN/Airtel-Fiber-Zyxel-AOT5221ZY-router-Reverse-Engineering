@@ -1,0 +1,150 @@
+=== Disassembly of constructL3WANDevName (0x698dc, 596 bytes) in libbemodules.so ===
+0x000698dc:  sub      sp, sp, #0xb0                    
+0x000698e0:  stp      x29, x30, [sp, #0x10]            
+0x000698e4:  add      x29, sp, #0x10                   
+0x000698e8:  stp      x19, x20, [sp, #0x20]            
+0x000698ec:  mov      x19, x2                          
+0x000698f0:  str      wzr, [sp, #0x54]                 
+0x000698f4:  cbnz     w1, #0x699f8                     
+0x000698f8:  mov      w20, w1                          
+0x000698fc:  cbz      x4, #0x69a08                     
+0x00069900:  stp      x21, x22, [sp, #0x30]            
+0x00069904:  str      x23, [sp, #0x40]                 
+0x00069908:  add      x0, sp, #0x60                    
+0x0006990c:  movi     v0.4s, #0                        
+0x00069910:  stp      q0, q0, [x0]                     
+0x00069914:  stp      q0, q0, [x0, #0x20]              
+0x00069918:  str      q0, [x0, #0x40]                  
+0x0006991c:  str      wzr, [sp, #0x58]                 
+0x00069920:  str      w6, [sp, #0x5c]                  
+0x00069924:  str      x3, [sp, #0x68]                  
+0x00069928:  ldrb     w0, [x4, #0x23]                  
+0x0006992c:  strb     w0, [sp, #0x70]                  
+0x00069930:  ldrh     w0, [x4, #0x10]                  
+0x00069934:  str      w0, [sp, #0x78]                  
+0x00069938:  ldrh     w0, [x4, #0xe]                   
+0x0006993c:  str      w0, [sp, #0x7c]                  
+0x00069940:  add      x21, x4, #0x5c5                  
+0x00069944:  str      x21, [sp, #0x80]                 
+0x00069948:  add      x22, x4, #0x31e                  
+0x0006994c:  str      x22, [sp, #0x88]                 
+0x00069950:  add      x23, x4, #0xa0                   
+0x00069954:  str      x23, [sp, #0x90]                 
+0x00069958:  add      x4, x4, #0x20c                   
+0x0006995c:  str      x4, [sp, #0x98]                  
+0x00069960:  mov      w3, #0                           
+0x00069964:  mov      x2, #0                           
+0x00069968:  add      x1, sp, #0x54                    
+0x0006996c:  mov      x0, x19                          
+0x00069970:  bl       #0x1e810                         
+0x00069974:  ldr      w0, [sp, #0x54]                  
+0x00069978:  str      w0, [sp, #0xa0]                  
+0x0006997c:  add      x0, sp, #0x58                    
+0x00069980:  bl       #0x1bfc0                         
+0x00069984:  mov      w20, w0                          
+0x00069988:  adrp     x0, #0xe6000                     
+0x0006998c:  ldr      x0, [x0, #0xf00]                 
+0x00069990:  ldr      w0, [x0]                         
+0x00069994:  tbz      w0, #5, #0x69b18                 
+0x00069998:  adrp     x0, #0xe6000                     
+0x0006999c:  ldr      x0, [x0, #0xdf8]                 
+0x000699a0:  ldr      w0, [x0]                         
+0x000699a4:  cmp      w0, #5                           
+0x000699a8:  b.hi     #0x699b8                         
+0x000699ac:  ldp      x21, x22, [sp, #0x30]            
+0x000699b0:  ldr      x23, [sp, #0x40]                 
+0x000699b4:  b        #0x69a08                         
+0x000699b8:  str      x23, [sp]                        
+0x000699bc:  mov      x7, x22                          
+0x000699c0:  mov      x6, x21                          
+0x000699c4:  mov      x5, x19                          
+0x000699c8:  mov      w4, #0xde9                       
+0x000699cc:  adrp     x3, #0xbe000                     
+0x000699d0:  add      x3, x3, #0xc88                   
+0x000699d4:  add      x3, x3, #0x258                    ; "constructL3WANDevName"
+0x000699d8:  adrp     x2, #0xbd000                     
+0x000699dc:  add      x2, x2, #0xec8                   
+0x000699e0:  mov      w1, #1                           
+0x000699e4:  mov      w0, #6                           
+0x000699e8:  bl       #0x1cc50                         
+0x000699ec:  ldp      x21, x22, [sp, #0x30]            
+0x000699f0:  ldr      x23, [sp, #0x40]                 
+0x000699f4:  b        #0x69a08                         
+0x000699f8:  cmp      x5, #0                           
+0x000699fc:  mov      w20, #0                          
+0x00069a00:  ccmp     w1, #1, #0, ne                   
+0x00069a04:  b.eq     #0x69a1c                         
+0x00069a08:  mov      w0, w20                          
+0x00069a0c:  ldp      x19, x20, [sp, #0x20]            
+0x00069a10:  ldp      x29, x30, [sp, #0x10]            
+0x00069a14:  add      sp, sp, #0xb0                    
+0x00069a18:  ret                                       
+0x00069a1c:  stp      x21, x22, [sp, #0x30]            
+0x00069a20:  str      x23, [sp, #0x40]                 
+0x00069a24:  add      x0, sp, #0x60                    
+0x00069a28:  movi     v0.4s, #0                        
+0x00069a2c:  stp      q0, q0, [x0]                     
+0x00069a30:  stp      q0, q0, [x0, #0x20]              
+0x00069a34:  str      q0, [x0, #0x40]                  
+0x00069a38:  mov      w0, #1                           
+0x00069a3c:  str      w0, [sp, #0x58]                  
+0x00069a40:  str      w6, [sp, #0x5c]                  
+0x00069a44:  str      x3, [sp, #0x68]                  
+0x00069a48:  ldrb     w0, [x5, #0x34]                  
+0x00069a4c:  strb     w0, [sp, #0x70]                  
+0x00069a50:  ldrh     w0, [x5, #0x1e]                  
+0x00069a54:  str      w0, [sp, #0x78]                  
+0x00069a58:  ldrh     w0, [x5, #0x1c]                  
+0x00069a5c:  str      w0, [sp, #0x7c]                  
+0x00069a60:  add      x21, x5, #0x898                  
+0x00069a64:  str      x21, [sp, #0x80]                 
+0x00069a68:  add      x22, x5, #0x3e7                  
+0x00069a6c:  str      x22, [sp, #0x88]                 
+0x00069a70:  add      x23, x5, #0xc6                   
+0x00069a74:  str      x23, [sp, #0x90]                 
+0x00069a78:  add      x5, x5, #0x1c7                   
+0x00069a7c:  str      x5, [sp, #0x98]                  
+0x00069a80:  mov      w3, #0                           
+0x00069a84:  mov      x2, #0                           
+0x00069a88:  add      x1, sp, #0x54                    
+0x00069a8c:  mov      x0, x19                          
+0x00069a90:  bl       #0x1e810                         
+0x00069a94:  ldr      w0, [sp, #0x54]                  
+0x00069a98:  str      w0, [sp, #0xa0]                  
+0x00069a9c:  add      x0, sp, #0x58                    
+0x00069aa0:  bl       #0x1bfc0                         
+0x00069aa4:  mov      w20, w0                          
+0x00069aa8:  adrp     x0, #0xe6000                     
+0x00069aac:  ldr      x0, [x0, #0xf00]                 
+0x00069ab0:  ldr      w0, [x0]                         
+0x00069ab4:  tbz      w0, #5, #0x69b24                 
+0x00069ab8:  adrp     x0, #0xe6000                     
+0x00069abc:  ldr      x0, [x0, #0xdf8]                 
+0x00069ac0:  ldr      w0, [x0]                         
+0x00069ac4:  cmp      w0, #5                           
+0x00069ac8:  b.hi     #0x69ad8                         
+0x00069acc:  ldp      x21, x22, [sp, #0x30]            
+0x00069ad0:  ldr      x23, [sp, #0x40]                 
+0x00069ad4:  b        #0x69a08                         
+0x00069ad8:  str      x23, [sp]                        
+0x00069adc:  mov      x7, x22                          
+0x00069ae0:  mov      x6, x21                          
+0x00069ae4:  mov      x5, x19                          
+0x00069ae8:  mov      w4, #0xe1d                       
+0x00069aec:  adrp     x3, #0xbe000                     
+0x00069af0:  add      x3, x3, #0xc88                   
+0x00069af4:  add      x3, x3, #0x258                    ; "constructL3WANDevName"
+0x00069af8:  adrp     x2, #0xbd000                     
+0x00069afc:  add      x2, x2, #0xf28                   
+0x00069b00:  mov      w1, #1                           
+0x00069b04:  mov      w0, #6                           
+0x00069b08:  bl       #0x1cc50                         
+0x00069b0c:  ldp      x21, x22, [sp, #0x30]            
+0x00069b10:  ldr      x23, [sp, #0x40]                 
+0x00069b14:  b        #0x69a08                         
+0x00069b18:  ldp      x21, x22, [sp, #0x30]            
+0x00069b1c:  ldr      x23, [sp, #0x40]                 
+0x00069b20:  b        #0x69a08                         
+0x00069b24:  ldp      x21, x22, [sp, #0x30]            
+0x00069b28:  ldr      x23, [sp, #0x40]                 
+0x00069b2c:  b        #0x69a08                         

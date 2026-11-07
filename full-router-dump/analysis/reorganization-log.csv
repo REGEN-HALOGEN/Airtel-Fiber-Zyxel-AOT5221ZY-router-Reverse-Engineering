@@ -1,0 +1,5 @@
+"Source","Destination","Result","Time"
+".\analysis\aot5221-os-analysis.tar.gz",".\analysis\source-archives\aot5221-os-analysis.tar.gz","Moved","2026-11-05 14:47:02"
+".\analysis\extracted\rootfs",".\filesystem\rootfs","Moved","2026-11-05 14:47:02"
+".\analysis\extracted\apps-filesystem.tar",".\filesystem\archives\apps-filesystem.tar","Moved","2026-11-05 14:47:02"
+".\analysis\reports\router-device-tree.dts",".\hardware\router-device-tree.dts","Moved","2026-11-05 14:47:02"

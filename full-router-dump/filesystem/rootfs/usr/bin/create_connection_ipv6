@@ -1,0 +1,49 @@
+#!/bin/sh
+#
+# Initializes network interfaces
+#
+
+DEVICE="";DHCP6C="";IPV6ADDR="";IPV6_DEFAULTGW="";
+
+  ifcfg="/etc/sysconfig/network-scripts/wan-multi/ifcfg_ipv6-$1"
+
+  . $ifcfg
+
+  if [ -z "${DEVICE}" ]; then
+    echo "  Missing DEVICE for network interface ${ifcfg}"
+    exit 1
+  fi
+
+  if [ "${DHCP6C}" = "yes" ]; then
+    #Use DHCPv6
+    echo "Configuring via dhcp6c"
+    /sbin/ifconfig ${DEVICE} up
+    /usr/sbin/dhcp6c -c /etc/wide-dhcpv6/${DEVICE}.conf -p /var/wan_v6-pid/$1.pid ${DEVICE}||
+    (echo " Failed")
+  fi
+
+  if [ -n "${IPV6ADDR}" ]; then
+    echo "Configuring WAN IPv6 Address"
+    params="${DEVICE} ${IPV6ADDR}"
+    /sbin/ifconfig ${params}||
+    (echo " Failed")
+	
+	echo "################ create_connection_ipv6 start ################" >> /var/log/syslog.log
+	echo "!!! Send event [CEVENT_IPV6_WAN_CONNECTION_UP], if_name=${DEVICE}" >> /var/log/syslog.log
+	echo "################ create_connection_ipv6 end ################" >> /var/log/syslog.log
+	rm -f /var/wan_connection_notify/${DEVICE}"_ipv6_connection_is_up"
+	touch /var/wan_connection_notify/${DEVICE}"_ipv6_connection_is_up"
+	echo "RDMNAME config;" >> /var/wan_connection_notify/${DEVICE}"_ipv6_connection_is_up"
+	echo "EVENTNOTIFY 308 string ${DEVICE};" >> /var/wan_connection_notify/${DEVICE}"_ipv6_connection_is_up"
+	ccctest -f /var/wan_connection_notify/${DEVICE}"_ipv6_connection_is_up"
+  fi
+
+  if [ -n "${IPV6_DEFAULTGW}" ]; then
+    /sbin/route -A inet6 del ::/0 > /dev/null 2>&1
+    echo "Configuring IPv6 default gateway"
+    /sbin/route -A inet6 add ::/0 gw ${IPV6_DEFAULTGW} dev ${DEVICE}||
+    (echo " Failed")
+  fi
+
+  exit 0
+

@@ -1,0 +1,10 @@
+
+config rtk_map 'map'
+	option device_name 'EasyMesh_Controller'
+	option profile '2'
+	option controller '0'
+	option configured_band '5g'
+	option enable_vlan '0'
+	option primary_vid '0'
+	option secondary_vid '0'
+	option log_level '0'

@@ -1,0 +1,332 @@
+
+================ CheckAndRestartPPP (0x4945c - 0x49784) ================
+0x04945c:  sub      sp, sp, #0x570                   
+0x049460:  stp      x29, x30, [sp]                   
+0x049464:  mov      x29, sp                          
+0x049468:  str      x0, [sp, #0x18]                  
+0x04946c:  str      w1, [sp, #0x14]                  
+0x049470:  str      wzr, [sp, #0x56c]                
+0x049474:  str      xzr, [sp, #0x558]                
+0x049478:  add      x0, sp, #0x400                   
+0x04947c:  stp      xzr, xzr, [x0, #0x48]            
+0x049480:  add      x0, sp, #0x458                   
+0x049484:  movi     v0.4s, #0                        
+0x049488:  stp      q0, q0, [x0]                     
+0x04948c:  stp      q0, q0, [x0, #0x20]              
+0x049490:  stp      q0, q0, [x0, #0x40]              
+0x049494:  stp      q0, q0, [x0, #0x60]              
+0x049498:  stp      q0, q0, [x0, #0x80]              
+0x04949c:  stp      q0, q0, [x0, #0xa0]              
+0x0494a0:  stp      q0, q0, [x0, #0xc0]              
+0x0494a4:  str      q0, [x0, #0xe0]                  
+0x0494a8:  stp      xzr, xzr, [sp, #0x48]            
+0x0494ac:  add      x0, sp, #0x58                    
+0x0494b0:  mov      x1, #0x3f0                       
+0x0494b4:  mov      x2, x1                           
+0x0494b8:  mov      w1, #0                           
+0x0494bc:  bl       #0x453a0                          // <memset@plt>
+0x0494c0:  stp      xzr, xzr, [sp, #0x28]            
+0x0494c4:  stp      xzr, xzr, [sp, #0x38]            
+0x0494c8:  str      xzr, [sp, #0x560]                
+0x0494cc:  str      xzr, [sp, #0x20]                 
+0x0494d0:  str      xzr, [sp, #0x550]                
+0x0494d4:  add      x4, sp, #0x28                    
+0x0494d8:  ldr      x3, [sp, #0x18]                  
+0x0494dc:  adrp     x0, #0xca000                     
+0x0494e0:  add      x2, x0, #0xdd0                    // "ppp%s"
+0x0494e4:  mov      x1, #0x20                        
+0x0494e8:  mov      x0, x4                           
+0x0494ec:  bl       #0x44f80                          // <snprintf@plt>
+0x0494f0:  adrp     x0, #0x12a000                    
+0x0494f4:  ldr      x0, [x0, #0xfb8]                  // GOT -> globalRdmCB
+0x0494f8:  ldr      x0, [x0]                         
+0x0494fc:  mov      w1, #0xe3                        
+0x049500:  bl       #0x462c0                          // <cccRdmGetObjListByOID@plt>
+0x049504:  str      x0, [sp, #0x560]                 
+0x049508:  ldr      x0, [sp, #0x560]                 
+0x04950c:  str      x0, [sp, #0x20]                  
+0x049510:  b        #0x49760                         
+0x049514:  adrp     x0, #0x12a000                    
+0x049518:  ldr      x0, [x0, #0xfb8]                  // GOT -> globalRdmCB
+0x04951c:  ldr      x4, [x0]                         
+0x049520:  ldr      x0, [sp, #0x560]                 
+0x049524:  ldr      w1, [x0, #0x10]                  
+0x049528:  ldr      x0, [sp, #0x560]                 
+0x04952c:  ldr      x0, [x0, #0x18]                  
+0x049530:  mov      w3, #1                           
+0x049534:  mov      x2, x0                           
+0x049538:  mov      x0, x4                           
+0x04953c:  bl       #0x45db0                          // <cccRdmGetObjectByOID@plt>
+0x049540:  str      x0, [sp, #0x550]                 
+0x049544:  ldr      x0, [sp, #0x550]                 
+0x049548:  cmp      x0, #0                           
+0x04954c:  b.eq     #0x49754                         
+0x049550:  ldr      x0, [sp, #0x550]                 
+0x049554:  add      x0, x0, #0x3e7                   
+0x049558:  add      x1, sp, #0x28                    
+0x04955c:  bl       #0x45920                          // <strcmp@plt>
+0x049560:  cmp      w0, #0                           
+0x049564:  b.ne     #0x49754                         
+0x049568:  ldr      x0, [sp, #0x550]                 
+0x04956c:  add      x1, x0, #0x898                   
+0x049570:  ldr      x0, [sp, #0x550]                 
+0x049574:  add      x0, x0, #0x898                   
+0x049578:  add      x5, sp, #0x448                   
+0x04957c:  mov      x4, x0                           
+0x049580:  mov      x3, x1                           
+0x049584:  adrp     x0, #0xca000                     
+0x049588:  add      x2, x0, #0xdd8                    // "ps | grep "pppd -d file /etc/ppp/options_%s %s""
+0x04958c:  mov      x1, #0x100                       
+0x049590:  mov      x0, x5                           
+0x049594:  bl       #0x44f80                          // <snprintf@plt>
+0x049598:  add      x2, sp, #0x448                   
+0x04959c:  adrp     x0, #0xc9000                     
+0x0495a0:  add      x1, x0, #0xe90                    // "r"
+0x0495a4:  mov      x0, x2                           
+0x0495a8:  bl       #0x45290                          // <popen@plt>
+0x0495ac:  str      x0, [sp, #0x558]                 
+0x0495b0:  ldr      x0, [sp, #0x558]                 
+0x0495b4:  cmp      x0, #0                           
+0x0495b8:  b.ne     #0x495d0                         
+0x0495bc:  adrp     x0, #0xca000                     
+0x0495c0:  add      x0, x0, #0xe08                    // " Fail to popen."
+0x0495c4:  bl       #0x45860                          // <puts@plt>
+0x0495c8:  mov      w0, #1                           
+0x0495cc:  bl       #0x44be0                          // <exit@plt>
+0x0495d0:  ldr      x0, [sp, #0x550]                 
+0x0495d4:  add      x1, x0, #0x898                   
+0x0495d8:  ldr      x0, [sp, #0x550]                 
+0x0495dc:  add      x0, x0, #0x898                   
+0x0495e0:  add      x4, sp, #0x448                   
+0x0495e4:  mov      x3, x0                           
+0x0495e8:  mov      x2, x1                           
+0x0495ec:  adrp     x0, #0xca000                     
+0x0495f0:  add      x1, x0, #0xe18                    // "/bin/pppd -d file /etc/ppp/options_%s %s"
+0x0495f4:  mov      x0, x4                           
+0x0495f8:  bl       #0x44de0                          // <sprintf@plt>
+0x0495fc:  add      x0, sp, #0x48                    
+0x049600:  ldr      x2, [sp, #0x558]                 
+0x049604:  mov      w1, #0x400                       
+0x049608:  bl       #0x46380                          // <fgets@plt>
+0x04960c:  add      x1, sp, #0x448                   
+0x049610:  add      x0, sp, #0x48                    
+0x049614:  bl       #0x45fc0                          // <strstr@plt>
+0x049618:  str      x0, [sp, #0x548]                 
+0x04961c:  ldr      x0, [sp, #0x548]                 
+0x049620:  cmp      x0, #0                           
+0x049624:  b.eq     #0x49630                         
+0x049628:  mov      w0, #1                           
+0x04962c:  str      w0, [sp, #0x56c]                 
+0x049630:  ldr      x0, [sp, #0x558]                 
+0x049634:  bl       #0x46160                          // <pclose@plt>
+0x049638:  cmp      w0, #0                           
+0x04963c:  b.eq     #0x4964c                         
+0x049640:  adrp     x0, #0xca000                     
+0x049644:  add      x0, x0, #0x498                    // " Error: Failed to close command stream "
+0x049648:  bl       #0x45860                          // <puts@plt>
+0x04964c:  ldr      w1, [sp, #0x56c]                 
+0x049650:  ldr      w0, [sp, #0x14]                  
+0x049654:  cmp      w1, w0                           
+0x049658:  b.eq     #0x49754                         
+0x04965c:  ldr      w0, [sp, #0x14]                  
+0x049660:  cmp      w0, #0                           
+0x049664:  b.eq     #0x496e0                         
+0x049668:  add      x6, sp, #0x448                   
+0x04966c:  ldr      x5, [sp, #0x18]                  
+0x049670:  ldr      x4, [sp, #0x18]                  
+0x049674:  ldr      x3, [sp, #0x18]                  
+0x049678:  adrp     x0, #0xca000                     
+0x04967c:  add      x2, x0, #0xe48                    // "/bin/ls /var/run | grep ppp%s.pid && kill -SIGTERM `cat /var/run/ppp%s.pid` && rm -f /var/run/ppp%s.pid"
+0x049680:  mov      x1, #0x100                       
+0x049684:  mov      x0, x6                           
+0x049688:  bl       #0x44f80                          // <snprintf@plt>
+0x04968c:  add      x0, sp, #0x448                   
+0x049690:  bl       #0x45620                          // <system@plt>
+0x049694:  adrp     x0, #0xca000                     
+0x049698:  add      x0, x0, #0xeb0                    // "sleep 8"
+0x04969c:  bl       #0x45620                          // <system@plt>
+0x0496a0:  ldr      x0, [sp, #0x550]                 
+0x0496a4:  add      x1, x0, #0x898                   
+0x0496a8:  ldr      x0, [sp, #0x550]                 
+0x0496ac:  add      x0, x0, #0x898                   
+0x0496b0:  add      x6, sp, #0x448                   
+0x0496b4:  mov      x5, x0                           
+0x0496b8:  mov      x4, x1                           
+0x0496bc:  ldr      x3, [sp, #0x18]                  
+0x0496c0:  adrp     x0, #0xca000                     
+0x0496c4:  add      x2, x0, #0xeb8                    // "/bin/ls /var/run | grep ppp%s.pid || /bin/pppd -d file /etc/ppp/options_%s %s &"
+0x0496c8:  mov      x1, #0x100                       
+0x0496cc:  mov      x0, x6                           
+0x0496d0:  bl       #0x44f80                          // <snprintf@plt>
+0x0496d4:  add      x0, sp, #0x448                   
+0x0496d8:  bl       #0x45620                          // <system@plt>
+0x0496dc:  b        #0x49754                         
+0x0496e0:  add      x6, sp, #0x448                   
+0x0496e4:  ldr      x5, [sp, #0x18]                  
+0x0496e8:  ldr      x4, [sp, #0x18]                  
+0x0496ec:  ldr      x3, [sp, #0x18]                  
+0x0496f0:  adrp     x0, #0xca000                     
+0x0496f4:  add      x2, x0, #0xe48                    // "/bin/ls /var/run | grep ppp%s.pid && kill -SIGTERM `cat /var/run/ppp%s.pid` && rm -f /var/run/ppp%s.pid"
+0x0496f8:  mov      x1, #0x100                       
+0x0496fc:  mov      x0, x6                           
+0x049700:  bl       #0x44f80                          // <snprintf@plt>
+0x049704:  add      x0, sp, #0x448                   
+0x049708:  bl       #0x45620                          // <system@plt>
+0x04970c:  adrp     x0, #0xca000                     
+0x049710:  add      x0, x0, #0xeb0                    // "sleep 8"
+0x049714:  bl       #0x45620                          // <system@plt>
+0x049718:  ldr      x0, [sp, #0x550]                 
+0x04971c:  add      x1, x0, #0x898                   
+0x049720:  ldr      x0, [sp, #0x550]                 
+0x049724:  add      x0, x0, #0x898                   
+0x049728:  add      x6, sp, #0x448                   
+0x04972c:  mov      x5, x0                           
+0x049730:  mov      x4, x1                           
+0x049734:  ldr      x3, [sp, #0x18]                  
+0x049738:  adrp     x0, #0xca000                     
+0x04973c:  add      x2, x0, #0xf08                    // "/bin/ls /var/run | grep ppp%s.pid || /bin/pppd file /etc/ppp/options_%s %s &"
+0x049740:  mov      x1, #0x100                       
+0x049744:  mov      x0, x6                           
+0x049748:  bl       #0x44f80                          // <snprintf@plt>
+0x04974c:  add      x0, sp, #0x448                   
+0x049750:  bl       #0x45620                          // <system@plt>
+0x049754:  ldr      x0, [sp, #0x560]                 
+0x049758:  ldr      x0, [x0]                         
+0x04975c:  str      x0, [sp, #0x560]                 
+0x049760:  ldr      x0, [sp, #0x560]                 
+0x049764:  cmp      x0, #0                           
+0x049768:  b.ne     #0x49514                         
+0x04976c:  add      x0, sp, #0x20                    
+0x049770:  bl       #0x45f20                          // <cccRdmFreeObjList@plt>
+0x049774:  mov      w0, #0                           
+0x049778:  ldp      x29, x30, [sp]                   
+0x04977c:  add      sp, sp, #0x570                   
+0x049780:  ret                                       
+
+================ wrapperDoPPP (0x49784 - 0x4997c) ================
+0x049784:  stp      x29, x30, [sp, #-0x150]!         
+0x049788:  mov      x29, sp                          
+0x04978c:  str      w0, [sp, #0x2c]                  
+0x049790:  str      x1, [sp, #0x20]                  
+0x049794:  str      x2, [sp, #0x18]                  
+0x049798:  stp      xzr, xzr, [sp, #0x38]            
+0x04979c:  add      x0, sp, #0x48                    
+0x0497a0:  movi     v0.4s, #0                        
+0x0497a4:  stp      q0, q0, [x0]                     
+0x0497a8:  stp      q0, q0, [x0, #0x20]              
+0x0497ac:  stp      q0, q0, [x0, #0x40]              
+0x0497b0:  stp      q0, q0, [x0, #0x60]              
+0x0497b4:  stp      q0, q0, [x0, #0x80]              
+0x0497b8:  stp      q0, q0, [x0, #0xa0]              
+0x0497bc:  stp      q0, q0, [x0, #0xc0]              
+0x0497c0:  str      q0, [x0, #0xe0]                  
+0x0497c4:  str      wzr, [sp, #0x14c]                
+0x0497c8:  str      xzr, [sp, #0x140]                
+0x0497cc:  str      xzr, [sp, #0x138]                
+0x0497d0:  ldr      w0, [sp, #0x2c]                  
+0x0497d4:  cmp      w0, #3                           
+0x0497d8:  b.ne     #0x49964                         
+0x0497dc:  ldr      x0, [sp, #0x20]                  
+0x0497e0:  add      x0, x0, #8                       
+0x0497e4:  ldr      x0, [x0]                         
+0x0497e8:  bl       #0x450e0                          // <atoi@plt>
+0x0497ec:  str      w0, [sp, #0x14c]                 
+0x0497f0:  ldr      w0, [sp, #0x14c]                 
+0x0497f4:  cmp      w0, #0                           
+0x0497f8:  b.ge     #0x49808                         
+0x0497fc:  bl       #0x44ae0                          // <pppHelp@plt>
+0x049800:  mov      w0, #-1                          
+0x049804:  b        #0x49974                         
+0x049808:  ldr      x0, [sp, #0x20]                  
+0x04980c:  add      x0, x0, #0x10                    
+0x049810:  ldr      x2, [x0]                         
+0x049814:  adrp     x0, #0xca000                     
+0x049818:  add      x1, x0, #0xf58                    // "up"
+0x04981c:  mov      x0, x2                           
+0x049820:  bl       #0x45920                          // <strcmp@plt>
+0x049824:  cmp      w0, #0                           
+0x049828:  b.eq     #0x49850                         
+0x04982c:  ldr      x0, [sp, #0x20]                  
+0x049830:  add      x0, x0, #0x10                    
+0x049834:  ldr      x2, [x0]                         
+0x049838:  adrp     x0, #0xca000                     
+0x04983c:  add      x1, x0, #0xf60                    // "down"
+0x049840:  mov      x0, x2                           
+0x049844:  bl       #0x45920                          // <strcmp@plt>
+0x049848:  cmp      w0, #0                           
+0x04984c:  b.ne     #0x49958                         
+0x049850:  ldr      w3, [sp, #0x14c]                 
+0x049854:  mov      w2, #1                           
+0x049858:  mov      w1, #1                           
+0x04985c:  adrp     x0, #0xca000                     
+0x049860:  add      x0, x0, #0xf68                    // "%d,%d,%d"
+0x049864:  bl       #0x45090                          // <rdmConstructIAValue@plt>
+0x049868:  str      x0, [sp, #0x140]                 
+0x04986c:  adrp     x0, #0x12a000                    
+0x049870:  ldr      x0, [x0, #0xfb8]                  // GOT -> globalRdmCB
+0x049874:  ldr      x0, [x0]                         
+0x049878:  mov      w3, #1                           
+0x04987c:  ldr      x2, [sp, #0x140]                 
+0x049880:  mov      w1, #0xe3                        
+0x049884:  bl       #0x45db0                          // <cccRdmGetObjectByOID@plt>
+0x049888:  str      x0, [sp, #0x138]                 
+0x04988c:  ldr      x0, [sp, #0x138]                 
+0x049890:  cmp      x0, #0                           
+0x049894:  b.eq     #0x49970                         
+0x049898:  ldr      x0, [sp, #0x20]                  
+0x04989c:  add      x0, x0, #0x10                    
+0x0498a0:  ldr      x2, [x0]                         
+0x0498a4:  adrp     x0, #0xca000                     
+0x0498a8:  add      x1, x0, #0xf58                    // "up"
+0x0498ac:  mov      x0, x2                           
+0x0498b0:  bl       #0x45920                          // <strcmp@plt>
+0x0498b4:  cmp      w0, #0                           
+0x0498b8:  b.ne     #0x49904                         
+0x0498bc:  ldr      x0, [sp, #0x138]                 
+0x0498c0:  add      x1, x0, #0x3e7                   
+0x0498c4:  ldr      x0, [sp, #0x138]                 
+0x0498c8:  add      x2, x0, #0x898                   
+0x0498cc:  ldr      x0, [sp, #0x138]                 
+0x0498d0:  add      x0, x0, #0x898                   
+0x0498d4:  add      x6, sp, #0x38                    
+0x0498d8:  mov      x5, x0                           
+0x0498dc:  mov      x4, x2                           
+0x0498e0:  mov      x3, x1                           
+0x0498e4:  adrp     x0, #0xca000                     
+0x0498e8:  add      x2, x0, #0xf78                    // "/bin/ls /var/run | grep %s.pid || /bin/pppd file /etc/ppp/options_%s %s &"
+0x0498ec:  mov      x1, #0x100                       
+0x0498f0:  mov      x0, x6                           
+0x0498f4:  bl       #0x44f80                          // <snprintf@plt>
+0x0498f8:  add      x0, sp, #0x38                    
+0x0498fc:  bl       #0x45620                          // <system@plt>
+0x049900:  b        #0x49970                         
+0x049904:  ldr      x0, [sp, #0x138]                 
+0x049908:  add      x1, x0, #0x3e7                   
+0x04990c:  ldr      x0, [sp, #0x138]                 
+0x049910:  add      x2, x0, #0x3e7                   
+0x049914:  ldr      x0, [sp, #0x138]                 
+0x049918:  add      x0, x0, #0x3e7                   
+0x04991c:  add      x6, sp, #0x38                    
+0x049920:  mov      x5, x0                           
+0x049924:  mov      x4, x2                           
+0x049928:  mov      x3, x1                           
+0x04992c:  adrp     x0, #0xca000                     
+0x049930:  add      x2, x0, #0xfc8                    // "/bin/ls /var/run | grep %s.pid && kill -SIGTERM `cat /var/run/%s.pid` && rm -f /var/run/%s.pid"
+0x049934:  mov      x1, #0x100                       
+0x049938:  mov      x0, x6                           
+0x04993c:  bl       #0x44f80                          // <snprintf@plt>
+0x049940:  add      x0, sp, #0x38                    
+0x049944:  bl       #0x45620                          // <system@plt>
+0x049948:  adrp     x0, #0xca000                     
+0x04994c:  add      x0, x0, #0xeb0                    // "sleep 8"
+0x049950:  bl       #0x45620                          // <system@plt>
+0x049954:  b        #0x49970                         
+0x049958:  bl       #0x44ae0                          // <pppHelp@plt>
+0x04995c:  mov      w0, #-1                          
+0x049960:  b        #0x49974                         
+0x049964:  bl       #0x44ae0                          // <pppHelp@plt>
+0x049968:  mov      w0, #-1                          
+0x04996c:  b        #0x49974                         
+0x049970:  mov      w0, #0                           
+0x049974:  ldp      x29, x30, [sp], #0x150           
+0x049978:  ret                                       

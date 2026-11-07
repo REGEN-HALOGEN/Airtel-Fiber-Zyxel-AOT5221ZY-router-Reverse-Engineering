@@ -1,0 +1,54 @@
+#!/bin/sh /etc/rc.common
+
+START=16
+
+PNAME=VoIP
+DEBUG=1
+
+W_LOG()
+{
+	if [ $DEBUG -eq 1 ]; then
+		echo "[${PNAME}] $@" > /dev/console
+	fi
+}
+
+W_ERR()
+{
+	if [ $DEBUG -eq 1 ]; then
+		echo "[${PNAME}][ERR] $@" > /dev/console
+	fi
+}
+
+start()
+{
+	W_LOG "preload ..."
+	
+	ponmode=`mib get PON_MODE`
+	# W_LOG "ponmode $ponmode"
+	# 
+	if [ "$ponmode" == "PON_MODE=0" ]; then
+		W_LOG "set up clock for PON_MODE 0"
+		if [ -x "/usr/bin/init_voipclock_arm" ];then
+			W_LOG "arm"
+			/bin/sh /usr/bin/init_voipclock_arm
+		else
+			W_LOG "mips"
+			aipc_util -E 0x0
+		fi
+	fi
+
+	if [ -x "/etc/rc_voip_module_openwrt" ]; then
+		/etc/rc_voip_module_openwrt &> /dev/console
+	fi
+
+	W_LOG "Setup dev node ..."
+	/etc/scripts/rc_dev_voip &> /dev/console
+
+
+	if [ -x "bin/voip_def_init" ]; then
+		/bin/voip_def_init &> /dev/console
+	elif [ -x "/usr/bin/voip_def_init" ]; then
+		/usr/bin/voip_def_init &> /dev/console
+	fi
+}
+

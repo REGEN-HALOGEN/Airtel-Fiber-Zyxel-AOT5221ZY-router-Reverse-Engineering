@@ -1,0 +1,6 @@
+#!/bin/sh
+# Sample udhcpc nak script
+
+echo Received a NAK: $message
+
+# Let INTERNET LED show RED in router mode

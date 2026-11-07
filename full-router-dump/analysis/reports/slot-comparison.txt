@@ -1,0 +1,6 @@
+Comparing kernel-slot0.bin and kernel-slot1.bin
+IDENTICAL
+Comparing rootfs-slot0.bin and rootfs-slot1.bin
+IDENTICAL
+Comparing dtb-slot0.bin and dtb-slot1.bin
+IDENTICAL

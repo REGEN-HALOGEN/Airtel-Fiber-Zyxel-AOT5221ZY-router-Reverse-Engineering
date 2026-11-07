@@ -1,0 +1,138 @@
+=== Disassembly of setWanIpPppInterfaceName (0x346d0, 548 bytes) in libcccbe.so ===
+0x000346d0:  stp      x29, x30, [sp, #-0x140]!         
+0x000346d4:  mov      x29, sp                          
+0x000346d8:  stp      x19, x20, [sp, #0x10]            
+0x000346dc:  mov      x19, x0                          
+0x000346e0:  stp      xzr, xzr, [sp, #0xc0]            
+0x000346e4:  add      x0, sp, #0xd0                    
+0x000346e8:  movi     v0.4s, #0                        
+0x000346ec:  stp      q0, q0, [x0]                     
+0x000346f0:  stp      q0, q0, [x0, #0x20]              
+0x000346f4:  stp      q0, q0, [x0, #0x40]              
+0x000346f8:  str      q0, [x0, #0x60]                  
+0x000346fc:  stp      xzr, xzr, [sp, #0x40]            
+0x00034700:  add      x0, sp, #0x50                    
+0x00034704:  stp      q0, q0, [x0]                     
+0x00034708:  stp      q0, q0, [x0, #0x20]              
+0x0003470c:  stp      q0, q0, [x0, #0x40]              
+0x00034710:  str      q0, [x0, #0x60]                  
+0x00034714:  cbz      x19, #0x347cc                    
+0x00034718:  ldr      x0, [x19, #0x28]                 
+0x0003471c:  cbz      x0, #0x347cc                     
+0x00034720:  ldr      x0, [x19, #0x30]                 
+0x00034724:  cbz      x0, #0x347cc                     
+0x00034728:  ldr      x3, [x19, #0x10]                 
+0x0003472c:  cbz      x3, #0x34744                     
+0x00034730:  adrp     x2, #0x4c000                     
+0x00034734:  add      x2, x2, #0x160                    ; "%s"
+0x00034738:  mov      x1, #0x80                        
+0x0003473c:  add      x0, sp, #0xc0                    
+0x00034740:  bl       #0x19820                         
+0x00034744:  ldrb     w0, [x19, #0x18]                 
+0x00034748:  cbz      w0, #0x3481c                     
+0x0003474c:  ldr      w5, [x19, #0x20]                 
+0x00034750:  adrp     x4, #0x4d000                     
+0x00034754:  add      x4, x4, #0x990                    ; "_%d"
+0x00034758:  mov      x3, #0x80                        
+0x0003475c:  mov      w2, #1                           
+0x00034760:  mov      x1, #0x20                        
+0x00034764:  add      x0, sp, #0x40                    
+0x00034768:  bl       #0x198a0                         
+0x0003476c:  ldr      w20, [x19]                       
+0x00034770:  cbz      w20, #0x34838                    
+0x00034774:  cmp      w20, #1                          
+0x00034778:  b.eq     #0x348a8                         
+0x0003477c:  adrp     x0, #0x6a000                     
+0x00034780:  ldr      x0, [x0, #0xfb8]                 
+0x00034784:  ldr      w0, [x0]                         
+0x00034788:  mov      w20, #0                          
+0x0003478c:  tbz      w0, #5, #0x34898                 
+0x00034790:  adrp     x0, #0x6a000                     
+0x00034794:  ldr      x0, [x0, #0xfe0]                 
+0x00034798:  ldr      w0, [x0]                         
+0x0003479c:  cmp      w0, #2                           
+0x000347a0:  b.ls     #0x34898                         
+0x000347a4:  mov      w4, #0x8d                        
+0x000347a8:  adrp     x3, #0x4c000                     
+0x000347ac:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x000347b0:  add      x3, x3, #0x28                     ; "setWanIpPppInterfaceName"
+0x000347b4:  adrp     x2, #0x4a000                     
+0x000347b8:  add      x2, x2, #0xeb8                   
+0x000347bc:  mov      w1, #1                           
+0x000347c0:  mov      w0, #3                           
+0x000347c4:  bl       #0x1a110                         
+0x000347c8:  b        #0x34898                         
+0x000347cc:  adrp     x0, #0x6a000                     
+0x000347d0:  ldr      x0, [x0, #0xfb8]                 
+0x000347d4:  ldr      w0, [x0]                         
+0x000347d8:  mov      w20, #-1                         
+0x000347dc:  tbz      w0, #5, #0x34898                 
+0x000347e0:  adrp     x0, #0x6a000                     
+0x000347e4:  ldr      x0, [x0, #0xfe0]                 
+0x000347e8:  ldr      w0, [x0]                         
+0x000347ec:  cmp      w0, #2                           
+0x000347f0:  b.ls     #0x34898                         
+0x000347f4:  mov      w4, #0x67                        
+0x000347f8:  adrp     x3, #0x4c000                     
+0x000347fc:  add      x3, x3, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00034800:  add      x3, x3, #0x28                     ; "setWanIpPppInterfaceName"
+0x00034804:  adrp     x2, #0x45000                     
+0x00034808:  add      x2, x2, #0x4f0                   
+0x0003480c:  mov      w1, #1                           
+0x00034810:  mov      w0, #3                           
+0x00034814:  bl       #0x1a110                         
+0x00034818:  b        #0x34898                         
+0x0003481c:  adrp     x0, #0x4a000                     
+0x00034820:  add      x0, x0, #0xea8                    ; "_notag"
+0x00034824:  ldr      w1, [x0]                         
+0x00034828:  str      w1, [sp, #0x40]                  
+0x0003482c:  ldur     w0, [x0, #3]                     
+0x00034830:  stur     w0, [sp, #0x43]                  
+0x00034834:  b        #0x3476c                         
+0x00034838:  stp      x21, x22, [sp, #0x20]            
+0x0003483c:  str      x23, [sp, #0x30]                 
+0x00034840:  add      x23, sp, #0x40                   
+0x00034844:  add      x22, sp, #0xc0                   
+0x00034848:  adrp     x21, #0x40000                    
+0x0003484c:  add      x21, x21, #0xad8                  ; "%s%s"
+0x00034850:  mov      x6, x23                          
+0x00034854:  mov      x5, x22                          
+0x00034858:  mov      x4, x21                          
+0x0003485c:  mov      x3, #-1                          
+0x00034860:  mov      w2, #1                           
+0x00034864:  mov      x1, #0x20                        
+0x00034868:  ldr      x0, [x19, #0x28]                 
+0x0003486c:  bl       #0x198a0                         
+0x00034870:  mov      x6, x23                          
+0x00034874:  mov      x5, x22                          
+0x00034878:  mov      x4, x21                          
+0x0003487c:  mov      x3, #-1                          
+0x00034880:  mov      w2, #1                           
+0x00034884:  mov      x1, #0x20                        
+0x00034888:  ldr      x0, [x19, #0x30]                 
+0x0003488c:  bl       #0x198a0                         
+0x00034890:  ldp      x21, x22, [sp, #0x20]            
+0x00034894:  ldr      x23, [sp, #0x30]                 
+0x00034898:  mov      w0, w20                          
+0x0003489c:  ldp      x19, x20, [sp, #0x10]            
+0x000348a0:  ldp      x29, x30, [sp], #0x140           
+0x000348a4:  ret                                       
+0x000348a8:  add      x6, sp, #0x40                    
+0x000348ac:  add      x5, sp, #0xc0                    
+0x000348b0:  adrp     x4, #0x40000                     
+0x000348b4:  add      x4, x4, #0xad8                    ; "%s%s"
+0x000348b8:  mov      x3, #-1                          
+0x000348bc:  mov      w2, #1                           
+0x000348c0:  mov      x1, #0x20                        
+0x000348c4:  ldr      x0, [x19, #0x28]                 
+0x000348c8:  bl       #0x198a0                         
+0x000348cc:  ldr      w5, [x19, #0x48]                 
+0x000348d0:  adrp     x4, #0x4a000                     
+0x000348d4:  add      x4, x4, #0xeb0                    ; "ppp%d"
+0x000348d8:  mov      x3, #-1                          
+0x000348dc:  mov      w2, #1                           
+0x000348e0:  mov      x1, #0x20                        
+0x000348e4:  ldr      x0, [x19, #0x30]                 
+0x000348e8:  bl       #0x198a0                         
+0x000348ec:  mov      w20, #0                          
+0x000348f0:  b        #0x34898                         

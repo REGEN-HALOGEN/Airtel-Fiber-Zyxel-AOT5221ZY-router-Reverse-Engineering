@@ -1,0 +1,8 @@
+"Algorithm","Hash","Path"
+"SHA256","B5200AF3E0A4D2C8B62128A858DCEF25220A3AFD4CDCFF66A280F51C5C9AEE01","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\apps.bin"
+"SHA256","ADD17B52B19FEF934DC61AD0AFA03749778CFA49675E515F57C741A2AB4F4039","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\dtb-slot0.bin"
+"SHA256","ADD17B52B19FEF934DC61AD0AFA03749778CFA49675E515F57C741A2AB4F4039","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\dtb-slot1.bin"
+"SHA256","298B79928D7A50178EE34F2481693ABC89B4962F16ED6ED9016D3372BC5F751C","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\kernel-slot0.bin"
+"SHA256","298B79928D7A50178EE34F2481693ABC89B4962F16ED6ED9016D3372BC5F751C","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\kernel-slot1.bin"
+"SHA256","DCFEA0CED0774438B9D7FEB5B483DD5679F9E1D9009696FA6CC218CAA020FDBA","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\rootfs-slot0.bin"
+"SHA256","DCFEA0CED0774438B9D7FEB5B483DD5679F9E1D9009696FA6CC218CAA020FDBA","C:\Users\REGEN\AirtelModemRev\full-router-dump\flash\ubi-volumes\rootfs-slot1.bin"

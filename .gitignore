@@ -1,0 +1,77 @@
+# ==============================================================================
+# Airtel AOT5221ZY Reverse Engineering - Git Ignore Configuration
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Flash Partition Dumps & Large UBI Images (> 100MB / > 50MB)
+# ------------------------------------------------------------------------------
+# Raw flash dumps exceed GitHub's 100MB file limit and 50MB warning threshold.
+# The extracted filesystem is fully preserved in full-router-dump/filesystem/rootfs/.
+# All flash partitions and volumes are cryptographically verified via SHA-256 CSVs.
+full-router-dump/flash/physical-mtd/*.bin
+full-router-dump/flash/ubi-volumes/*.bin
+full-router-dump/analysis/source-archives/*.tar.gz
+
+# Preserve cryptographic hash manifests and documentation
+!full-router-dump/flash/physical-mtd-sha256.csv
+!full-router-dump/flash/ubi-volumes-sha256.csv
+!full-router-dump/flash/*.txt
+
+# ------------------------------------------------------------------------------
+# 2. Private Volumes & Device Identity Data
+# ------------------------------------------------------------------------------
+# Hardware-specific secrets, certificates, and runtime NVRAM
+full-router-dump/private-volumes/*.bin
+
+# Preserve hash manifests for private volume integrity verification
+!full-router-dump/private-volumes/private-volumes-sha256.csv
+
+# ------------------------------------------------------------------------------
+# 3. Accidental Dotfiles & Local Scanner Artifacts
+# ------------------------------------------------------------------------------
+DUMPFILES/.claude.json
+DUMPFILES/.gitconfig
+DUMPFILES/.kdiff3rc
+DUMPFILES/.npmrc
+DUMPFILES/advanced_ip_scanner_*.bin
+
+# ------------------------------------------------------------------------------
+# 4. Third-Party Vendor Packages & Symlinks
+# ------------------------------------------------------------------------------
+# Capstone and pyelftools wheels installed locally; use requirements / global pip
+analysis/vendor/
+analysis/scratch/
+
+# Windows directory junction alias (points to full-router-dump/analysis/rea-investigation)
+# Ignored to avoid duplicate tracking of the investigation repository
+analysis/rea-investigation
+
+# ------------------------------------------------------------------------------
+# 5. Python & Bytecode Artifacts
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.dist-info/
+*.egg-info/
+
+# ------------------------------------------------------------------------------
+# 6. Temporary Files & Editor Settings
+# ------------------------------------------------------------------------------
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# ------------------------------------------------------------------------------
+# 7. OS Metadata
+# ------------------------------------------------------------------------------
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*

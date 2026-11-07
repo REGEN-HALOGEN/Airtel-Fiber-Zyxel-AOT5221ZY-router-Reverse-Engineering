@@ -1,0 +1,586 @@
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ OpenWrt 22.03.0, r19685-512e76967f
+ -----------------------------------------------------
+=== WARNING! =====================================
+There is no root password defined on this device!
+Use the "passwd" command to set up a new password
+in order to prevent unauthorized SSH logins.
+--------------------------------------------------
+===== MTD DEVICE NODES =====
+crw-------    1 admin    root       90,   0 Jan  1  1970 /dev/mtd0
+crw-------    1 admin    root       90,   1 Jan  1  1970 /dev/mtd0ro
+crw-------    1 admin    root       90,   2 Jan  1  1970 /dev/mtd1
+crw-------    1 admin    root       90,  20 Jan  1  1970 /dev/mtd10
+crw-------    1 admin    root       90,  21 Jan  1  1970 /dev/mtd10ro
+crw-------    1 admin    root       90,  22 Jan  1  1970 /dev/mtd11
+crw-------    1 admin    root       90,  23 Jan  1  1970 /dev/mtd11ro
+crw-------    1 admin    root       90,  24 Jan  1  1970 /dev/mtd12
+crw-------    1 admin    root       90,  25 Jan  1  1970 /dev/mtd12ro
+crw-------    1 admin    root       90,  26 Jan  1  1970 /dev/mtd13
+crw-------    1 admin    root       90,  27 Jan  1  1970 /dev/mtd13ro
+crw-------    1 admin    root       90,  28 Jan  1  1970 /dev/mtd14
+crw-------    1 admin    root       90,  29 Jan  1  1970 /dev/mtd14ro
+crw-------    1 admin    root       90,  30 Jan  1  1970 /dev/mtd15
+crw-------    1 admin    root       90,  31 Jan  1  1970 /dev/mtd15ro
+crw-------    1 admin    root       90,  32 Jan  1  1970 /dev/mtd16
+crw-------    1 admin    root       90,  33 Jan  1  1970 /dev/mtd16ro
+crw-------    1 admin    root       90,  34 Jan  1  1970 /dev/mtd17
+crw-------    1 admin    root       90,  35 Jan  1  1970 /dev/mtd17ro
+crw-------    1 admin    root       90,  36 Jan  1  1970 /dev/mtd18
+crw-------    1 admin    root       90,  37 Jan  1  1970 /dev/mtd18ro
+crw-------    1 admin    root       90,  38 Jan  1  1970 /dev/mtd19
+crw-------    1 admin    root       90,  39 Jan  1  1970 /dev/mtd19ro
+crw-------    1 admin    root       90,   3 Jan  1  1970 /dev/mtd1ro
+crw-------    1 admin    root       90,   4 Jan  1  1970 /dev/mtd2
+crw-------    1 admin    root       90,  40 Jun  3 12:12 /dev/mtd20
+crw-------    1 admin    root       90,  41 Jun  3 12:12 /dev/mtd20ro
+crw-------    1 admin    root       90,  42 Jun  3 12:12 /dev/mtd21
+crw-------    1 admin    root       90,  43 Jun  3 12:12 /dev/mtd21ro
+crw-------    1 admin    root       90,  44 Jun  3 12:12 /dev/mtd22
+crw-------    1 admin    root       90,  45 Jun  3 12:12 /dev/mtd22ro
+crw-------    1 admin    root       90,  46 Jun  3 12:12 /dev/mtd23
+crw-------    1 admin    root       90,  47 Jun  3 12:12 /dev/mtd23ro
+crw-------    1 admin    root       90,   5 Jan  1  1970 /dev/mtd2ro
+crw-------    1 admin    root       90,   6 Jan  1  1970 /dev/mtd3
+crw-------    1 admin    root       90,   7 Jan  1  1970 /dev/mtd3ro
+crw-------    1 admin    root       90,   8 Jan  1  1970 /dev/mtd4
+crw-------    1 admin    root       90,   9 Jan  1  1970 /dev/mtd4ro
+crw-------    1 admin    root       90,  10 Jan  1  1970 /dev/mtd5
+crw-------    1 admin    root       90,  11 Jan  1  1970 /dev/mtd5ro
+crw-------    1 admin    root       90,  12 Jan  1  1970 /dev/mtd6
+crw-------    1 admin    root       90,  13 Jan  1  1970 /dev/mtd6ro
+crw-------    1 admin    root       90,  14 Jan  1  1970 /dev/mtd7
+crw-------    1 admin    root       90,  15 Jan  1  1970 /dev/mtd7ro
+crw-------    1 admin    root       90,  16 Jan  1  1970 /dev/mtd8
+crw-------    1 admin    root       90,  17 Jan  1  1970 /dev/mtd8ro
+crw-------    1 admin    root       90,  18 Jan  1  1970 /dev/mtd9
+crw-------    1 admin    root       90,  19 Jan  1  1970 /dev/mtd9ro
+brw-------    1 admin    root       31,   0 Jan  1  1970 /dev/mtdblock0
+brw-------    1 admin    root       31,   1 Jan  1  1970 /dev/mtdblock1
+brw-------    1 admin    root       31,  10 Jan  1  1970 /dev/mtdblock10
+brw-------    1 admin    root       31,  11 Jan  1  1970 /dev/mtdblock11
+brw-------    1 admin    root       31,  12 Jan  1  1970 /dev/mtdblock12
+brw-------    1 admin    root       31,  13 Jan  1  1970 /dev/mtdblock13
+brw-------    1 admin    root       31,  14 Jan  1  1970 /dev/mtdblock14
+brw-------    1 admin    root       31,  15 Jan  1  1970 /dev/mtdblock15
+brw-------    1 admin    root       31,  16 Jan  1  1970 /dev/mtdblock16
+brw-------    1 admin    root       31,  17 Jan  1  1970 /dev/mtdblock17
+brw-------    1 admin    root       31,  18 Jan  1  1970 /dev/mtdblock18
+brw-------    1 admin    root       31,  19 Jan  1  1970 /dev/mtdblock19
+brw-------    1 admin    root       31,   2 Jan  1  1970 /dev/mtdblock2
+brw-------    1 admin    root       31,  20 Jun  3 12:12 /dev/mtdblock20
+brw-------    1 admin    root       31,  21 Jun  3 12:12 /dev/mtdblock21
+brw-------    1 admin    root       31,  22 Jun  3 12:12 /dev/mtdblock22
+brw-------    1 admin    root       31,  23 Jun  3 12:12 /dev/mtdblock23
+brw-------    1 admin    root       31,   3 Jan  1  1970 /dev/mtdblock3
+brw-------    1 admin    root       31,   4 Jan  1  1970 /dev/mtdblock4
+brw-------    1 admin    root       31,   5 Jan  1  1970 /dev/mtdblock5
+brw-------    1 admin    root       31,   6 Jan  1  1970 /dev/mtdblock6
+brw-------    1 admin    root       31,   7 Jan  1  1970 /dev/mtdblock7
+brw-------    1 admin    root       31,   8 Jan  1  1970 /dev/mtdblock8
+brw-------    1 admin    root       31,   9 Jan  1  1970 /dev/mtdblock9
+brw-------    1 admin    root       31,   0 Jan  1  1970 /dev/mtdblock0
+brw-------    1 admin    root       31,   1 Jan  1  1970 /dev/mtdblock1
+brw-------    1 admin    root       31,  10 Jan  1  1970 /dev/mtdblock10
+brw-------    1 admin    root       31,  11 Jan  1  1970 /dev/mtdblock11
+brw-------    1 admin    root       31,  12 Jan  1  1970 /dev/mtdblock12
+brw-------    1 admin    root       31,  13 Jan  1  1970 /dev/mtdblock13
+brw-------    1 admin    root       31,  14 Jan  1  1970 /dev/mtdblock14
+brw-------    1 admin    root       31,  15 Jan  1  1970 /dev/mtdblock15
+brw-------    1 admin    root       31,  16 Jan  1  1970 /dev/mtdblock16
+brw-------    1 admin    root       31,  17 Jan  1  1970 /dev/mtdblock17
+brw-------    1 admin    root       31,  18 Jan  1  1970 /dev/mtdblock18
+brw-------    1 admin    root       31,  19 Jan  1  1970 /dev/mtdblock19
+brw-------    1 admin    root       31,   2 Jan  1  1970 /dev/mtdblock2
+brw-------    1 admin    root       31,  20 Jun  3 12:12 /dev/mtdblock20
+brw-------    1 admin    root       31,  21 Jun  3 12:12 /dev/mtdblock21
+brw-------    1 admin    root       31,  22 Jun  3 12:12 /dev/mtdblock22
+brw-------    1 admin    root       31,  23 Jun  3 12:12 /dev/mtdblock23
+brw-------    1 admin    root       31,   3 Jan  1  1970 /dev/mtdblock3
+brw-------    1 admin    root       31,   4 Jan  1  1970 /dev/mtdblock4
+brw-------    1 admin    root       31,   5 Jan  1  1970 /dev/mtdblock5
+brw-------    1 admin    root       31,   6 Jan  1  1970 /dev/mtdblock6
+brw-------    1 admin    root       31,   7 Jan  1  1970 /dev/mtdblock7
+brw-------    1 admin    root       31,   8 Jan  1  1970 /dev/mtdblock8
+brw-------    1 admin    root       31,   9 Jan  1  1970 /dev/mtdblock9
+===== MTD SYSFS DETAILS =====
+--- /sys/class/mtd/mtd0 ---
+name:
+uboot
+size:
+2097152
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd0ro ---
+--- /sys/class/mtd/mtd1 ---
+name:
+env
+size:
+262144
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd10 ---
+name:
+reserved
+size:
+15728640
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd10ro ---
+--- /sys/class/mtd/mtd11 ---
+name:
+ubi_Config
+size:
+10539008
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd11ro ---
+--- /sys/class/mtd/mtd12 ---
+name:
+ubi_DTB0
+size:
+380928
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd12ro ---
+--- /sys/class/mtd/mtd13 ---
+name:
+ubi_k0
+size:
+12697600
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd13ro ---
+--- /sys/class/mtd/mtd14 ---
+name:
+ubi_r0
+size:
+83931136
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd14ro ---
+--- /sys/class/mtd/mtd15 ---
+name:
+ubi_DTB1
+size:
+380928
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd15ro ---
+--- /sys/class/mtd/mtd16 ---
+name:
+ubi_k1
+size:
+12697600
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd16ro ---
+--- /sys/class/mtd/mtd17 ---
+name:
+ubi_r1
+size:
+83931136
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd17ro ---
+--- /sys/class/mtd/mtd18 ---
+name:
+ubi_tlv
+size:
+634880
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd18ro ---
+--- /sys/class/mtd/mtd19 ---
+name:
+ubi_backup_tlv
+size:
+634880
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd19ro ---
+--- /sys/class/mtd/mtd1ro ---
+--- /sys/class/mtd/mtd2 ---
+name:
+env2
+size:
+262144
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd20 ---
+name:
+ubi_apps
+size:
+204812288
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd20ro ---
+--- /sys/class/mtd/mtd21 ---
+name:
+ubi_mrdcert1
+size:
+634880
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd21ro ---
+--- /sys/class/mtd/mtd22 ---
+name:
+ubi_mrdcert2
+size:
+634880
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd22ro ---
+--- /sys/class/mtd/mtd23 ---
+name:
+ubi_romd
+size:
+634880
+erasesize:
+126976
+writesize:
+2048
+type:
+ubi
+flags:
+0x400
+--- /sys/class/mtd/mtd23ro ---
+--- /sys/class/mtd/mtd2ro ---
+--- /sys/class/mtd/mtd3 ---
+name:
+zboot
+size:
+1048576
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd3ro ---
+--- /sys/class/mtd/mtd4 ---
+name:
+devconf
+size:
+1048576
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd4ro ---
+--- /sys/class/mtd/mtd5 ---
+name:
+devconf_backup
+size:
+1048576
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd5ro ---
+--- /sys/class/mtd/mtd6 ---
+name:
+pon_info
+size:
+1048576
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd6ro ---
+--- /sys/class/mtd/mtd7 ---
+name:
+mrd
+size:
+524288
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd7ro ---
+--- /sys/class/mtd/mtd8 ---
+name:
+ubi_device
+size:
+241172480
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd8ro ---
+--- /sys/class/mtd/mtd9 ---
+name:
+piubi
+size:
+272105472
+erasesize:
+131072
+writesize:
+2048
+type:
+nand
+flags:
+0x400
+--- /sys/class/mtd/mtd9ro ---
+===== UBI DEVICE NODES =====
+crw-------    1 admin    root      251,   0 Jan  1  1970 /dev/ubi0
+crw-------    1 admin    root      251,   1 Jan  1  1970 /dev/ubi0_0
+crw-------    1 admin    root      251,   2 Jan  1  1970 /dev/ubi0_1
+crw-------    1 admin    root      251,   3 Jan  1  1970 /dev/ubi0_2
+crw-------    1 admin    root      251,   4 Jan  1  1970 /dev/ubi0_3
+crw-------    1 admin    root      251,   5 Jan  1  1970 /dev/ubi0_4
+crw-------    1 admin    root      251,   6 Jan  1  1970 /dev/ubi0_5
+crw-------    1 admin    root      251,   7 Jan  1  1970 /dev/ubi0_6
+crw-------    1 admin    root      251,   8 Jan  1  1970 /dev/ubi0_7
+crw-------    1 admin    root      251,   9 Jan  1  1970 /dev/ubi0_8
+crw-------    1 admin    root      247,   0 Jun  3 12:12 /dev/ubi1
+crw-------    1 admin    root      247,   1 Jun  3 12:12 /dev/ubi1_0
+crw-------    1 admin    root      247,   2 Jun  3 12:12 /dev/ubi1_1
+crw-------    1 admin    root      247,   3 Jun  3 12:12 /dev/ubi1_2
+crw-------    1 admin    root      247,   4 Jun  3 12:12 /dev/ubi1_3
+crw-------    1 admin    root       10,  62 Jan  1  1970 /dev/ubi_ctrl
+===== UBI SYSFS DETAILS =====
+drwxr-xr-x    2 admin    root             0 Jan  1  1970 .
+drwxr-xr-x   35 admin    root             0 Jan  1  1970 ..
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0 -> ../../devices/virtual/ubi/ubi0
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_0 -> ../../devices/virtual/ubi/ubi0/ubi0_0
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_1 -> ../../devices/virtual/ubi/ubi0/ubi0_1
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_2 -> ../../devices/virtual/ubi/ubi0/ubi0_2
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_3 -> ../../devices/virtual/ubi/ubi0/ubi0_3
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_4 -> ../../devices/virtual/ubi/ubi0/ubi0_4
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_5 -> ../../devices/virtual/ubi/ubi0/ubi0_5
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_6 -> ../../devices/virtual/ubi/ubi0/ubi0_6
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_7 -> ../../devices/virtual/ubi/ubi0/ubi0_7
+lrwxrwxrwx    1 admin    root             0 Jan  1  1970 ubi0_8 -> ../../devices/virtual/ubi/ubi0/ubi0_8
+lrwxrwxrwx    1 admin    root             0 Jun  3 12:12 ubi1 -> ../../devices/virtual/ubi/ubi1
+lrwxrwxrwx    1 admin    root             0 Jun  3 12:12 ubi1_0 -> ../../devices/virtual/ubi/ubi1/ubi1_0
+lrwxrwxrwx    1 admin    root             0 Jun  3 12:12 ubi1_1 -> ../../devices/virtual/ubi/ubi1/ubi1_1
+lrwxrwxrwx    1 admin    root             0 Jun  3 12:12 ubi1_2 -> ../../devices/virtual/ubi/ubi1/ubi1_2
+lrwxrwxrwx    1 admin    root             0 Jun  3 12:12 ubi1_3 -> ../../devices/virtual/ubi/ubi1/ubi1_3
+-r--r--r--    1 admin    root          4096 Jan  1  1970 version
+--- /sys/class/ubi/ubi0 ---
+mtd_num:
+8
+total_eraseblocks:
+1840
+avail_eraseblocks:
+135
+eraseblock_size:
+126976
+max_ec:
+22
+--- /sys/class/ubi/ubi0_0 ---
+name:
+ubi_Config
+type:
+dynamic
+--- /sys/class/ubi/ubi0_1 ---
+name:
+ubi_DTB0
+type:
+dynamic
+--- /sys/class/ubi/ubi0_2 ---
+name:
+ubi_k0
+type:
+dynamic
+--- /sys/class/ubi/ubi0_3 ---
+name:
+ubi_r0
+type:
+dynamic
+--- /sys/class/ubi/ubi0_4 ---
+name:
+ubi_DTB1
+type:
+dynamic
+--- /sys/class/ubi/ubi0_5 ---
+name:
+ubi_k1
+type:
+dynamic
+--- /sys/class/ubi/ubi0_6 ---
+name:
+ubi_r1
+type:
+dynamic
+--- /sys/class/ubi/ubi0_7 ---
+name:
+ubi_tlv
+type:
+dynamic
+--- /sys/class/ubi/ubi0_8 ---
+name:
+ubi_backup_tlv
+type:
+dynamic
+--- /sys/class/ubi/ubi1 ---
+mtd_num:
+9
+total_eraseblocks:
+2076
+avail_eraseblocks:
+364
+eraseblock_size:
+126976
+max_ec:
+3
+--- /sys/class/ubi/ubi1_0 ---
+name:
+ubi_apps
+type:
+dynamic
+--- /sys/class/ubi/ubi1_1 ---
+name:
+ubi_mrdcert1
+type:
+dynamic
+--- /sys/class/ubi/ubi1_2 ---
+name:
+ubi_mrdcert2
+type:
+dynamic
+--- /sys/class/ubi/ubi1_3 ---
+name:
+ubi_romd
+type:
+dynamic
+===== AVAILABLE FLASH UTILITIES =====
+===== MOUNTED STORAGE =====
+/dev/root / squashfs ro,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,noatime 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,noatime 0 0
+cgroup2 /sys/fs/cgroup cgroup2 rw,nosuid,nodev,noexec,relatime,nsdelegate 0 0
+tmpfs /tmp tmpfs rw,nosuid,nodev,noatime 0 0
+ubi0:ubi_Config /config ubifs rw,relatime,assert=read-only,ubi=0,vol=0 0 0
+overlay /etc overlay rw,relatime,lowerdir=/etc,upperdir=/config/openwrt_config/upper,workdir=/config/openwrt_config/work,xino=off 0 0
+tmpfs /dev tmpfs rw,nosuid,noexec,noatime,size=512k,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,noatime,mode=600,ptmxmode=000 0 0
+debugfs /sys/kernel/debug debugfs rw,noatime 0 0
+none /sys/fs/bpf bpf rw,nosuid,nodev,noexec,noatime,mode=700 0 0
+pstore /sys/fs/pstore pstore rw,noatime 0 0
+ubi1:ubi_apps /tmp/app ubifs rw,relatime,assert=read-only,ubi=1,vol=0 0 0
+===== DEVICE TREE =====

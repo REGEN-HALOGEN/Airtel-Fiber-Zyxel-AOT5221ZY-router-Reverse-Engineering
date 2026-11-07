@@ -1,0 +1,20 @@
+#!/bin/sh
+
+DEVICE="$1"
+
+# EVENT is defined on file ccc_event.h
+CEVENT_WAN_PPPv6_DOWN=214
+
+
+echo "CEVENT_WAN_PPPv6_DOWN $DEVICE" > /dev/console
+echo "PID: $DEVICE.pid" > /dev/console
+
+if [ -f /var/wan_connection_notify/$DEVICE"_connection_v6_is_down" ]
+then
+        rm -rf /var/wan_connection_notify/$DEVICE"_connection_v6_is_down"
+fi
+
+touch /var/wan_connection_notify/$DEVICE"_connection_v6_is_down"
+echo "RDMNAME config;" >> /var/wan_connection_notify/$DEVICE"_connection_v6_is_down"
+echo "EVENTNOTIFY $CEVENT_WAN_PPPv6_DOWN string $DEVICE;" >> /var/wan_connection_notify/$DEVICE"_connection_v6_is_down"
+ccctest -f /var/wan_connection_notify/$DEVICE"_connection_v6_is_down"

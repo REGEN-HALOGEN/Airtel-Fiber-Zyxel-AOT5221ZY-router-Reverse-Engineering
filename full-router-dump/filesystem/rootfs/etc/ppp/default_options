@@ -1,0 +1,7 @@
+plugin pppoe
+noipdefault
+ipcp-accept-remote
+usepeerdns
+hide-password
+holdoff 3 
+maxfail 0

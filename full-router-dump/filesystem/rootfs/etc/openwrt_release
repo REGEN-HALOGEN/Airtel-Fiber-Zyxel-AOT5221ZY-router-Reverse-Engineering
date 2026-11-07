@@ -1,0 +1,7 @@
+DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='22.03.0'
+DISTRIB_REVISION='unknown'
+DISTRIB_TARGET='realtek_bb/rtl9617c'
+DISTRIB_ARCH='aarch64_generic'
+DISTRIB_DESCRIPTION='OpenWrt 22.03.0 r19685-512e76967f'
+DISTRIB_TAINTS='no-all glibc override'

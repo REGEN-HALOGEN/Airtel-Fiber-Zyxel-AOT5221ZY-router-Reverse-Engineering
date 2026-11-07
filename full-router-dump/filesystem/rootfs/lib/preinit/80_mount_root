@@ -1,0 +1,83 @@
+#!/bin/sh
+# Copyright (C) 2006 OpenWrt.org
+# Copyright (C) 2010 Vertical Communications
+
+CONFIG_STATIC_PATH=/var/config_static
+CONFIG_PATH=/config
+CONFIG_LINK_PATH=/var/config
+MOUNT_ROOT_OVERLAY=
+
+OPENWRT_CONFIG_PATH=/etc
+OPENWRT_CONFIG_PATH_UP=/config/openwrt_config/upper
+OPENWRT_CONFIG_PATH_WORK=/config/openwrt_config/work
+
+W_LOG()
+{
+	if [ $DEBUG -eq 1 ]; then
+		echo "[${PNAME}] $@" > /dev/console
+	fi
+}
+
+W_ERR()
+{
+	if [ $DEBUG -eq 1 ]; then
+		echo "[${PNAME}][ERR] $@" > /dev/console
+	fi
+}
+
+check_config_partition() 
+{
+	local f
+	W_LOG "Starting check partion for Static-Config ..."
+	f=`cat /proc/mtd | grep static_conf`
+	if [ $? -eq 0 ]; then
+		mkdir -p ${CONFIG_STATIC_PATH}
+		mountpoint -q ${CONFIG_STATIC_PATH}
+		if [ ! $? -eq 0 ]; then
+			/etc/scripts/mnt_static_cfg.sh "-t squashfs" "static_conf" "${CONFIG_STATIC_PATH}"
+		else
+			W_LOG "The Static-Config was already mouted."
+		fi
+	else
+		W_LOG "not support partion for Static-Config"
+	fi
+
+	W_LOG "Starting check partion for Config  ..."
+	f=`cat /proc/mtd | grep ubi_Config`
+	if [ $? -eq 0 ]; then
+		mkdir -p ${CONFIG_PATH}
+		mountpoint -q ${CONFIG_PATH}
+		if [ ! $? -eq 0 ]; then
+			mount -t ubifs ubi0:ubi_Config ${CONFIG_PATH}
+			if [ ! $? -eq 0 ]; then
+				W_ERR "Cannot mount partion for Config"
+			else
+				if [ ! -d ${OPENWRT_CONFIG_PATH_UP} ]; then
+					mkdir -p ${OPENWRT_CONFIG_PATH_UP}
+				fi
+				mkdir -p ${OPENWRT_CONFIG_PATH_WORK}
+				mount -t overlay -o lowerdir="${OPENWRT_CONFIG_PATH}",upperdir="${OPENWRT_CONFIG_PATH_UP}",workdir="${OPENWRT_CONFIG_PATH_WORK}" overlay ${OPENWRT_CONFIG_PATH}
+			fi
+		else
+			W_LOG "The Config was already mouted."
+		fi
+	else
+		W_ERR "not support partion for Config"
+	fi
+	test -L ${CONFIG_PATH} || ln -sf ${CONFIG_PATH} ${CONFIG_LINK_PATH}
+}
+
+do_mount_root() {
+	if [ "${MOUNT_ROOT_OVERLAY}" = "y" ]; then 
+		mount_root
+	fi
+	check_config_partition
+	boot_run_hook preinit_mount_root
+	[ -f /sysupgrade.tgz ] && {
+		echo "- config restore -"
+		cd /
+		tar xzf /sysupgrade.tgz
+	}
+}
+
+[ "$INITRAMFS" = "1" ] || boot_hook_add preinit_main do_mount_root

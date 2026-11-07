@@ -1,0 +1,36 @@
+=== Disassembly of libccc_executePPPv4Client (0x348f4, 140 bytes) in libcccbe.so ===
+0x000348f4:  stp      x29, x30, [sp, #-0x120]!         
+0x000348f8:  mov      x29, sp                          
+0x000348fc:  str      x19, [sp, #0x10]                 
+0x00034900:  mov      x6, x1                           
+0x00034904:  stp      xzr, xzr, [sp, #0x20]            
+0x00034908:  add      x2, sp, #0x30                    
+0x0003490c:  movi     v0.4s, #0                        
+0x00034910:  stp      q0, q0, [x2]                     
+0x00034914:  stp      q0, q0, [x2, #0x20]              
+0x00034918:  stp      q0, q0, [x2, #0x40]              
+0x0003491c:  stp      q0, q0, [x2, #0x60]              
+0x00034920:  stp      q0, q0, [x2, #0x80]              
+0x00034924:  stp      q0, q0, [x2, #0xa0]              
+0x00034928:  stp      q0, q0, [x2, #0xc0]              
+0x0003492c:  str      q0, [x2, #0xe0]                  
+0x00034930:  add      x19, sp, #0x20                   
+0x00034934:  mov      x7, x1                           
+0x00034938:  mov      x5, x0                           
+0x0003493c:  adrp     x4, #0x4a000                     
+0x00034940:  add      x4, x4, #0xee0                    ; "%s file /etc/ppp/options_%s %s > /tmp/pppd-info.tmp 2>&1 &"
+0x00034944:  mov      x3, #0x100                       
+0x00034948:  mov      w2, #1                           
+0x0003494c:  mov      x1, x3                           
+0x00034950:  mov      x0, x19                          
+0x00034954:  bl       #0x198a0                         
+0x00034958:  mov      w2, #0                           
+0x0003495c:  mov      x1, x19                          
+0x00034960:  adrp     x0, #0x4c000                     
+0x00034964:  add      x0, x0, #0x448                    ; "libcccBeWan_getL2IntfName_wrapper"
+0x00034968:  add      x0, x0, #0x48                     ; "libccc_executePPPv4Client"
+0x0003496c:  bl       #0x19ad0                         
+0x00034970:  mov      w0, #0                           
+0x00034974:  ldr      x19, [sp, #0x10]                 
+0x00034978:  ldp      x29, x30, [sp], #0x120           
+0x0003497c:  ret                                       

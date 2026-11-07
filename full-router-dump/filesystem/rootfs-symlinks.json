@@ -1,0 +1,1257 @@
+[
+  {
+    "path": "lib64",
+    "target": "lib",
+    "is_dir": true
+  },
+  {
+    "path": "bin\\arch",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ash",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\base32",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\bash",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\cat",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\chgrp",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\chmod",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\chown",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\cp",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\date",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\df",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\dmesg",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\echo",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\egrep",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\fgrep",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\getopt",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\grep",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\gunzip",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\gzip",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\kill",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\link",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ln",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\login",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ls",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\maceui",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\mkdir",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\mknod",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\mount",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\mpstat",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\mv",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\netstat",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\nice",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\pidof",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ping",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ping6",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\ps",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\pwd",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\resume",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\rm",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\sed",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\setpriv",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\sh",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\sleep",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\stat",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\stty",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\sync",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\tar",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\touch",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\umount",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\uname",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\uncompress",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\usleep",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\vi",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "bin\\zcat",
+    "target": "busybox",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\localtime",
+    "target": "/tmp/localtime",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\mtab",
+    "target": "/proc/mounts",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\os-release",
+    "target": "../usr/lib/os-release",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\resolv.conf",
+    "target": "/tmp/resolv.conf",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\TZ",
+    "target": "/tmp/TZ",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\02-crypto-hash",
+    "target": "../modules.d/02-crypto-hash",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\04-crypto-crc32c",
+    "target": "../modules.d/04-crypto-crc32c",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\09-crypto-aead",
+    "target": "../modules.d/09-crypto-aead",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\09-crypto-manager",
+    "target": "../modules.d/09-crypto-manager",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\10-ca_packages",
+    "target": "../modules.d/10-ca_packages",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\11-ca_rtk",
+    "target": "../modules.d/11-ca_rtk",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\12-rtk_fc",
+    "target": "../modules.d/12-rtk_fc",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\13-rtk_igmp_hook",
+    "target": "../modules.d/13-rtk_igmp_hook",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\20-lib-crc16",
+    "target": "../modules.d/20-lib-crc16",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\20-usb-core",
+    "target": "../modules.d/20-usb-core",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\30-gpio-button-hotplug",
+    "target": "../modules.d/30-gpio-button-hotplug",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\modules-boot.d\\54-usb-xhci-hcd",
+    "target": "../modules.d/54-usb-xhci-hcd",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K10gpio_switch",
+    "target": "../init.d/gpio_switch",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K21wpad",
+    "target": "../init.d/wpad",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K90boot",
+    "target": "../init.d/boot",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K90network",
+    "target": "../init.d/network",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K90sysfixtime",
+    "target": "../init.d/sysfixtime",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\K90umount",
+    "target": "../init.d/umount",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S00sysfixtime",
+    "target": "../init.d/sysfixtime",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S00urngd",
+    "target": "../init.d/urngd",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S08rtk_voip_dsp",
+    "target": "../init.d/rtk_voip_dsp",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S10boot",
+    "target": "../init.d/boot",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S10lock_console",
+    "target": "../init.d/lock_console",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S10system",
+    "target": "../init.d/system",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S11fstab",
+    "target": "../init.d/fstab",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S11sysctl",
+    "target": "../init.d/sysctl",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S12rpcd",
+    "target": "../init.d/rpcd",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S13load_rtk_wifi6",
+    "target": "../init.d/load_rtk_wifi6",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S13openssl",
+    "target": "../init.d/openssl",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S15diagshell",
+    "target": "../init.d/diagshell",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S16rtk_voip_preload",
+    "target": "../init.d/rtk_voip_preload",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S19wpad",
+    "target": "../init.d/wpad",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S20network",
+    "target": "../init.d/network",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S50transceiver.sh",
+    "target": "../init.d/transceiver.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S90ndppd",
+    "target": "../init.d/ndppd",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S94gpio_switch",
+    "target": "../init.d/gpio_switch",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S95done",
+    "target": "../init.d/done",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S99igmpproxy",
+    "target": "../init.d/igmpproxy",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S99load_rtk_xframe_ext_recovery",
+    "target": "../init.d/load_rtk_xframe_ext_recovery",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S99omcproxy",
+    "target": "../init.d/omcproxy",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S99urandom_seed",
+    "target": "../init.d/urandom_seed",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc.d\\S99zz_rc4mstcinit",
+    "target": "../init.d/zz_rc4mstcinit",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S01deviceinfo",
+    "target": "../init.d/deviceinfo.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S02zywifid",
+    "target": "../init.d/zywifid.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S03CA_init",
+    "target": "../init.d/CA_init.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S04mountfs",
+    "target": "../init.d/mountfs.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S05mount_piubi",
+    "target": "../init.d/mount_piubi.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S06ccc_init",
+    "target": "../init.d/ccc_init.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S10devicesock",
+    "target": "../init.d/devicesock.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\rc4_mstc.d\\S99hachi",
+    "target": "../init.d/hachi.sh",
+    "is_dir": false
+  },
+  {
+    "path": "etc\\ssl\\cert.pem",
+    "target": "/etc/ssl/certs/ca-certificates.crt",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\libanl.so",
+    "target": "libanl.so.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\libcrypt.so",
+    "target": "libcrypt.so.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\libm.so",
+    "target": "libm.so.6",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\libresolv.so",
+    "target": "libresolv.so.2",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\libstdc++.so.6",
+    "target": "libstdc++.so.6.0.29",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libblkid.so",
+    "target": "libblkid.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libblkid.so.1",
+    "target": "libblkid.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libconfuse.so",
+    "target": "libconfuse.so.2.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libconfuse.so.2",
+    "target": "libconfuse.so.2.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libcrypto.so",
+    "target": "libcrypto.so.1.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libcurl.so",
+    "target": "libcurl.so.4.6.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libcurl.so.4",
+    "target": "libcurl.so.4.6.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libexpat.so",
+    "target": "libexpat.so.0.5.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libexpat.so.0",
+    "target": "libexpat.so.0.5.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libjson-c.so",
+    "target": "libjson-c.so.2.0.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libjson-c.so.2",
+    "target": "libjson-c.so.2.0.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libmosquitto.so",
+    "target": "libmosquitto.so.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libmxml.so",
+    "target": "libmxml.so.1.4",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libmxml.so.1",
+    "target": "libmxml.so.1.4",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libntfs-3g.so.88",
+    "target": "libntfs-3g.so.88.0.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libpam.so",
+    "target": "libpam.so.0.85.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libpam.so.0",
+    "target": "libpam.so.0.85.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libsmartcols.so",
+    "target": "libsmartcols.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libsmartcols.so.1",
+    "target": "libsmartcols.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libsqlite3.so",
+    "target": "libsqlite3.so.0.8.6",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libsqlite3.so.0",
+    "target": "libsqlite3.so.0.8.6",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libssl.so",
+    "target": "libssl.so.1.1",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libusb-1.0.so",
+    "target": "libusb-1.0.so.0.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libusb-1.0.so.0",
+    "target": "libusb-1.0.so.0.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libuuid.so",
+    "target": "libuuid.so.1.3.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libuuid.so.1",
+    "target": "libuuid.so.1.3.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libwebsockets.so",
+    "target": "libwebsockets.so.19",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libz.so",
+    "target": "libz.so.1.2.8",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libz.so.1",
+    "target": "libz.so.1.2.8",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libzebra.so",
+    "target": "libzebra.so.1.0.0",
+    "is_dir": false
+  },
+  {
+    "path": "lib\\MSTC\\libzebra.so.1",
+    "target": "libzebra.so.1.0.0",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\devmem",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\diag",
+    "target": "/bin/diag",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\getty",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\halt",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\ifconfig",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\ifdown",
+    "target": "ifup",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\insmod",
+    "target": "/sbin/kmodloader",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\ip",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\jffs2mark",
+    "target": "jffs2reset",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\klogd",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\lsmod",
+    "target": "/sbin/kmodloader",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\mcputil",
+    "target": "mcputil3.0.0",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\mdev",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\modinfo",
+    "target": "/sbin/kmodloader",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\modprobe",
+    "target": "/sbin/kmodloader",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\mount.ntfs-3g",
+    "target": "../usr/bin/ntfs-3g",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\reboot",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\rmmod",
+    "target": "/sbin/kmodloader",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\route",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\run-init",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\seccomp-trace",
+    "target": "utrace",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\sysctl",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\syslogd",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\tc",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "sbin\\vconfig",
+    "target": "../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ar",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ascii",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\awk",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\basename",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\bc",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\bzip2",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\chvt",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\cmp",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\crc32",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\cut",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\diff",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\expr",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\factor",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\fallocate",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\fgconsole",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\find",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\flock",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\free",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ftpget",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ftpput",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\fuser",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\head",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\hexedit",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\id",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\killall",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\logger",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\lsscsi",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\md5sum",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\nc",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\nl",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\nproc",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\nslookup",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\passwd",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\paste",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\pgrep",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\readlink",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\renice",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\seq",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\setfattr",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\shred",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\shuf",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\signify",
+    "target": "usign",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ssl_client",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\svok",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\tail",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\tcpsvd",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\tftp",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\top",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\tr",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\traceroute",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\traceroute6",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\ts",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\udpsvd",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\unlink",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\unshare",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\unzip",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\wc",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\wget",
+    "target": "/bin/uclient-fetch",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\which",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\xargs",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\xxd",
+    "target": "../../bin/busybox",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\lib\\libblkid.so.1",
+    "target": "libblkid.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\lib\\libsmartcols.so.1",
+    "target": "libsmartcols.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\lib\\libuuid.so.1",
+    "target": "libuuid.so.1.3.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\bin\\linux32",
+    "target": "setarch",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\bin\\linux64",
+    "target": "setarch",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\bin\\uname26",
+    "target": "setarch",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\lib\\libblkid.so",
+    "target": "../../lib/libblkid.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\lib\\libsmartcols.so",
+    "target": "../../lib/libsmartcols.so.1.1.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\bin\\usr\\lib\\libuuid.so",
+    "target": "../../lib/libuuid.so.1.3.0",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\libcups.so",
+    "target": "libcups.so.2",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\libcupsimage.so",
+    "target": "libcupsimage.so.2",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\libcupsmime.so",
+    "target": "libcupsmime.so.1",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\libcupsppdc.so",
+    "target": "libcupsppdc.so.1",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\cups\\backend\\http",
+    "target": "ipp",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\cups\\filter\\rastertodymo",
+    "target": "rastertolabel",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\firmware\\2.6.20.19",
+    "target": "2.6.32.32",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\modules\\2.6.20.19",
+    "target": "2.6.32.32",
+    "is_dir": false
+  },
+  {
+    "path": "usr\\lib\\MSTC\\tc\\m_ipt.so",
+    "target": "m_xt.so",
+    "is_dir": false
+  }
+]

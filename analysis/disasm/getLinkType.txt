@@ -1,0 +1,62 @@
+=== Disassembly of libcccBeWan_getWANDeviceObjectRequestedLinkType (0x34334, 244 bytes) in libcccbe.so ===
+0x00034334:  stp      x29, x30, [sp, #-0x20]!          
+0x00034338:  mov      x29, sp                          
+0x0003433c:  cbz      x0, #0x343c4                     
+0x00034340:  stp      x19, x20, [sp, #0x10]            
+0x00034344:  mov      x20, x0                          
+0x00034348:  lsr      x19, x1, #0x38                   
+0x0003434c:  mov      w1, w19                          
+0x00034350:  adrp     x0, #0x42000                     
+0x00034354:  add      x0, x0, #0x218                    ; "%d"
+0x00034358:  bl       #0x19890                         
+0x0003435c:  mov      w3, #1                           
+0x00034360:  mov      x2, x0                           
+0x00034364:  mov      w1, #0xc7                        
+0x00034368:  mov      x0, x20                          
+0x0003436c:  bl       #0x1a140                         
+0x00034370:  cbz      x0, #0x34380                     
+0x00034374:  ldrb     w1, [x0]                         
+0x00034378:  mov      w0, #1                           
+0x0003437c:  cbnz     w1, #0x34420                     
+0x00034380:  mov      w1, w19                          
+0x00034384:  adrp     x0, #0x42000                     
+0x00034388:  add      x0, x0, #0x218                    ; "%d"
+0x0003438c:  bl       #0x19890                         
+0x00034390:  mov      w3, #1                           
+0x00034394:  mov      x2, x0                           
+0x00034398:  mov      w1, #0xca                        
+0x0003439c:  mov      x0, x20                          
+0x000343a0:  bl       #0x1a140                         
+0x000343a4:  cbz      x0, #0x34414                     
+0x000343a8:  ldrb     w0, [x0, #4]                     
+0x000343ac:  cmp      w0, #0                           
+0x000343b0:  cset     w0, eq                           
+0x000343b4:  lsl      w0, w0, #1                       
+0x000343b8:  ldp      x19, x20, [sp, #0x10]            
+0x000343bc:  ldp      x29, x30, [sp], #0x20            
+0x000343c0:  ret                                       
+0x000343c4:  adrp     x0, #0x6a000                     
+0x000343c8:  ldr      x0, [x0, #0xfb8]                 
+0x000343cc:  ldr      w1, [x0]                         
+0x000343d0:  mov      w0, #2                           
+0x000343d4:  tbz      w1, #5, #0x343bc                 
+0x000343d8:  adrp     x0, #0x6a000                     
+0x000343dc:  ldr      x0, [x0, #0xfe0]                 
+0x000343e0:  ldr      w1, [x0]                         
+0x000343e4:  mov      w0, #2                           
+0x000343e8:  cmp      w1, w0                           
+0x000343ec:  b.ls     #0x343bc                         
+0x000343f0:  adrp     x3, #0x4a000                     
+0x000343f4:  add      x3, x3, #0xe28                    ; "libcccBeWan_getWANDeviceObjectRequestedLinkType"
+0x000343f8:  adrp     x2, #0x4a000                     
+0x000343fc:  add      x2, x2, #0xdb8                   
+0x00034400:  mov      w1, #1                           
+0x00034404:  mov      w0, #3                           
+0x00034408:  bl       #0x1a110                         
+0x0003440c:  mov      w0, #2                           
+0x00034410:  b        #0x343bc                         
+0x00034414:  mov      w0, #2                           
+0x00034418:  ldp      x19, x20, [sp, #0x10]            
+0x0003441c:  b        #0x343bc                         
+0x00034420:  ldp      x19, x20, [sp, #0x10]            
+0x00034424:  b        #0x343bc                         

@@ -1,0 +1,168 @@
+
+========================================
+BINWALK: apps.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+126976        0x1F000         UBIFS filesystem master node, CRC: 0xAE676242, highest inode: 326, commit number: 309
+129024        0x1F800         UBIFS filesystem master node, CRC: 0x7C648FC1, highest inode: 327, commit number: 310
+131072        0x20000         UBIFS filesystem master node, CRC: 0x29CFAED8, highest inode: 327, commit number: 311
+133120        0x20800         UBIFS filesystem master node, CRC: 0x2261BE62, highest inode: 327, commit number: 312
+135168        0x21000         UBIFS filesystem master node, CRC: 0xCF7F9EBA, highest inode: 328, commit number: 313
+137216        0x21800         UBIFS filesystem master node, CRC: 0xD6CA13C9, highest inode: 331, commit number: 314
+139264        0x22000         UBIFS filesystem master node, CRC: 0x6B803E25, highest inode: 333, commit number: 315
+141312        0x22800         UBIFS filesystem master node, CRC: 0xF725536B, highest inode: 335, commit number: 316
+143360        0x23000         UBIFS filesystem master node, CRC: 0x834B1FAE, highest inode: 336, commit number: 317
+145408        0x23800         UBIFS filesystem master node, CRC: 0x25EFA2E7, highest inode: 336, commit number: 318
+147456        0x24000         UBIFS filesystem master node, CRC: 0xA037A721, highest inode: 337, commit number: 319
+149504        0x24800         UBIFS filesystem master node, CRC: 0xFA0DB2C3, highest inode: 338, commit number: 320
+151552        0x25000         UBIFS filesystem master node, CRC: 0x4133B7CE, highest inode: 338, commit number: 321
+153600        0x25800         UBIFS filesystem master node, CRC: 0x22EBF9DD, highest inode: 338, commit number: 322
+155648        0x26000         UBIFS filesystem master node, CRC: 0xD047EF8C, highest inode: 339, commit number: 323
+157696        0x26800         UBIFS filesystem master node, CRC: 0xD0CA2B64, highest inode: 339, commit number: 324
+159744        0x27000         UBIFS filesystem master node, CRC: 0x9A59A07A, highest inode: 341, commit number: 325
+161792        0x27800         UBIFS filesystem master node, CRC: 0x463C36B5, highest inode: 341, commit number: 326
+163840        0x28000         UBIFS filesystem master node, CRC: 0x46DBE000, highest inode: 343, commit number: 327
+165888        0x28800         UBIFS filesystem master node, CRC: 0x186ADC86, highest inode: 343, commit number: 328
+167936        0x29000         UBIFS filesystem master node, CRC: 0x6122CDFC, highest inode: 345, commit number: 329
+169984        0x29800         UBIFS filesystem master node, CRC: 0xCD52606D, highest inode: 345, commit number: 330
+172032        0x2A000         UBIFS filesystem master node, CRC: 0xB24B46D6, highest inode: 347, commit number: 331
+174080        0x2A800         UBIFS filesystem master node, CRC: 0xC843D8F3, highest inode: 349, commit number: 332
+176128        0x2B000         UBIFS filesystem master node, CRC: 0x87BB8951, highest inode: 349, commit number: 333
+178176        0x2B800         UBIFS filesystem master node, CRC: 0xA487E60C, highest inode: 350, commit number: 334
+180224        0x2C000         UBIFS filesystem master node, CRC: 0x58336640, highest inode: 352, commit number: 335
+182272        0x2C800         UBIFS filesystem master node, CRC: 0x8613A713, highest inode: 352, commit number: 336
+184320        0x2D000         UBIFS filesystem master node, CRC: 0xD2688EF9, highest inode: 353, commit number: 337
+186368        0x2D800         UBIFS filesystem master node, CRC: 0xBA49A642, highest inode: 353, commit number: 338
+188416        0x2E000         UBIFS filesystem master node, CRC: 0x2CC9C238, highest inode: 355, commit number: 339
+190464        0x2E800         UBIFS filesystem master node, CRC: 0x6AA96C3A, highest inode: 355, commit number: 340
+192512        0x2F000         UBIFS filesystem master node, CRC: 0x4E870EA7, highest inode: 357, commit number: 341
+194560        0x2F800         UBIFS filesystem master node, CRC: 0x2BF0CFA8, highest inode: 357, commit number: 342
+196608        0x30000         UBIFS filesystem master node, CRC: 0x669457F4, highest inode: 359, commit number: 343
+198656        0x30800         UBIFS filesystem master node, CRC: 0x2A1A92B4, highest inode: 360, commit number: 344
+200704        0x31000         UBIFS filesystem master node, CRC: 0xBCE7C507, highest inode: 360, commit number: 345
+202752        0x31800         UBIFS filesystem master node, CRC: 0xE4B057E1, highest inode: 361, commit number: 346
+204800        0x32000         UBIFS filesystem master node, CRC: 0x8C51FC44, highest inode: 363, commit number: 347
+206848        0x32800         UBIFS filesystem master node, CRC: 0x43685327, highest inode: 363, commit number: 348
+208896        0x33000         UBIFS filesystem master node, CRC: 0xBE278FE7, highest inode: 364, commit number: 349
+210944        0x33800         UBIFS filesystem master node, CRC: 0x92C18DE, highest inode: 366, commit number: 350
+212992        0x34000         UBIFS filesystem master node, CRC: 0xA27596CB, highest inode: 366, commit number: 351
+215040        0x34800         UBIFS filesystem master node, CRC: 0xED1AECA, highest inode: 367, commit number: 352
+217088        0x35000         UBIFS filesystem master node, CRC: 0x89CC2EF3, highest inode: 367, commit number: 353
+219136        0x35800         UBIFS filesystem master node, CRC: 0xABBBDEE7, highest inode: 369, commit number: 354
+221184        0x36000         UBIFS filesystem master node, CRC: 0xF1CB6AE8, highest inode: 369, commit number: 355
+223232        0x36800         UBIFS filesystem master node, CRC: 0x156ECEB8, highest inode: 371, commit number: 356
+225280        0x37000         UBIFS filesystem master node, CRC: 0x3E1E56FF, highest inode: 372, commit number: 357
+227328        0x37800         UBIFS filesystem master node, CRC: 0x7D6D4B1A, highest inode: 372, commit number: 358
+229376        0x38000         UBIFS filesystem master node, CRC: 0xB13466B0, highest inode: 373, commit number: 359
+253952        0x3E000         UBIFS filesystem master node, CRC: 0x8AF5A911, highest inode: 326, commit number: 309
+256000        0x3E800         UBIFS filesystem master node, CRC: 0x58F64492, highest inode: 327, commit number: 310
+258048        0x3F000         UBIFS filesystem master node, CRC: 0x25FF5BC5, highest inode: 327, commit number: 311
+260096        0x3F800         UBIFS filesystem master node, CRC: 0x2E514B7F, highest inode: 327, commit number: 312
+262144        0x40000         UBIFS filesystem master node, CRC: 0xDB2E819D, highest inode: 328, commit number: 313
+264192        0x40800         UBIFS filesystem master node, CRC: 0xF258D89A, highest inode: 331, commit number: 314
+266240        0x41000         UBIFS filesystem master node, CRC: 0x7FD12102, highest inode: 333, commit number: 315
+268288        0x41800         UBIFS filesystem master node, CRC: 0xFB15A676, highest inode: 335, commit number: 316
+270336        0x42000         UBIFS filesystem master node, CRC: 0x971A0089, highest inode: 336, commit number: 317
+272384        0x42800         UBIFS filesystem master node, CRC: 0x31BEBDC0, highest inode: 336, commit number: 318
+274432        0x43000         UBIFS filesystem master node, CRC: 0xAC07523C, highest inode: 337, commit number: 319
+276480        0x43800         UBIFS filesystem master node, CRC: 0xF63D47DE, highest inode: 338, commit number: 320
+278528        0x44000         UBIFS filesystem master node, CRC: 0x5562A8E9, highest inode: 338, commit number: 321
+280576        0x44800         UBIFS filesystem master node, CRC: 0x2EDB0CC0, highest inode: 338, commit number: 322
+282624        0x45000         UBIFS filesystem master node, CRC: 0x95528C37, highest inode: 339, commit number: 323
+284672        0x45800         UBIFS filesystem master node, CRC: 0xF458E037, highest inode: 339, commit number: 324
+286720        0x46000         UBIFS filesystem master node, CRC: 0x96695567, highest inode: 341, commit number: 325
+288768        0x46800         UBIFS filesystem master node, CRC: 0x4A0CC3A8, highest inode: 341, commit number: 326
+290816        0x47000         UBIFS filesystem master node, CRC: 0x528AFF27, highest inode: 343, commit number: 327
+292864        0x47800         UBIFS filesystem master node, CRC: 0xC3BC3A1, highest inode: 343, commit number: 328
+294912        0x48000         UBIFS filesystem master node, CRC: 0x2437AE47, highest inode: 345, commit number: 329
+296960        0x48800         UBIFS filesystem master node, CRC: 0xE9C0AB3E, highest inode: 345, commit number: 330
+299008        0x49000         UBIFS filesystem master node, CRC: 0xBE7BB3CB, highest inode: 347, commit number: 331
+301056        0x49800         UBIFS filesystem master node, CRC: 0xECD113A0, highest inode: 349, commit number: 332
+303104        0x4A000         UBIFS filesystem master node, CRC: 0xC2AEEAEA, highest inode: 349, commit number: 333
+305152        0x4A800         UBIFS filesystem master node, CRC: 0xE19285B7, highest inode: 350, commit number: 334
+307200        0x4B000         UBIFS filesystem master node, CRC: 0x4C627967, highest inode: 352, commit number: 335
+309248        0x4B800         UBIFS filesystem master node, CRC: 0x9242B834, highest inode: 352, commit number: 336
+311296        0x4C000         UBIFS filesystem master node, CRC: 0xC63991DE, highest inode: 353, commit number: 337
+313344        0x4C800         UBIFS filesystem master node, CRC: 0xAE18B965, highest inode: 353, commit number: 338
+315392        0x4D000         UBIFS filesystem master node, CRC: 0x20F93725, highest inode: 355, commit number: 339
+317440        0x4D800         UBIFS filesystem master node, CRC: 0x66999927, highest inode: 355, commit number: 340
+319488        0x4E000         UBIFS filesystem master node, CRC: 0x42B7FBBA, highest inode: 357, commit number: 341
+321536        0x4E800         UBIFS filesystem master node, CRC: 0x27C03AB5, highest inode: 357, commit number: 342
+323584        0x4F000         UBIFS filesystem master node, CRC: 0x72C548D3, highest inode: 359, commit number: 343
+325632        0x4F800         UBIFS filesystem master node, CRC: 0x3E4B8D93, highest inode: 360, commit number: 344
+327680        0x50000         UBIFS filesystem master node, CRC: 0xA8B6DA20, highest inode: 360, commit number: 345
+329728        0x50800         UBIFS filesystem master node, CRC: 0xC0229CB2, highest inode: 361, commit number: 346
+331776        0x51000         UBIFS filesystem master node, CRC: 0x9800E363, highest inode: 363, commit number: 347
+333824        0x51800         UBIFS filesystem master node, CRC: 0x57394C00, highest inode: 363, commit number: 348
+335872        0x52000         UBIFS filesystem master node, CRC: 0xAA7690C0, highest inode: 364, commit number: 349
+337920        0x52800         UBIFS filesystem master node, CRC: 0x2DBED38D, highest inode: 366, commit number: 350
+339968        0x53000         UBIFS filesystem master node, CRC: 0xE760F570, highest inode: 366, commit number: 351
+342016        0x53800         UBIFS filesystem master node, CRC: 0x4BC4CD71, highest inode: 367, commit number: 352
+344064        0x54000         UBIFS filesystem master node, CRC: 0xAD5EE5A0, highest inode: 367, commit number: 353
+346112        0x54800         UBIFS filesystem master node, CRC: 0xA78B2BFA, highest inode: 369, commit number: 354
+348160        0x55000         UBIFS filesystem master node, CRC: 0xFDFB9FF5, highest inode: 369, commit number: 355
+350208        0x55800         UBIFS filesystem master node, CRC: 0x13FD19F, highest inode: 371, commit number: 356
+352256        0x56000         UBIFS filesystem master node, CRC: 0x2A4F49D8, highest inode: 372, commit number: 357
+354304        0x56800         UBIFS filesystem master node, CRC: 0x693C543D, highest inode: 372, commit number: 358
+356352        0x57000         UBIFS filesystem master node, CRC: 0xA5657997, highest inode: 373, commit number: 359
+
+
+========================================
+BINWALK: dtb-slot0.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Flattened device tree, size: 29325 bytes, version: 17
+
+
+========================================
+BINWALK: dtb-slot1.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Flattened device tree, size: 29325 bytes, version: 17
+
+
+========================================
+BINWALK: kernel-slot0.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Flattened device tree, size: 3748569 bytes, version: 17
+204           0xCC            LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 12085256 bytes
+3714792       0x38AEE8        Flattened device tree, size: 29325 bytes, version: 17
+
+
+========================================
+BINWALK: kernel-slot1.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Flattened device tree, size: 3748569 bytes, version: 17
+204           0xCC            LZMA compressed data, properties: 0x5D, dictionary size: 8388608 bytes, uncompressed size: 12085256 bytes
+3714792       0x38AEE8        Flattened device tree, size: 29325 bytes, version: 17
+
+
+========================================
+BINWALK: rootfs-slot0.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Squashfs filesystem, little endian, version 4.0, compression:xz, size: 33477478 bytes, 5293 inodes, blocksize: 131072 bytes, created: 2024-06-03 06:41:57
+
+
+========================================
+BINWALK: rootfs-slot1.bin
+========================================
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Squashfs filesystem, little endian, version 4.0, compression:xz, size: 33477478 bytes, 5293 inodes, blocksize: 131072 bytes, created: 2024-06-03 06:41:57
+

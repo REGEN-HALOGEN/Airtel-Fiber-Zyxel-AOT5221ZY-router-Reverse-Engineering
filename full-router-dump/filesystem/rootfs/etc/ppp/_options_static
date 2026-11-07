@@ -1,0 +1,8 @@
+plugin pppoe
+noipdefault
+ipcp-accept-remote
+nodetach
+usepeerdns
+hide-password
+holdoff 3
+debug

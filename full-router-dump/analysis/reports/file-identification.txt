@@ -1,0 +1,35 @@
+
+========================================
+FILE: apps.bin
+========================================
+apps.bin: UBIfs image, sequence number 2, length 4096, CRC 0xeca31a41
+
+========================================
+FILE: dtb-slot0.bin
+========================================
+dtb-slot0.bin: Device Tree Blob version 17, size=29325, boot CPU=0, string block size=1645, DT structure block size=27624
+
+========================================
+FILE: dtb-slot1.bin
+========================================
+dtb-slot1.bin: Device Tree Blob version 17, size=29325, boot CPU=0, string block size=1645, DT structure block size=27624
+
+========================================
+FILE: kernel-slot0.bin
+========================================
+kernel-slot0.bin: Device Tree Blob version 17, size=3748569, boot CPU=0, string block size=196, DT structure block size=3746752
+
+========================================
+FILE: kernel-slot1.bin
+========================================
+kernel-slot1.bin: Device Tree Blob version 17, size=3748569, boot CPU=0, string block size=196, DT structure block size=3746752
+
+========================================
+FILE: rootfs-slot0.bin
+========================================
+rootfs-slot0.bin: Squashfs filesystem, little endian, version 4.0, xz compressed, 33477478 bytes, 5293 inodes, blocksize: 131072 bytes, created: Mon Jun  3 06:41:57 2024
+
+========================================
+FILE: rootfs-slot1.bin
+========================================
+rootfs-slot1.bin: Squashfs filesystem, little endian, version 4.0, xz compressed, 33477478 bytes, 5293 inodes, blocksize: 131072 bytes, created: Mon Jun  3 06:41:57 2024
